@@ -1,0 +1,54 @@
+.button {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  position: relative;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  appearance: auto;
+  user-select: none;
+  white-space: pre;
+  min-width: 200px;
+  height: 52px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0px 32px;
+  text-align: center;
+  box-sizing: border-box;
+  align-items: flex-start;
+  color: var(--text-color);
+  text-transform: uppercase;
+  background: var(--bg-color);
+  transition: all 0.25s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  font-family: 'Circular Std Book';
+  border-top: 0px solid var(--text-color);
+  border-left: 0px solid var(--text-color);
+  border-right: 0px solid var(--text-color);
+  border-bottom: 0px solid var(--text-color);
+}
+
+.button:hover {
+  box-shadow: inset 0 -52px 0 var(--text-color);
+  color: var(--bg-color);
+}
+
+.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+}
+
+.bordered {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  border-width: 2px !important;
+}
+
+.bordered_reverse {
+  border-width: 2px !important;
+  border-color: var(--text-color);
+}
+
+.dark.bordered_reverse {
+  border-color: var(--bg-color);
+}

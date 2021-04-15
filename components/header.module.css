@@ -1,0 +1,90 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+.navbar {
+  --bg-color: transparent;
+  --text-color: #ffffff;
+  padding: 0;
+  z-index: 99;
+  width: 100%;
+  position: fixed;
+  font-size: 18px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: 'Circular Std Book';
+  transition: all ease-in-out 200ms;
+}
+
+.dark {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.content {
+  margin-left: auto !important;
+}
+
+.content__main {
+  display: flex;
+  flex-basis: auto;
+}
+.navbar__ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 0;
+  margin: 0;
+  cursor: pointer;
+  list-style: none;
+  margin-right: 18px;
+}
+
+.navbar__li__after::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: top;
+  content: '';
+  border-top: 0em solid;
+  border-right: 0em solid transparent;
+  border-bottom: 0;
+  border-left: 0em solid transparent;
+  font-size: 12px;
+}
+
+.navbar__li {
+  list-style: none;
+  display: block;
+  padding: 11px 24px !important;
+}
+
+@media (max-width: 980px) {
+  .content,
+  .call {
+    display: none;
+  }
+}
