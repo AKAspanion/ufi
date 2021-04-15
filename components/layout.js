@@ -9,12 +9,6 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <link
-          rel="preload"
-          href="/fonts/Circular-Std.otf"
-          as="font"
-          crossOrigin=""
-        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Website" />
         <meta name="twitter:card" content="summary_large_image" />

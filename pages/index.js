@@ -1,5 +1,6 @@
 import cs from 'classnames';
 import Head from 'next/head';
+import { FaQuoteLeft } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import { useResizeDetector } from 'react-resize-detector';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
@@ -147,6 +148,26 @@ const processNav = [
   },
 ];
 
+const praiseList = [
+  {
+    name: 'Cecil Usher',
+    title: 'CEO, Music Plug LLC',
+    quote:
+      'It really transcends everything we’ve done to date. Everyone who’s seen the app has loved it.',
+  },
+  {
+    name: 'Leonardo Rodriguez',
+    title: 'Technical PM, Reliable Group',
+    quote:
+      'The team’s in-depth knowledge of user interaction and behavior resulted in an impressive UI/UX design.',
+  },
+  {
+    name: 'Fabien Mahieu',
+    title: 'Co-Founder/Director Flexiwork, UK',
+    quote: 'They’re available to help us around the clock.',
+  },
+];
+
 const arrowStyles = {
   position: 'absolute',
   zIndex: 2,
@@ -182,7 +203,13 @@ export default function Home() {
   return (
     <Layout home>
       <Head>
-        <title>Test</title>
+        <title>Website</title>
+        <link
+          rel="preload"
+          href="/fonts/circular.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
       <section className={styles.video__container}>
         <div className={styles.video__wrapper}>
@@ -413,11 +440,12 @@ export default function Home() {
             <Carousel
               swipeable
               infiniteLoop
-              selectedItem={selectedNav}
-              showIndicators={isMedium}
+              showThumbs={false}
               showArrows={false}
               showStatus={false}
-              axis="vertical"
+              showIndicators={isMedium}
+              selectedItem={selectedNav}
+              axis={!isMedium ? 'vertical' : undefined}
             >
               {process.map(({ id, title, img, desc }) => (
                 <div key={id}>
@@ -468,6 +496,79 @@ export default function Home() {
               ))}
             </Carousel>
           </div>
+        </div>
+      </section>
+      <section className={styles.project}>
+        <div className={styles.project__left}>
+          <Carousel
+            swipeable
+            infiniteLoop
+            showThumbs={false}
+            autoPlay={isMedium}
+            showThumbs={false}
+            showStatus={false}
+            showArrows={!isMedium && !isSmall}
+          >
+            {praiseList.map(({ name, title, quote }, index) => (
+              <div key={index} style={{ padding: '5%' }}>
+                <section className={styles.praise}>
+                  <div className={styles.praise__img}></div>
+                  <div className={styles.praise__logo}></div>
+                  <div className={styles.praise__quote}>
+                    <blockquote>
+                      <FaQuoteLeft size={33} color="#C7C7C7" /> {quote}
+                    </blockquote>
+                  </div>
+                  <div className={styles.praise__name}>{name}</div>
+                  <div className={styles.praise__title}>{title}</div>
+                </section>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+        <div className={styles.project__right}>
+          <h3>
+            Have a project to discuss?
+            <br />
+            Get in touch.
+          </h3>
+          <div className={styles.project__input__wrapper}>
+            <div className={cs(styles.project__input)}>
+              <label>Name *</label>
+              <input />
+            </div>
+          </div>
+
+          <div className={styles.project__input__wrapper}>
+            <div
+              className={cs(
+                styles.project__input,
+                styles.project__input__right,
+              )}
+            >
+              <label>Email *</label>
+              <input />
+            </div>
+            <div style={{ width: '24px' }}></div>
+            <div
+              className={cs(styles.project__input, styles.project__input__left)}
+            >
+              <label>Phone</label>
+              <input />
+            </div>
+          </div>
+          <div className={styles.project__input__wrapper}>
+            <div className={cs(styles.project__input)}>
+              <label>Message</label>
+              <textarea placeholder="Type your message here..." />
+            </div>
+          </div>
+          <div className={styles.project__nda}>
+            Note: We’ll keep your idea confidential with a signed NDA.
+          </div>
+          <Button bordered dark>
+            Submit
+          </Button>
         </div>
       </section>
     </Layout>
