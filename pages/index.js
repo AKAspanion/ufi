@@ -205,10 +205,8 @@ export default function Home() {
       <Head>
         <title>Website</title>
         <link
-          rel="preload"
-          href="/fonts/circular.ttf"
-          as="font"
-          crossOrigin=""
+          rel="stylesheet"
+          href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
         />
       </Head>
       <section className={styles.video__container}>

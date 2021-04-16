@@ -1,3 +1,11 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+@font-face {
+  font-family: 'LineAwesome';
+  src: url('https://www.unifiedinfotech.net/assets/fonts/line-awesome.woff2')
+    format('woff2');
+}
+
 .navbar {
   --bg-color: transparent;
   --text-color: #ffffff;
@@ -64,20 +72,72 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 0.255em;
+  margin-left: 0.45em;
   vertical-align: top;
-  content: '';
+  content: '\f110';
+  font-family: 'LineAwesome';
   border-top: 0em solid;
   border-right: 0em solid transparent;
   border-bottom: 0;
   border-left: 0em solid transparent;
   font-size: 12px;
+  line-height: 22px;
 }
 
 .navbar__li {
   list-style: none;
   display: block;
   padding: 11px 24px !important;
+  position: relative;
+}
+
+.navbar__li_hover:hover > .nav__submenu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible;
+}
+
+.menu_item_arrow {
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 1px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu_item_arrow__before::before {
+  position: absolute;
+  bottom: 100%;
+  left: calc(100% - 10px);
+  border: solid transparent;
+  content: ' ';
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  margin-left: -11px;
+  border-color: transparent;
+  border-bottom-color: #000;
+  border-width: 11px;
+}
+
+.menu_item_arrow__after::after {
+  margin-left: -8px;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 8px;
+  position: absolute;
+  bottom: 100%;
+  left: calc(100% - 10px);
+  border: solid transparent;
+  content: ' ';
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 980px) {

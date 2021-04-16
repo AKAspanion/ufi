@@ -1,0 +1,111 @@
+.nav__submenu {
+  visibility: hidden;
+  position: absolute;
+  left: 22px;
+  opacity: 0;
+  min-width: 220px;
+  padding-top: 42px;
+  top: calc(100% - 24px);
+  transition: all 0.25s ease-in-out;
+  transform: translateY(40px);
+}
+
+.nav__submenu.nav__visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(20px);
+  transition: all 0.25s ease-in-out;
+}
+
+.nav__submenu.nav__left {
+  left: -150%;
+}
+
+.sub__elem {
+  padding: 30px;
+  position: relative;
+  background-color: #fff;
+  border-top: 2px solid #000;
+  box-shadow: 0px 5px 20px rgb(0 0 0 / 12%);
+}
+
+.nav__submenu__item_hover:hover::before {
+  width: 18px;
+  background-color: #000;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav__submenu__item_hover:hover a {
+  color: #000;
+  padding-left: 10px !important;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav__submenu__item {
+  list-style-type: none;
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  padding-left: 20px !important;
+  transition: all 0.25s ease-in-out;
+}
+.nav__submenu__item:last-of-type {
+  padding-bottom: 0px !important;
+}
+
+.nav__submenu__item__before::before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 0;
+  content: ' ';
+  width: 10px;
+  height: 1px;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0);
+  transition: all 0.25s ease-in-out;
+}
+
+.nav__submenu__item__before a {
+  transition: all 0.25s ease-in-out;
+}
+
+.nav__submenu__services {
+  padding: 12px;
+  width: 750px;
+}
+
+.nav__submenu__services_title {
+  font-size: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav__submenu__services_container {
+  display: flex;
+  padding: 24px 0px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav__submenu__services_container_name {
+  padding-bottom: 12px;
+}
+
+.nav__submenu__services_item {
+  width: calc(100% / 3);
+}
+
+.nav__submenu__services__extra {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  justify-content: space-between;
+}
+
+.nav__submenu__services__extra__item {
+  font-size: 18px;
+}
