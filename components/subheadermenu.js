@@ -27,7 +27,7 @@ export default function SubHeaderMenu(props) {
                 Our Services
               </div>
               <div className={styles.nav__submenu__services_container}>
-                {dataArr.map(({ submeta, name, id }) => (
+                {dataArr.map(({ submeta = [], name, id }) => (
                   <div className={styles.nav__submenu__services_item}>
                     <div
                       className={styles.nav__submenu__services_container_name}

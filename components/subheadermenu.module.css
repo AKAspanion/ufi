@@ -3,6 +3,7 @@
   position: absolute;
   left: 22px;
   opacity: 0;
+  color: black;
   min-width: 220px;
   padding-top: 42px;
   top: calc(100% - 24px);
