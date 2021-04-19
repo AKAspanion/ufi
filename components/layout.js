@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-export default function Layout({ children }) {
+export default function Layout({ darkHeader, children }) {
   return (
     <div>
       <Head>
@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         <meta name="description" content="Website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
+      <Header darkHeader={darkHeader} />
       <main>{children}</main>
       <Footer />
     </div>

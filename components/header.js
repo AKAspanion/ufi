@@ -1,4 +1,5 @@
 import cs from 'classnames';
+import Link from 'next/link';
 import { useState } from 'react';
 import { CgClose } from 'react-icons/cg';
 import Collapsible from 'react-collapsible';
@@ -66,13 +67,17 @@ const submeta = [
   },
 ];
 
-export default function Header() {
+export default function Header({ darkHeader = false }) {
   const [dark, setDark] = useState(false);
+  const [onTop, setOnTop] = useState(false);
   const [active, setActive] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
 
+  const isDark = () => (darkHeader ? true : dark);
+
   useScrollPosition(({ currPos }) => {
     setDark(currPos.y < 0);
+    setOnTop(currPos.y < 0);
   });
 
   const checkIfHasSubmenu = (id, active) => {
@@ -97,7 +102,12 @@ export default function Header() {
 
   return (
     <header>
-      <nav className={cs(styles.navbar, { [styles.dark]: dark === true })}>
+      <nav
+        className={cs(styles.navbar, {
+          [styles.dark]: isDark() === true,
+          [styles.on__top]: onTop === true,
+        })}
+      >
         <div className={styles.container}>
           <a className={styles.logo}>LOGO</a>
           <div className={styles.content}>
@@ -116,7 +126,7 @@ export default function Header() {
                       ],
                     )}
                   >
-                    {name}
+                    <Link href={`/${name.toLowerCase()}`}>{name}</Link>
                     {['Services', 'Portfolio', 'Company'].includes(name) && (
                       <div className={styles.menu_item_arrow}>
                         <span
@@ -135,7 +145,7 @@ export default function Header() {
             </div>
           </div>
           <div className={styles.call}>
-            <Button dark={dark} borderedReverse={dark}>
+            <Button dark={isDark()} borderedReverse={isDark()}>
               Contact Us
             </Button>
           </div>
@@ -143,7 +153,10 @@ export default function Header() {
             {showMenu ? (
               <CgClose size={32} />
             ) : (
-              <HiOutlineMenuAlt4 size={32} color={dark ? 'black' : 'white'} />
+              <HiOutlineMenuAlt4
+                size={32}
+                color={isDark() ? 'black' : 'white'}
+              />
             )}
           </div>
           <div
@@ -162,7 +175,7 @@ export default function Header() {
                     <Collapsible
                       trigger={
                         <div key={id} className={styles.menu__top__title}>
-                          {name}
+                          <Link href={`/${name.toLowerCase()}`}>{name}</Link>
                           {getNested(id).length !== 0 && <BsChevronDown />}
                         </div>
                       }
