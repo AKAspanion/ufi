@@ -17,7 +17,7 @@ export default function Button({
         [styles.tag__style]: tag === true,
       })}
     >
-      {children}
+      <p>{children}</p>
     </button>
   );
 }
