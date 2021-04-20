@@ -1,5 +1,6 @@
 import cs from 'classnames';
 import { useState } from 'react';
+import Link from 'next/link'
 import { CgClose } from 'react-icons/cg';
 import Collapsible from 'react-collapsible';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
@@ -10,10 +11,10 @@ import styles from './header.module.css';
 import Button from './button';
 
 const liMeta = [
-  { id: 1, name: 'Services' },
-  { id: 2, name: 'How we work' },
-  { id: 3, name: 'Portfolio' },
-  { id: 4, name: 'Company' },
+  { id: 1, name: 'Services', link: '#' },
+  { id: 2, name: 'How we work', link: '/how-we-work' },
+  { id: 3, name: 'Portfolio', link: '#' },
+  { id: 4, name: 'Company', link: '#' },
 ];
 
 const oneData = [
@@ -103,7 +104,7 @@ export default function Header() {
           <div className={styles.content}>
             <div className={styles.content__main}>
               <ul className={styles.navbar__ul}>
-                {liMeta.map(({ name, id }) => (
+                {liMeta.map(({ name, id, link }) => (
                   <li
                     key={id}
                     onMouseOver={() => setActive(id)}
@@ -116,7 +117,9 @@ export default function Header() {
                       ],
                     )}
                   >
-                    {name}
+                    <Link href={link}>
+                      <a>{name}</a>
+                    </Link>
                     {['Services', 'Portfolio', 'Company'].includes(name) && (
                       <div className={styles.menu_item_arrow}>
                         <span
@@ -143,8 +146,8 @@ export default function Header() {
             {showMenu ? (
               <CgClose size={32} />
             ) : (
-              <HiOutlineMenuAlt4 size={32} color={dark ? 'black' : 'white'} />
-            )}
+                <HiOutlineMenuAlt4 size={32} color={dark ? 'black' : 'white'} />
+              )}
           </div>
           <div
             className={cs(styles.menu__wrapper, {
