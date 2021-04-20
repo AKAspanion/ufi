@@ -52,3 +52,23 @@
 .dark.bordered_reverse {
   border-color: var(--bg-color);
 }
+
+.button.tag__style {
+  font-size: 14px;
+  line-height: 26px;
+  padding: 2px 12px 1px 12px;
+  transition: all 0.3s ease-in-out;
+  border: 1px rgba(0, 0, 0, 0.15) solid;
+  font-size: 14px;
+  height: 32px;
+  min-width: auto;
+  text-transform: capitalize;
+
+  --text-color: rgba(0, 0, 0, 0.5);
+  --bg-color: white;
+}
+
+.button.tag__style:hover {
+  --text-color: rgba(0, 0, 0, 1);
+  --bg-color: white;
+}

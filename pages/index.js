@@ -201,7 +201,7 @@ export default function Home() {
   const isSmall = width < 575;
   const isMedium = width < 980;
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>Website</title>
         <link
