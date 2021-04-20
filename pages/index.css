@@ -5,14 +5,16 @@ body {
   box-sizing: border-box;
 }
 
-.p_0{
+.p_0 {
   padding: 0 !important;
 }
 
-a:hover{
+a:hover {
   color: rgba(0, 0, 0, 0.8);
+  text-decoration: none !important;
 }
 a {
-  color: inherit;
+  cursor: pointer;
   text-decoration: none;
+  color: inherit !important;
 }

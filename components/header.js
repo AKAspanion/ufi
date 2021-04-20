@@ -1,7 +1,6 @@
 import cs from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
-import Link from 'next/link'
 import { CgClose } from 'react-icons/cg';
 import Collapsible from 'react-collapsible';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
@@ -14,7 +13,7 @@ import Button from './button';
 const liMeta = [
   { id: 1, name: 'Services', link: '#' },
   { id: 2, name: 'How we work', link: '/how-we-work' },
-  { id: 3, name: 'Portfolio', link: '#' },
+  { id: 3, name: 'Portfolio', link: '/portfolio' },
   { id: 4, name: 'Company', link: '#' },
 ];
 
@@ -110,7 +109,10 @@ export default function Header({ darkHeader = false }) {
         })}
       >
         <div className={styles.container}>
-          <a className={styles.logo}>LOGO</a>
+          <div className={styles.logo}>
+            <div className={styles.logo__img}></div>
+            <Link href={'/'}>LOGO</Link>
+          </div>
           <div className={styles.content}>
             <div className={styles.content__main}>
               <ul className={styles.navbar__ul}>
@@ -127,7 +129,7 @@ export default function Header({ darkHeader = false }) {
                       ],
                     )}
                   >
-                    <Link href={`/${name.toLowerCase()}`}>{name}</Link>
+                    <Link href={link}>{name}</Link>
                     {['Services', 'Portfolio', 'Company'].includes(name) && (
                       <div className={styles.menu_item_arrow}>
                         <span
@@ -154,11 +156,11 @@ export default function Header({ darkHeader = false }) {
             {showMenu ? (
               <CgClose size={32} />
             ) : (
-                <HiOutlineMenuAlt4
-                  size={32}
-                  color={isDark() ? 'black' : 'white'}
-                />
-              )}
+              <HiOutlineMenuAlt4
+                size={32}
+                color={isDark() ? 'black' : 'white'}
+              />
+            )}
           </div>
           <div
             className={cs(styles.menu__wrapper, {
