@@ -368,3 +368,71 @@ export const coreItems = [
     action: 'Explore',
   },
 ];
+
+export const expertise = [
+  {
+    id: 1,
+    name: 'AR/VR',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-AR-VR@4x.jpg',
+    desc:
+      'We work with the latest sensations in the tech industry and ensure to \
+      deliver best-in-class AR/VR solutions with immersive experiences.',
+  },
+  {
+    id: 2,
+    name: 'Media & Entertainment',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Shopping-E-commerce@4x.jpg',
+    desc:
+      'We innovate the ways your audience experiences entertainment. Get next-generation solutions for media & entertainment landscape.',
+  },
+  {
+    id: 3,
+    name: 'Blockchain & IoT',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Blockchain-IoT@4x.jpg',
+    desc:
+      'Let your customers experience the future and transform your business with our high-end Blockchain & IoT solutions.',
+  },
+  {
+    id: 4,
+    name: 'AI/ML',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-AI-ML@4x.jpg',
+    desc:
+      'With our AI/ML experts, we assist businesses to turn the big promises of AI/ML technologies into quantifiable business impact.',
+  },
+  {
+    id: 5,
+    name: 'Health & Fitness',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Health-Finance@4x.jpg',
+    desc:
+      'Get high-end mHealth solutions to improve medical care & patient services. Our tech solutions are redefining healthcare services.',
+  },
+  {
+    id: 6,
+    name: 'Banking & Finance',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Banking-Finance@4x.jpg',
+    desc:
+      'Our smart & customer-centric solutions assist businesses to outsmart competitors and modernize banking and finance-related services.',
+  },
+  {
+    id: 7,
+    name: 'Shopping & E-Commerce',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Shopping-E-commerce@4x.jpg',
+    desc:
+      'We design & develop user-engaging eCommerce applications that improve ROI, increase brand exposure, and skyrocket your online business',
+  },
+  {
+    id: 8,
+    name: 'Education & E-Learning',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Education-ELearning@4x.jpg',
+    desc:
+      'Our high-end tech solutions revamp the education industry and assist it to offer students a more personalized eLearning experience.',
+  },
+];

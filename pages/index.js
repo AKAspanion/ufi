@@ -1,6 +1,8 @@
 import cs from 'classnames';
 import Head from 'next/head';
 import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Carousel } from 'react-responsive-carousel';
 import { useResizeDetector } from 'react-resize-detector';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -12,11 +14,13 @@ import Button from '../components/button';
 import Layout from '../components/layout';
 
 import styles from './index.module.css';
+import 'swiper/swiper-bundle.css';
 
 import {
   stats,
   process,
   coreItems,
+  expertise,
   portfolio,
   processNav,
   praiseList,
@@ -35,6 +39,8 @@ const arrowStyles = {
   fontWeight: 'bold',
   cursor: 'pointer',
 };
+
+SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 export default function Home() {
   const [selectedNav, setSelectedNav] = useState(0);
@@ -308,6 +314,47 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
+      </section>
+      <section className={styles.expertise}>
+        <h2 className={styles.expertise__title}>Our expertise</h2>
+        {!isMedium && (
+          <>
+            <div className={styles.expertise__left__btn}>
+              <BsChevronLeft size={40} />
+            </div>
+            <div className={styles.expertise__right__btn}>
+              <BsChevronRight size={40} />
+            </div>
+          </>
+        )}
+        <Swiper
+          loop
+          autoPlay={{
+            delay: 2000,
+          }}
+          navigation={
+            isMedium
+              ? false
+              : {
+                  prevEl: `.${styles.expertise__left__btn}`,
+                  nextEl: `.${styles.expertise__right__btn}`,
+                }
+          }
+          spaceBetween={32}
+          slidesPerView={isMedium ? 2 : 4}
+        >
+          {expertise.map(({ id, name, desc, img }) => (
+            <SwiperSlide key={id}>
+              <div className={styles.expertise__content}>
+                <div className={styles.expertise__img}>
+                  <img src={img} alt={name} />
+                </div>
+                <div className={styles.expertise__name}>{name}</div>
+                <div className={styles.expertise__desc}>{desc}</div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
       <section className={styles.project}>
         <div className={styles.project__left}>
