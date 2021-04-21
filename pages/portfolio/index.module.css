@@ -131,3 +131,10 @@
 }
 
 /* @media (max-width: 575px) {} */
+
+.text__white{
+  color: #fff !important;
+}
+.text__black{
+  color: #000000;
+}

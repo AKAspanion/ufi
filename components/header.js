@@ -1,7 +1,6 @@
 import cs from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
-import Link from 'next/link'
 import { CgClose } from 'react-icons/cg';
 import Collapsible from 'react-collapsible';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
@@ -14,7 +13,7 @@ import Button from './button';
 const liMeta = [
   { id: 1, name: 'Services', link: '#' },
   { id: 2, name: 'How we work', link: '/how-we-work' },
-  { id: 3, name: 'Portfolio', link: '#' },
+  { id: 3, name: 'Portfolio', link: '/portfolio' },
   { id: 4, name: 'Company', link: '#' },
 ];
 
@@ -107,29 +106,34 @@ export default function Header({ darkHeader = false }) {
         className={cs(styles.navbar, {
           [styles.dark]: isDark() === true,
           [styles.on__top]: onTop === true,
-        })}
+        }, styles.navbar__expand__lg)}
       >
         <div className={styles.container}>
           <a className={styles.logo}>LOGO</a>
           <div className={styles.content}>
-            <div className={styles.content__main}>
-              <ul className={styles.navbar__ul}>
+            <div className={cs(styles.content__main, styles.main__bottom__navbar)}>
+              <ul className={cs(styles.navbar__ul, styles.navbar__nav)}>
                 {liMeta.map(({ name, id, link }) => (
                   <li
                     key={id}
                     onMouseOver={() => setActive(id)}
                     onMouseOut={() => setActive(null)}
-                    className={cs(
+                    className={cs([
                       styles.navbar__li,
                       ['Services', 'Portfolio', 'Company'].includes(name) && [
                         styles.navbar__li__after,
                         styles.navbar__li_hover,
                       ],
+                      styles.nav__item,
+                      styles.li,
+                      styles.has__uipl__mega__menu,
+                      { [styles.sub__menu__active]: active == id }
+                    ],
                     )}
                   >
-                    <Link href={`/${name.toLowerCase()}`}>{name}</Link>
+                    <Link href={link} className={styles.nav__link, styles.dropdown__toggle}>{name}</Link>
                     {['Services', 'Portfolio', 'Company'].includes(name) && (
-                      <div className={styles.menu_item_arrow}>
+                      <div className={styles.uipl__sub__menu__arrow}>
                         <span
                           className={cs([
                             styles.menu_item_arrow__before,
@@ -161,9 +165,10 @@ export default function Header({ darkHeader = false }) {
               )}
           </div>
           <div
-            className={cs(styles.menu__wrapper, {
+            className={cs([styles.menu__wrapper, {
               [styles.menu__wrapper_visible]: showMenu === true,
-            })}
+            }, styles.uipl__mega__menu__wraper, 'd-none'
+            ])}
           >
             <div className={styles.menu__header}>
               <div className={styles.menu__logo}></div>

@@ -4,8 +4,10 @@ import { FaQuoteLeft } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import { useResizeDetector } from 'react-resize-detector';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import Button from '../../components/button';
+
 import Layout from '../../components/layout';
 
 import styles from './index.module.css';
@@ -316,10 +318,16 @@ const getSubSection = (obj) => {
 }
 
 export default function Home() {
+    const [scrollY, setScrollY] = useState(0);
     const [selectedNav, setSelectedNav] = useState(0);
     const { width, ref } = useResizeDetector();
     const [collapsible, setcollapsible] = useState({ collapsible1: false, collapsible2: false });
 
+    useScrollPosition(({ currPos }) => {
+        console.log(parseInt(-1 * (scrollY / 100)));
+        console.log(scrollY / 100);
+        setScrollY(currPos.y);
+    });
     const isSmall = width < 575;
     const isMedium = width < 980;
     const handleCollapse = (id) => {
@@ -338,7 +346,7 @@ export default function Home() {
     };
 
     return (
-        <Layout howWeWork>
+        <Layout darkHeader>
             <Head>
                 <title>Website</title>
                 <link
@@ -367,16 +375,18 @@ export default function Home() {
                             Let’s talk about the specifics
                         </h3>
                     </div>
-                    <nav className={cs([styles.sidebar, styles.fixed, styles.cd__vertical__nav])} >
+                    <nav className={cs([styles.sidebar, { [styles.fixed]: (-100 < scrollY / 100 && scrollY / 100 < -4) }, styles.cd__vertical__nav,])} >
                         <ul>
                             {processNav.map(({ id, name }) => (
                                 <li
                                     key={id}
                                     onClick={() => setSelectedNav(id - 1)}
                                     className={cs({
-                                        [styles.process__nav__selected]: id - 1 === selectedNav,
+                                        [styles.a]: parseInt((-1 * (scrollY / 1000)) - 3) == id
                                     })}
-                                ><a href="" className={cs([styles.a_link, styles.a__li])}>
+                                ><a href="" className={cs([styles.a_link, styles.a__li], {
+                                    [styles.a__is__selected]: parseInt((-1 * (scrollY / 1000)) - 1) == id,
+                                })}>
                                         <span>
                                             {`${id}. ${name}`}
                                         </span>
@@ -384,6 +394,11 @@ export default function Home() {
                                 </li>
                             ))}
                         </ul>
+                        <div className={cs(styles.header)}>
+                            <div className={cs(styles.progress__container)}>
+                                <div className={cs(styles.progress__bar)} id="myBar" style={{ 'height': `${-1 * (scrollY / 100)}%` }}></div>
+                            </div>
+                        </div>
                     </nav>
                 </div>
                 <div className={cs([styles.scroll__right, 'p-0'])}>

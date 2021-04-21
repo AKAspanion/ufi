@@ -1050,3 +1050,26 @@
         line-height: 5.07;
         color: #bababa;
     }
+    .a__is__selected{
+      color: #000000 !important;
+      opacity: 1;
+    }
+    .fixed .header {
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 0;
+    }
+    .progress__container {
+      width: 1px;
+      height: 470px;
+      background: #e6e6e6;
+    }
+    .progress__bar {
+      height: 0%;
+      background: #000000;
+      width: 1px;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+    }

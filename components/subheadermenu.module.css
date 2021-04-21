@@ -5,8 +5,8 @@
   opacity: 0;
   color: black;
   min-width: 220px;
-  padding-top: 42px;
-  top: calc(100% - 24px);
+  padding-top: 18px;
+  top: calc(100% - 24.5px);
   transition: all 0.25s ease-in-out;
   transform: translateY(40px);
 }
