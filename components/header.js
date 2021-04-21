@@ -170,7 +170,7 @@ export default function Header({ darkHeader = false }) {
           <div
             className={cs([styles.menu__wrapper, {
               [styles.menu__wrapper_visible]: showMenu === true,
-            }, styles.uipl__mega__menu__wraper, 'd-none'
+            },
             ])}
           >
             <div className={styles.menu__header}>
