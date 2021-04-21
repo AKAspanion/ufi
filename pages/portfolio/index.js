@@ -1,11 +1,11 @@
 import cs from 'classnames';
 import Head from 'next/head';
-import Layout from '../components/layout';
 import { useInView } from 'react-intersection-observer';
 
 import styles from './portfolio.module.css';
-import { work } from '../assets/data';
-import Button from '../components/button';
+import Button from '../../components/button';
+import Layout from '../../components/layout';
+import { work } from '../../assets/data';
 
 export default function Portfolio() {
   return (

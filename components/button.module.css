@@ -102,3 +102,11 @@
   --text-color: black;
   --bg-color: white;
 }
+
+.button.icon__style {
+  width: auto;
+  height: auto;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 16px;
+}
