@@ -29,8 +29,8 @@
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
-.dark a{
-  color:#000000 !important;
+.dark a {
+  color: #000000 !important;
 }
 
 .container {
@@ -45,15 +45,22 @@
 }
 
 .logo {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border: 1px solid var(--text-color);
 }
 
 .content {
@@ -91,14 +98,14 @@
   line-height: 22px;
 }
 
-.navbar__li{
+.navbar__li {
   list-style: none;
   display: block;
   padding: 11px 24px !important;
   position: relative;
 }
 
-.navbar__li a{
+.navbar__li a {
   text-decoration: none;
   color: #fff;
 }
@@ -285,7 +292,7 @@
   width: 100%;
   display: flex;
   cursor: pointer;
-  padding: 24px 0px;
+  padding: 14px 0px;
   justify-content: space-between;
 }
 

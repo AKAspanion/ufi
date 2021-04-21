@@ -109,7 +109,10 @@ export default function Header({ darkHeader = false }) {
         }, styles.navbar__expand__lg)}
       >
         <div className={styles.container}>
-          <a className={styles.logo}>LOGO</a>
+          <div className={styles.logo}>
+            <div className={styles.logo__img}></div>
+            <Link href={'/'}>LOGO</Link>
+          </div>
           <div className={styles.content}>
             <div className={cs(styles.content__main, styles.main__bottom__navbar)}>
               <ul className={cs(styles.navbar__ul, styles.navbar__nav)}>

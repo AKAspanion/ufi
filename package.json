@@ -20,6 +20,7 @@
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.31.1",
     "react-resize-detector": "^6.6.5",
-    "react-responsive-carousel": "^3.2.18"
+    "react-responsive-carousel": "^3.2.18",
+    "swiper": "^6.5.7"
   }
 }

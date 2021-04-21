@@ -4,6 +4,7 @@ import cs from 'classnames';
 export default function Button({
   tag,
   dark,
+  icon,
   bordered,
   children,
   borderedReverse,
@@ -15,9 +16,10 @@ export default function Button({
         [styles.bordered]: bordered === true,
         [styles.bordered_reverse]: borderedReverse === true,
         [styles.tag__style]: tag === true,
+        [styles.icon__style]: icon === true,
       })}
     >
-      {children}
+      <p>{children}</p>
     </button>
   );
 }

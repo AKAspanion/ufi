@@ -1,6 +1,7 @@
 .button {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --bg-color: white;
+  --text-color: black;
+
   position: relative;
   text-align: center;
   outline: none;
@@ -12,6 +13,7 @@
   height: 52px;
   cursor: pointer;
   font-size: 16px;
+  overflow: hidden;
   padding: 0px 32px;
   text-align: center;
   box-sizing: border-box;
@@ -19,8 +21,6 @@
   color: var(--text-color);
   text-transform: uppercase;
   background: var(--bg-color);
-  transition: all 0.25s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
   font-family: 'Circular Std Book';
   border-top: 0px solid var(--text-color);
   border-left: 0px solid var(--text-color);
@@ -28,19 +28,46 @@
   border-bottom: 0px solid var(--text-color);
 }
 
-.button:hover {
-  box-shadow: inset 0 -52px 0 var(--text-color);
+.button > p {
+  z-index: 1;
+  position: relative;
+  margin: 0 !important;
+  text-align: center;
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.button::before {
+  content: '';
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  background: var(--text-color);
+}
+
+.button:hover:before {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover > p {
   color: var(--bg-color);
 }
 
 .dark {
-  --bg-color: #000000;
-  --text-color: #ffffff;
+  --bg-color: black;
+  --text-color: white;
 }
 
 .bordered {
-  --bg-color: #000000;
-  --text-color: #ffffff;
+  --bg-color: black;
+  --text-color: white;
   border-width: 2px !important;
 }
 
@@ -54,21 +81,32 @@
 }
 
 .button.tag__style {
+  height: 32px;
+  min-width: auto;
+  font-size: 14px;
   font-size: 14px;
   line-height: 26px;
   padding: 2px 12px 1px 12px;
   transition: all 0.3s ease-in-out;
   border: 1px rgba(0, 0, 0, 0.15) solid;
-  font-size: 14px;
-  height: 32px;
-  min-width: auto;
-  text-transform: capitalize;
 
   --text-color: rgba(0, 0, 0, 0.5);
   --bg-color: white;
 }
 
+.button.tag__style > p {
+  text-transform: capitalize;
+}
+
 .button.tag__style:hover {
-  --text-color: rgba(0, 0, 0, 1);
+  --text-color: black;
   --bg-color: white;
+}
+
+.button.icon__style {
+  width: auto;
+  height: auto;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 16px;
 }
