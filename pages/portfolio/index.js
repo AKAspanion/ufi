@@ -1,4 +1,5 @@
 import cs from 'classnames';
+import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import { useInView } from 'react-intersection-observer';
@@ -35,7 +36,7 @@ export default function Portfolio() {
 }
 
 const PortfolioCard = ({ detail = {} }) => {
-  const { id, img, name, color, description, tags } = detail;
+  const { id, img, link = '#', name, color, description, tags } = detail;
 
   const { ref, inView } = useInView({
     threshold: 0,
@@ -48,16 +49,20 @@ const PortfolioCard = ({ detail = {} }) => {
           [styles.img__inview]: inView === true,
         })}
       >
-        <img alt={name} src={img} />
+        <Link href={link}>
+          <img alt={name} src={img} />
+        </Link>
       </div>
       <div className={styles.portfolio__list__item__data}>
         <div
           style={{ '--title-color': color }}
           className={styles.portfolio__list__item__title}
         >
-          {name}
+          <Link href={link}>{name}</Link>
         </div>
-        <div className={styles.portfolio__list__item__desc}>{description}</div>
+        <div className={styles.portfolio__list__item__desc}>
+          <Link href={link}>{description}</Link>
+        </div>
         <div className={styles.portfolio__list__item__tags}>
           {tags.map(tag => (
             <>

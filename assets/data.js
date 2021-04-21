@@ -16,6 +16,7 @@ export const work = [
     id: 2,
     color: '#1cc2e5',
     name: 'Openreel Inc.',
+    link: '/portfolio/open-reel',
     description:
       'We helped build this multi-million dollar SaaS video platform with patented technology',
     tags: ['Consulting', 'UI/UX', 'Mobile App Solution'],
@@ -434,5 +435,90 @@ export const expertise = [
       'https://www.unifiedinfotech.net/assets/images/Home-Industry-Education-ELearning@4x.jpg',
     desc:
       'Our high-end tech solutions revamp the education industry and assist it to offer students a more personalized eLearning experience.',
+  },
+];
+
+export const overviewLinks = [
+  { id: 1, name: 'website', action: 'visit' },
+  { id: 2, name: 'appstore', action: 'download on' },
+  { id: 3, name: 'googleplay', action: 'get it on' },
+  { id: 4, name: 'chrome plugin', action: 'download' },
+];
+
+export const serviceList = [
+  'Consulting and Strategy',
+  'Information Architecture',
+  'UX/UI Design',
+  'Web Development',
+  'Mobile App Development',
+  'Browser Extension Development',
+];
+
+export const results = [
+  'Patent approved remote video shooting technology',
+  'Received multi-million dollar venture funding',
+  'Used by fortune 500 companies and corporations',
+];
+
+export const parallaxMeta = styles => [
+  {
+    id: 2,
+    className: styles.parallax__blue,
+    name: 'Patented remote shooting',
+    desc:
+      'A platform offering various modes of video recording that caters \
+      to the client need. There is the option for direct and remote recording\
+      making the entire experience user-friendly, seamless and convenient.\
+      A leap towards next-generation video shooting, making, and promotion.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-001@2x.png',
+  },
+  {
+    id: 2,
+    className: '',
+    name: 'Online video editing',
+    desc:
+      'Whether you’re doing a marketing campaign, creating engaging company updates, \
+      selling products and services or creating a client video testimonial, \
+      OpenReel puts you in the director’s chair. The application comes fully \
+      loaded with several customization options making sure your video is unique and engaging.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-002@2x.png',
+  },
+  {
+    id: 3,
+    className: styles.parallax__dark,
+    name: 'Campaign Management',
+    desc:
+      'You can create business campaigns using videos as a\
+      promotional event. The platform facilitates the entire process\
+      end to end with optimum assistance and guidance.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-003@2x.png',
+  },
+  {
+    id: 4,
+    className: '',
+    name: 'Social media marketing',
+    desc:
+      'This allows you to post videos on various social media\
+    platforms with it. The platform provides calendar\
+    functionality as well with this feature that can be used for\
+    scheduled uploads across predefined timeslots.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-004@2x.png',
+  },
+  {
+    id: 5,
+    className: styles.parallax__blue,
+    name: 'Tracking and analytics',
+    desc:
+      'A complete business-centric analytics segment that allows\
+gaining insight on important statistics such as region wise\
+views, user view count, view time, call to action, engagement\
+percentage and much more. A display that is graphical as well\
+as numerical.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-005@2x.png',
   },
 ];
