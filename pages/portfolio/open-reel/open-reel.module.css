@@ -249,6 +249,7 @@
   width: 100%;
   position: relative;
   margin-bottom: 8%;
+  overflow: hidden;
 }
 
 .seamless__slide {
