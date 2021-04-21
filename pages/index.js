@@ -188,7 +188,7 @@ export default function Home() {
           }
         >
           {portfolio.map(({ id, name, title, img, desc }) => (
-            <div key={id} style={{ padding: '5%' }}>
+            <div key={id} style={isSmall ? {} : { padding: '5%' }}>
               <section className={styles.standout}>
                 <div
                   className={cs(styles.standout__right, styles.carousel__right)}

@@ -557,8 +557,17 @@
     width: 100%;
     padding: 10% 5%;
   }
+  .core__item {
+    padding: 32px 32px 90px 32px;
+  }
   .core__title {
     font-size: 32px;
+  }
+  .core__btn {
+    left: 32px;
+  }
+  .core__content__btn {
+    padding-bottom: 10%;
   }
   .process__content__left {
     display: none;
@@ -567,8 +576,19 @@
     width: 100%;
   }
 
+  .standout__right.carousel__right {
+    padding: 5% !important;
+  }
   .standout__left.carousel__left {
     padding: 10% 5% !important;
+  }
+
+  .expertise {
+    padding: 10% 5%;
+  }
+
+  .process {
+    padding: 10% 5%;
   }
 
   .project__left,

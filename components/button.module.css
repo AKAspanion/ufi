@@ -87,12 +87,15 @@
   font-size: 14px;
   line-height: 26px;
   padding: 2px 12px 1px 12px;
-  text-transform: capitalize;
   transition: all 0.3s ease-in-out;
   border: 1px rgba(0, 0, 0, 0.15) solid;
 
   --text-color: rgba(0, 0, 0, 0.5);
   --bg-color: white;
+}
+
+.button.tag__style > p {
+  text-transform: capitalize;
 }
 
 .button.tag__style:hover {
