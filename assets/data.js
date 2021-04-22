@@ -37,6 +37,7 @@ export const work = [
     id: 4,
     color: '#f5a623',
     name: 'Houselab',
+    link: '/portfolio/houselab',
     description:
       'Engineered a cloud based document management platform for architects, agents & homeowners',
     tags: ['UI/UX', 'Web App Development'],

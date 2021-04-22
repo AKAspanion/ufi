@@ -11,10 +11,10 @@ import styles from './header.module.css';
 import Button from './button';
 
 const liMeta = [
-  { id: 1, name: 'Services', link: '#' },
+  { id: 1, name: 'Services', link: '' },
   { id: 2, name: 'How we work', link: '/how-we-work' },
-  { id: 3, name: 'Portfolio', link: '/portfolio' },
-  { id: 4, name: 'Company', link: '#' },
+  { id: 3, name: 'Portfolio', link: '' },
+  { id: 4, name: 'Company', link: '' },
 ];
 
 const oneData = [
@@ -53,8 +53,8 @@ const submeta = [
   },
   {
     3: [
-      { id: 31, name: 'Projects' },
-      { id: 32, name: 'UI/UX Gallery' },
+      { id: 31, name: 'Projects', link: '/portfolio' },
+      { id: 32, name: 'UI/UX Gallery', link: '/ui-ux' },
     ],
   },
   {
@@ -103,10 +103,14 @@ export default function Header({ darkHeader = false }) {
   return (
     <header>
       <nav
-        className={cs(styles.navbar, {
-          [styles.dark]: isDark() === true,
-          [styles.on__top]: onTop === true,
-        }, styles.navbar__expand__lg)}
+        className={cs(
+          styles.navbar,
+          {
+            [styles.dark]: isDark() === true,
+            [styles.on__top]: onTop === true,
+          },
+          styles.navbar__expand__lg,
+        )}
       >
         <div className={styles.container}>
           <div className={styles.logo}>
@@ -114,7 +118,9 @@ export default function Header({ darkHeader = false }) {
             <Link href={'/'}>LOGO</Link>
           </div>
           <div className={styles.content}>
-            <div className={cs(styles.content__main, styles.main__bottom__navbar)}>
+            <div
+              className={cs(styles.content__main, styles.main__bottom__navbar)}
+            >
               <ul className={cs(styles.navbar__ul, styles.navbar__nav)}>
                 {liMeta.map(({ name, id, link }) => (
                   <li
@@ -130,11 +136,19 @@ export default function Header({ darkHeader = false }) {
                       styles.nav__item,
                       styles.li,
                       styles.has__uipl__mega__menu,
-                      { [styles.sub__menu__active]: active == id }
-                    ],
-                    )}
+                      { [styles.sub__menu__active]: active == id },
+                    ])}
                   >
-                    <Link href={link} className={styles.nav__link, styles.dropdown__toggle}>{name}</Link>
+                    {link !== '' ? (
+                      <Link
+                        href={link}
+                        className={(styles.nav__link, styles.dropdown__toggle)}
+                      >
+                        {name}
+                      </Link>
+                    ) : (
+                      name
+                    )}
                     {['Services', 'Portfolio', 'Company'].includes(name) && (
                       <div className={styles.uipl__sub__menu__arrow}>
                         <span
@@ -161,16 +175,18 @@ export default function Header({ darkHeader = false }) {
             {showMenu ? (
               <CgClose size={32} />
             ) : (
-                <HiOutlineMenuAlt4
-                  size={32}
-                  color={isDark() ? 'black' : 'white'}
-                />
-              )}
+              <HiOutlineMenuAlt4
+                size={32}
+                color={isDark() ? 'black' : 'white'}
+              />
+            )}
           </div>
           <div
-            className={cs([styles.menu__wrapper, {
-              [styles.menu__wrapper_visible]: showMenu === true,
-            },
+            className={cs([
+              styles.menu__wrapper,
+              {
+                [styles.menu__wrapper_visible]: showMenu === true,
+              },
             ])}
           >
             <div className={styles.menu__header}>
@@ -179,33 +195,48 @@ export default function Header({ darkHeader = false }) {
             </div>
             <div className={styles.menu__container}>
               <div className={styles.menu__top}>
-                {liMeta.map(({ id, name }) => (
+                {liMeta.map(({ id, name, link }) => (
                   <>
                     <Collapsible
+                      key={id}
                       trigger={
                         <div key={id} className={styles.menu__top__title}>
-                          <Link href={`/${name.toLowerCase()}`}>{name}</Link>
+                          {getNested(id).length === 0 ? (
+                            <Link href={link}>{name}</Link>
+                          ) : (
+                            name
+                          )}
                           {getNested(id).length !== 0 && <BsChevronDown />}
                         </div>
                       }
                     >
                       <div className={styles.menu__top__sub}>
-                        {getNested(id).map(({ id, name, submeta = [] }) => (
-                          <Collapsible
-                            trigger={
-                              <div key={id} className={styles.menu__sub__head}>
-                                {name}
-                                {submeta.length !== 0 && <BsChevronDown />}
-                              </div>
-                            }
-                          >
-                            {submeta.map(({ id, name }) => (
-                              <div key={id} className={styles.menu_sub__sub}>
-                                {name}
-                              </div>
-                            ))}
-                          </Collapsible>
-                        ))}
+                        {getNested(id).map(
+                          ({ id, name, link: link2 = '#', submeta = [] }) => (
+                            <Collapsible
+                              key={id}
+                              trigger={
+                                <div
+                                  key={id}
+                                  className={styles.menu__sub__head}
+                                >
+                                  {submeta.length === 0 ? (
+                                    <Link href={link2}>{name}</Link>
+                                  ) : (
+                                    name
+                                  )}
+                                  {submeta.length !== 0 && <BsChevronDown />}
+                                </div>
+                              }
+                            >
+                              {submeta.map(({ id, name, link = '#' }) => (
+                                <div key={id} className={styles.menu_sub__sub}>
+                                  {name}
+                                </div>
+                              ))}
+                            </Collapsible>
+                          ),
+                        )}
                       </div>
                     </Collapsible>
                   </>

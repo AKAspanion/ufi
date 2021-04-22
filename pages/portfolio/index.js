@@ -20,7 +20,7 @@ export default function Portfolio() {
       image.src = img;
     });
 
-    window.onscroll = function () {
+    const onscroll = function () {
       clearTimeout(scrollTimeout);
 
       setScrolling(true);
@@ -29,6 +29,10 @@ export default function Portfolio() {
         setScrolling(false);
       }, 10);
     };
+
+    window.addEventListener('scroll', onscroll);
+
+    () => window.removeEventListener('scroll', onscroll);
   }, []);
 
   return (
@@ -57,7 +61,7 @@ export default function Portfolio() {
   );
 }
 
-const PortfolioCard = ({ detail = {}, scrolling }) => {
+const PortfolioCard = ({ key, detail = {}, scrolling }) => {
   const [view, setView] = useState(false);
   const { id, img, link = '#', name, color, description, tags } = detail;
 
@@ -72,7 +76,7 @@ const PortfolioCard = ({ detail = {}, scrolling }) => {
   }, [inView, scrolling]);
 
   return (
-    <div ref={ref} key={id} className={styles.portfolio__list__item}>
+    <div ref={ref} key={key} className={styles.portfolio__list__item}>
       <div
         className={cs(styles.portfolio__list__item__img, {
           [styles.img__inview]: view === true,

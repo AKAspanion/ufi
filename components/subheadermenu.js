@@ -1,9 +1,7 @@
 import cs from 'classnames';
-import { useState } from 'react';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import Link from 'next/link';
 
 import styles from './subheadermenu.module.css';
-import Button from './button';
 
 const items = ['UI/UX Design', 'BlockChain', 'eCommerce', 'Custom Software'];
 
@@ -28,7 +26,7 @@ export default function SubHeaderMenu(props) {
               </div>
               <div className={styles.nav__submenu__services_container}>
                 {dataArr.map(({ submeta = [], name, id }) => (
-                  <div className={styles.nav__submenu__services_item}>
+                  <div key={id} className={styles.nav__submenu__services_item}>
                     <div
                       className={styles.nav__submenu__services_container_name}
                     >
@@ -60,7 +58,7 @@ export default function SubHeaderMenu(props) {
               </div>
             </div>
           ) : (
-            dataArr.map(({ name, id }) => (
+            dataArr.map(({ name, id, link }) => (
               <li
                 key={id}
                 className={cs(styles.nav__submenu__item, [
@@ -68,7 +66,7 @@ export default function SubHeaderMenu(props) {
                   styles.nav__submenu__item__before,
                 ])}
               >
-                <a>{name}</a>
+                <a>{link ? <Link href={link}>{name}</Link> : name}</a>
               </li>
             ))
           )}
