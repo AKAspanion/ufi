@@ -16,6 +16,7 @@ import {
   serviceList,
   results,
 } from '../../../assets/data';
+import { useEffect, useState } from 'react';
 
 export default function OpenReel() {
   const { width, ref } = useResizeDetector();
@@ -27,6 +28,10 @@ export default function OpenReel() {
   });
 
   const { ref: strategyRef, inView: strategyInView } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: seamlessRef, inView: seamlessInView } = useInView({
     threshold: 0,
   });
 
@@ -141,8 +146,12 @@ export default function OpenReel() {
           />
         </div>
       </section>
-      <section className={styles.seamless}>
-        <div className={styles.seamless__title}>
+      <section ref={seamlessRef} className={styles.seamless}>
+        <div
+          className={cs(styles.seamless__title, {
+            [styles.seamless__in_view]: seamlessInView === true,
+          })}
+        >
           <h1>Seamless User Experience</h1>
           <p>
             Ensuring a quality cross channel customer journey, the entire system
@@ -169,7 +178,7 @@ export default function OpenReel() {
           </div>
         </div>
       </section>
-      {parallaxMeta(styles).map((detail, index) => (
+      {parallaxMeta(styles, isMedium).map((detail, index) => (
         <ParallaxCard
           title={isMedium ? index === 0 : true}
           detail={detail}
@@ -209,9 +218,17 @@ export default function OpenReel() {
 const ParallaxCard = ({ detail = {}, title = true }) => {
   const { img, name, desc, className } = detail;
 
+  const [view, setView] = useState(false);
+
   const { ref, inView } = useInView({
     threshold: 0,
   });
+
+  useEffect(() => {
+    if (inView && !view) {
+      setView(inView);
+    }
+  }, [inView]);
 
   return (
     <section className={cs(styles.parallax, className)}>
@@ -224,13 +241,12 @@ const ParallaxCard = ({ detail = {}, title = true }) => {
             </div>
           </div>
         </div>
-        <div className={styles.parallax__features}>
+        <div ref={ref} className={styles.parallax__features}>
           <div className={styles.parallax__features__left}></div>
           <div className={styles.parallax__features__right}>
             <div
-              ref={ref}
               className={cs(styles.parallax__features__text, {
-                [styles.parallax__text__in_view]: inView === true,
+                [styles.parallax__text__in_view]: view === true,
               })}
             >
               <h2>{name}</h2>

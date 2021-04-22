@@ -461,7 +461,7 @@ export const results = [
   'Used by fortune 500 companies and corporations',
 ];
 
-export const parallaxMeta = styles => [
+export const parallaxMeta = (styles, isMedium) => [
   {
     id: 2,
     className: styles.parallax__blue,
@@ -483,8 +483,9 @@ export const parallaxMeta = styles => [
       selling products and services or creating a client video testimonial, \
       OpenReel puts you in the director’s chair. The application comes fully \
       loaded with several customization options making sure your video is unique and engaging.',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-002@2x.png',
+    img: `https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Parallax-Image-002@${
+      isMedium ? 1 : 2
+    }x.png`,
   },
   {
     id: 3,

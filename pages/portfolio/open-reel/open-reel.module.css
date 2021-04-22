@@ -62,7 +62,7 @@
   top: 50%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .overview {
@@ -86,12 +86,12 @@
 
 .overview__content__left {
   opacity: 0;
-  transform: translateY(15%);
+  transform: translate3d(0, 25%, 0);
   transition: all 1.5s ease;
 }
 .overview__content__left.overview__in_view {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .overview__content__left h2 {
@@ -218,12 +218,12 @@
 
 .strategy__left {
   opacity: 0;
-  transform: translateY(15%);
+  transform: translate3d(0, 25%, 0);
   transition: all 1.5s ease;
 }
 .strategy__left.strategy__in_view {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .seamless {
@@ -236,9 +236,18 @@
 
 .seamless__title {
   padding: 8%;
+  opacity: 0;
   padding-bottom: 4%;
   max-width: 960px;
+  transform: translate3d(0, 25%, 0);
+  transition: all 1.5s ease;
 }
+
+.seamless__title.seamless__in_view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 .seamless__title h1 {
   font-size: 36px;
   line-height: 42px;
@@ -266,16 +275,16 @@
 
 @keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
   50.001% {
-    transform: translateX(0%);
+    transform: translate3d(0%, 0, 0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -349,7 +358,7 @@
   vertical-align: top;
   margin-bottom: 250px;
   display: inline-block;
-  transform: translateY(100%);
+  transform: translate3d(0, 100%, 0);
   transition: all 1.5s ease;
 }
 
@@ -360,7 +369,7 @@
 
 .parallax__features__text.parallax__text__in_view {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .integrations {
@@ -403,7 +412,7 @@
   max-width: 160px;
   position: absolute;
   transition: all 1.5s ease;
-  transform: translate(-50%, 0%) scale(0);
+  transform: translate3d(-50%, 0%, 0) scale(0);
 }
 
 .integration__img_1 {
@@ -456,7 +465,7 @@
 
 .integration__img.img__inview {
   opacity: 1;
-  transform: translate(-50%, 0%) scale(1);
+  transform: translate3d(-50%, 0%, 0) scale(1);
 }
 
 .results {
