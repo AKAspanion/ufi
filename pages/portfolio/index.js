@@ -1,14 +1,36 @@
 import cs from 'classnames';
 import Link from 'next/link';
 import Head from 'next/head';
-import Layout from '../../components/layout';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import styles from './index.module.css';
 import { work } from '../../assets/data';
 import Button from '../../components/button';
+import Layout from '../../components/layout';
+
+let scrollTimeout;
 
 export default function Portfolio() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    work.map(({ img }) => {
+      const image = new Image();
+      image.src = img;
+    });
+
+    window.onscroll = function () {
+      clearTimeout(scrollTimeout);
+
+      setScrolling(true);
+
+      scrollTimeout = setTimeout(() => {
+        setScrolling(false);
+      }, 10);
+    };
+  }, []);
+
   return (
     <Layout darkHeader>
       <Head>
@@ -28,29 +50,38 @@ export default function Portfolio() {
 
       <section className={styles.portfolio__list__wrapper}>
         {work.map((detail, index) => (
-          <PortfolioCard key={index} detail={detail} />
+          <PortfolioCard key={index} detail={detail} scrolling={scrolling} />
         ))}
       </section>
     </Layout>
   );
 }
 
-const PortfolioCard = ({ detail = {} }) => {
+const PortfolioCard = ({ detail = {}, scrolling }) => {
+  const [view, setView] = useState(false);
   const { id, img, link = '#', name, color, description, tags } = detail;
 
   const { ref, inView } = useInView({
     threshold: 0,
   });
 
+  useEffect(() => {
+    if (inView && !view && !scrolling) {
+      setView(true);
+    }
+  }, [inView, scrolling]);
+
   return (
     <div ref={ref} key={id} className={styles.portfolio__list__item}>
       <div
         className={cs(styles.portfolio__list__item__img, {
-          [styles.img__inview]: inView === true,
+          [styles.img__inview]: view === true,
         })}
       >
         <Link href={link}>
-          <img alt={name} src={img} />
+          <div className={styles.portfolio__list__item__wrapper}>
+            <img alt={name} src={img} />
+          </div>
         </Link>
       </div>
       <div className={styles.portfolio__list__item__data}>
