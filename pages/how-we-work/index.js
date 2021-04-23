@@ -262,15 +262,15 @@ const getSubSection = (obj) => {
         const { bgInfoBlack, bgInfoWhite } = bg__info;
         const { objectives } = bgInfoBlack;
         return (<>
-            <div className={cs(styles.we__work__section)}>
-                <div className={cs(['common__text__section', styles.text__white])}>
-                    <h3>{commontext_h3}</h3>
-                    <h4 className={'d-none'}>{commontext_h4}</h4>
+            <div className={cs(styles.we__work__section, styles.discovery__workshop__sec)}>
+                <div className={cs([styles.common_text, styles.text__black])}>
+                    <h3 className={styles.commonh3}>{commontext_h3}</h3>
+                    <h4 className={styles.commonh4}>{commontext_h4}</h4>
                 </div>
                 <div className={cs(styles.workshop_wrap, [styles.black__bg__info, styles.common__pad__wrap])}>
                     <div className={cs('row', 'm-0')}>
                         <div className={cs(['col-md-12', 'col-lg-7', 'p-0'])}>
-                            <div className={cs(styles.common__pad__left)}>
+                            <div className={cs(styles.common__pad__left, styles.black__sec__padd)}>
                                 <div className={cs([styles.common_text, styles.text__white])}>
                                     <h5 className={styles.sub__header}>{commontexSubHeader}</h5>
                                 </div>
@@ -283,19 +283,19 @@ const getSubSection = (obj) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className={cs(['col-md-12', 'col-lg-5', styles.box__down, 'p-0'])}>
-                            <div className={cs([styles.discovery_workshop_right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
+                        <div className={cs(['col-md-12', 'col-lg-5', styles.box__down, 'p-0', styles.mobile__white__bg])}>
+                            <div className={cs([styles.discovery__workshop__right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
                                 <img alt="Unified Infotech process" src={bgInfoWhite.uiplImage} />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className={cs(styles.workshop_wrap, [styles.white__bg__info, styles.common__pad__wrap])}>
+                <div className={cs(styles.workshop_wrap, [styles.white__bg__info, styles.common__padd__wrap])}>
                     <div className={cs('row', 'm-0')}>
                         {outCome.map(({ title, list__data }) => {
                             return (<>
                                 <div className={cs(['col-sm-8', 'p-0'])}>
-                                    <div className={cs(styles.common__pad__left)}>
+                                    <div className={cs(styles.common__pad__left, styles.common__padd__left)}>
                                         <div className={cs([styles.common_text, styles.text__black])}>
                                             <h5 className={styles.sub__header}>{title}</h5>
                                         </div>
@@ -355,27 +355,29 @@ export default function Home() {
                 />
             </Head>
             <section className={styles.banner_section}>
-                <div className='row'>
-                    <div className={cs(['col-sm-11', 'col-md-10', 'col-lg-9', 'col-xl-7', 'p-0'])}>
-                        <div className={cs(styles.other__banner_text)}>
-                            <h1>
-                                <span>How we work</span>
-                            </h1>
-                            <p>
-                                The process is defined as a sequence of steps. When followed, it helps to achieve a goal. We consider it - the art of thinking through.
-                            </p>
+                <div className={cs('container-fluid', 'p-0')}>
+                    <div className={cs('row', 'm-0')}>
+                        <div className={cs(['col-sm-11', 'col-md-10', 'col-lg-9', 'col-xl-7', 'p-0'])}>
+                            <div className={cs(styles.other__banner_text)}>
+                                <h1 className={styles.page__title}>
+                                    <span>How we work</span>
+                                </h1>
+                                <p>
+                                    The process is defined as a sequence of steps. When followed, it helps to achieve a goal. We consider it - the art of thinking through.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className={cs(styles.scroll__section, styles.scrool__wrap)}>
-                <div className={cs([styles.scroll__left, 'p-0'])}>
-                    <div className={cs(styles.common_text, !isSmall && styles.mobile__heading)}>
+            <section className={cs([styles.scroll__section, styles.scrool__wrap, styles.scroll__main__wrap])}>
+                <div className={cs([styles.scroll__left, 'p-0', styles.work__mobile__heading])}>
+                    <div className={cs(styles.common_text)}>
                         <h3>
                             Let’s talk about the specifics
                         </h3>
                     </div>
-                    <nav className={cs([styles.sidebar, { [styles.fixed]: (-100 < scrollY / 100 && scrollY / 100 < -4) }, styles.cd__vertical__nav,])} >
+                    <nav className={cs([styles.sidebar, { [styles.fixed]: (-90 < scrollY / 100 && scrollY / 100 < -4) }, styles.cd__vertical__nav,])} >
                         <ul>
                             {processNav.map(({ id, name }) => (
                                 <li
@@ -396,36 +398,71 @@ export default function Home() {
                         </ul>
                         <div className={cs(styles.header)}>
                             <div className={cs(styles.progress__container)}>
-                                <div className={cs(styles.progress__bar)} id="myBar" style={{ 'height': `${-1 * (scrollY / 100)}%` }}></div>
+                                <div className={cs(styles.progress__bar)} id="myBar" style={{ 'height': `${(-1 * (scrollY / 100) + 10)}%` }}></div>
                             </div>
                         </div>
                     </nav>
+                    <nav className={cs([styles.sidebar, styles.mobile__progressbar])} id="cd-vertical-nav-mobile">
+                        <ul>
+                            <li>
+                                <a href="#section1" className={cs("is-selected")} data-number="1">
+                                    <span className={cs('cd-label')}>1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section2" data-number="2">
+                                    <span className={cs('cd-label')}>2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section3" data-number="3">
+                                    <span className={cs('cd-label')}>3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section4" data-number="4">
+                                    <span className={cs('cd-label')}>4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section5" data-number="5">
+                                    <span className={cs("cd-label")}>5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section6" data-number="6">
+                                    <span className={cs("cd-label")}>6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div className={cs([styles.scroll__right, 'p-0'])}>
+                <div className={cs([styles.scroll__right, 'p-0', styles.right__side__content])}>
                     {process.map((obj) => (
-                        <div key={obj.id}>
-                            <section className={styles.standout} key={`section${obj.id}`}>
+                        obj.id == 1 && <div key={obj.id}>
+                            <section className={cs([styles.common__work__sec, styles.section1, styles.discovery__workshop__sec])} key={`section${obj.id}`} id="section1">
 
                                 {getSubSection(obj)}
                             </section>
-
                         </div>
+
+
                     ))}
                     <div key='2'>
-                        <section className={styles.standout} key={`section2`}>
-                            <div className={cs(['common__text__section', styles.text__black, styles.planning__mobile])}>
-                                <h4>Planning</h4>
+                        <section className={cs([styles.standout, styles.planning__sec])} key={`section2`}>
+                            <div className={cs([styles.common_text, styles.text__black, styles.planning__mobile])}>
+                                <h4 className={styles.commonh4}>Planning</h4>
                             </div>
                             <div className={styles.planning__bg}>
                                 <div className={styles.we__work__section}>
-                                    <div className={styles.common__pad__wrap}>
+                                    <div className={styles.common__pad__wrap, styles.common__padd__wrap}>
                                         <div className={cs('row', 'm-0')}>
                                             <div className={cs('col-sm-12', 'col-lg-8', 'col-xl-7', styles.black__bg__info, styles.box__down, 'p-0')}>
-                                                <div className={styles.common__pad__left}>
-                                                    <div className={cs([styles.common__text__section, styles.text__white])}>
+                                                <div className={cs(styles.common__pad__left, styles.common__padd__left)}>
+                                                    <div className={cs([styles.common__text__section, styles.text__white, styles.common_text])}>
                                                         < h5 className={styles.sub__header}> Objective</h5>
                                                     </div>
-                                                    <ul className={cs([styles.text__white, styles.ul__list])}>
+                                                    <ul className={cs([styles.text__white, styles.ul__list, styles.box__down])}>
                                                         <li><span>Creation of all relevant documentation required for successful execution of the project</span></li>
                                                         <li><span>Getting confirmation and approval from the client on the documents and materials</span></li>
                                                         <li><span>Defining the project plan</span></li>
@@ -439,10 +476,10 @@ export default function Home() {
                             </div>
 
                             <div className={cs(styles.we__work__section, styles.padt__5)}>
-                                <div className={cs(styles.common__pad__wrap, styles.white__bg__info)}>
+                                <div className={cs([styles.common__pad__wrap, styles.white__bg__info, styles.common__padd__wrap])}>
                                     <div className={cs('row', 'm-0')}>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left, 'pt-0')}>
+                                            <div className={cs([styles.common__pad__left, 'pt-0', styles.common__padd__left])}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5 className={styles.sub__header}>Outcome</h5>
                                                 </div>
@@ -455,9 +492,9 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left)}>
+                                            <div className={cs(styles.common__pad__left, styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
-                                                    <h5 className={styles.sub__header}>Deliveerables</h5>
+                                                    <h5 className={styles.sub__header}>Deliverables</h5>
                                                 </div>
                                                 <ul className={cs([styles.text__black, styles.ul__list])}>
                                                     <li><span>Detailed technical Specification</span></li>
@@ -469,7 +506,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs([styles.common__pad__left, 'pb-0'])}>
+                                            <div className={cs([styles.common__pad__left, 'pb-0', styles.common__padd__left])}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5 className={styles.sub__header}>Team Members Involved</h5>
                                                 </div>
@@ -490,12 +527,12 @@ export default function Home() {
                         </section>
                     </div>
                     <div key='3'>
-                        <section className={cs(['common__work__sec', styles.design__sec])} key={`section3`}>
-                            <div className={cs(['common__text__section', styles.text__black, styles.planning__mobile])}>
-                                <h4 className="commonh4">Design</h4>
+                        <section className={cs([styles.common__work__sec, styles.design__sec])} key={`section3`}>
+                            <div className={cs(['common__text__section', styles.text__black, styles.design__mobile, styles.common_text])}>
+                                <h4 className={styles.commonh4}>Design</h4>
                             </div>
                             <div className={styles.we__work__section}>
-                                <div className={cs(['design__sec__wrap', styles.white__bg__info])}>
+                                <div className={cs([styles.design__sec__wrap, styles.white__bg__info])}>
                                     <div className={cs('row', 'm-0')}>
                                         <div className={cs('col-sm-12', 'p-0')} >
                                             <div className={cs([styles.discovery_workshop_right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
@@ -504,10 +541,10 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={cs(styles.common__pad__wrap, styles.white__bg__info)}>
+                                <div className={cs([styles.common__pad__wrap, styles.white__bg__info, styles.common__padd__wrap])}>
                                     <div className={cs('row', 'm-0')}>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left, 'pt-0')}>
+                                            <div className={cs(styles.common__pad__left, 'pt-0', styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Objective</h5>
                                                 </div>
@@ -519,7 +556,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left, 'pt-0')}>
+                                            <div className={cs(styles.common__pad__left, 'pt-0', styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Deliverables</h5>
                                                 </div>
@@ -531,7 +568,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className={cs('col-sm-12', 'col-lg-8', 'col-xl-7', styles.box__down, 'p-0')}>
-                                            <div className={styles.common__pad__left}>
+                                            <div className={cs(styles.common__pad__left, styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Tools</h5>
                                                 </div>
@@ -601,7 +638,7 @@ export default function Home() {
                                             </div>
                                         </div >
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left, 'pt-0')}>
+                                            <div className={cs(styles.common__pad__left, 'pt-0', styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Team Members Involved</h5>
                                                 </ div>
@@ -620,15 +657,15 @@ export default function Home() {
                         </section >
                     </div >
                     <div key='4'>
-                        <section className={styles.standout}>
-                            <div className={cs(['common__text__section', styles.text__black, styles.planning__mobile])}>
-                                <h4 className={cs("commonh4")}>Development</h4>
+                        <section className={cs([styles.standout, styles.common__work__sec, styles.development__sec, styles.maintenance__sec])}>
+                            <div className={cs(['common__text__section', styles.text__black, styles.development__mobile, styles.common_text])}>
+                                <h4 className={cs(styles.commonh4)}>Development</h4>
                             </div>
                             <div className={styles.we__work__section}>
-                                <div className={cs(styles.workshop_wrap, [styles.black__bg__info, styles.common__pad__wrap])}>
+                                <div className={cs([styles.workshop_wrap, styles.black__bg__info, styles.common__pad__wrap, styles.common__padd__wrap])}>
                                     <div className={cs('row', 'm-0')}>
                                         <div className={cs('col-sm-12', 'col-lg-8', 'col-xl-7', styles.black__bg__info, styles.box__down, 'p-0')}>
-                                            <div className={styles.common__pad__left}>
+                                            <div className={cs([styles.common__pad__left, styles.common__padd__left])}>
                                                 <div className={cs([styles.common__text__section, styles.text__white])}>
                                                     < h5 className={styles.sub__header}> Objective</h5>
                                                 </div>
@@ -643,17 +680,17 @@ export default function Home() {
                                             </div>
                                         </div>
 
-                                        <div className={cs(['col-md-12', 'col-lg-5', styles.box__down, 'p-0'])}>
-                                            <div className={cs([styles.discovery_workshop_right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
+                                        <div className={cs(['col-md-12', 'col-lg-5', styles.box__down, 'p-0', styles.mobile__white__bg])}>
+                                            <div className={cs([styles.discovery__workshop__right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
                                                 <img className={cs([styles.blur__out, styles.design__box_img])} src="https://www.unifiedinfotech.net/assets/images/development@2x.jpg" alt="Unified Infotech process" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className={cs(styles.workshop_wrap, [styles.white__bg__info, styles.common__pad__wrap])}>
+                                <div className={cs(styles.workshop_wrap, [styles.white__bg__info, styles.common__pad__wrap, styles.common__padd__wrap])}>
                                     <div className={cs('row', 'm-0')} >
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left)}>
+                                            <div className={cs([styles.common__pad__left, styles.common__padd__left])}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Web Technologies</h5>
                                                 </div>
@@ -666,7 +703,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left)}>
+                                            <div className={cs([styles.common__pad__left, styles.common__padd__left])}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Mobile Technologies</h5>
                                                 </div>
@@ -678,7 +715,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left)}>
+                                            <div className={cs([styles.common__pad__left, styles.common__padd__left])}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Team Members Involved</h5>
                                                 </div>
@@ -697,20 +734,20 @@ export default function Home() {
                         </section>
                     </div >
                     <div key="5">
-                        <section className={cs(['common__work__sec', styles.design__sec])} key={`section5`}>
-                            <div className={cs(['common__text__section', styles.text__black, styles.planning__mobile])}>
-                                <h4 className={cs("commonh4")}>Testing</h4>
+                        <section className={cs(['common__work__sec', styles.common__work__sec, styles.testing__sec])} key={`section5`}>
+                            <div className={cs([styles.text__black, styles.testing__mobile, styles.common_text])}>
+                                <h4 className={cs(styles.commonh4)}>Testing</h4>
                             </div>
                             <div className={cs([styles.testing__bg])}>
                                 <div className={styles.we__work__section}>
-                                    <div className={styles.testing__wrap}>
+                                    <div className={cs(styles.testing__wrap, styles.common__pad__wrap, styles.common__padd__wrap)}>
                                         <div className={cs('row', 'm-0')}>
                                             <div className={cs(['col-md-12', 'col-lg-6', 'p-0'])}>
-                                                <div className={cs([styles.common__pad__left, styles.box__down, styles.black__bg__info, styles.black__sec__padd])}>
+                                                <div className={cs([styles.common__pad__left, styles.box__down, styles.black__bg__info, styles.black__sec__padd, styles.common__padd__left])}>
                                                     <div className={cs([styles.common_text, styles.text__white])}>
                                                         <h5>Objective</h5>
                                                     </div>
-                                                    <ul className={cs([styles.text__white, styles.common__padd__left_ul])}>
+                                                    <ul className={cs([styles.text__white, styles.common__padd__left_ul, styles.common__padd__left])}>
                                                         <li><span>Each sprint/milestone is tested manually.</span></li>
                                                         <li><span>Bugs are reported and added to product backlog.</span></li>
                                                         <li><span>Upon bug fixing, quality release is provided and then the final demo of the sprint is sent to the client for approval.</span></li>
@@ -718,8 +755,8 @@ export default function Home() {
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div className={cs(['col-sm-12', 'p-0', 'col-lg-6', styles.black__down,])} >
-                                                <div className={cs([styles.discovery_workshop_right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
+                                            <div className={cs(['col-sm-12', 'p-0', 'col-lg-6', styles.black__down, styles.mobile__white__bg])}>
+                                                <div className={cs([styles.discovery__workshop__right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
                                                     <img className={cs([styles.blur__out, styles.design__box_img])} src="https://www.unifiedinfotech.net/assets/images/testing@2x.jpg" alt="Unified Infotech process" />
                                                 </div>
                                             </div>
@@ -729,10 +766,10 @@ export default function Home() {
                             </div>
 
                             <div className={cs(styles.we__work__section, styles.padt__5)}>
-                                <div className={cs(styles.common__pad__wrap, styles.white__bg__info)}>
+                                <div className={cs([styles.common__pad__wrap, styles.white__bg__info, styles.common__padd__wrap])}>
                                     <div className={cs('row', 'm-0')}>
                                         <div className={cs(['col-sm-9', 'col-lg-8', 'col-xl-8', 'p-0'])}>
-                                            <div className={cs([styles.common__pad__left, styles.design__tools__sec])} >
+                                            <div className={cs([styles.common__pad__left, styles.design__tools__sec, styles.common__padd__left])} >
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     < h5 > Tools</h5>
                                                 </div>
@@ -771,7 +808,7 @@ export default function Home() {
                                             </div >
                                         </div >
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left)}>
+                                            <div className={cs(styles.common__pad__left, styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Types of testing</h5>
                                                 </div >
@@ -788,7 +825,7 @@ export default function Home() {
                                             </div >
                                         </div >
                                         <div className={cs(['col-sm-8', 'p-0'])}>
-                                            <div className={cs(styles.common__pad__left)}>
+                                            <div className={cs(styles.common__pad__left, styles.common__padd__left)}>
                                                 <div className={cs([styles.common_text, styles.text__black])}>
                                                     <h5>Team Members Involved</h5>
                                                 </div >
@@ -805,15 +842,15 @@ export default function Home() {
                         </section>
                     </div>
                     <div key="6">
-                        <section className={cs(['common__work__sec', styles.design__sec, 'development_sec'])} key={`section6`}>
-                            <div className={cs(['common__text__section', styles.text__black, 'maintenance__mobile'])}>
-                                <h4 className={cs("commonh4")}>Maintenance</h4>
+                        <section className={cs(['common__work__sec', styles.common__work__sec, styles.development__sec, styles.maintenance__sec])} key={`section6`}>
+                            <div className={cs(['common__text__section', styles.text__black, styles.maintenance__mobile, styles.common_text])}>
+                                <h4 className={cs(styles.commonh4)}>Maintenance</h4>
                             </div>
                             <div className={cs(styles.we__work__section)}>
-                                <div className={cs(styles.workshop_wrap, [styles.black__bg__info, styles.common__pad__wrap])}>
+                                <div className={cs([styles.workshop_wrap, styles.black__bg__info, styles.common__pad__wrap, styles.common__padd__wrap])}>
                                     <div className={cs('row', 'm-0')}>
                                         <div className={cs(['col-md-12', 'col-lg-6', 'p-0'])}>
-                                            <div className={cs([styles.common__pad__left, styles.box__down, styles.black__bg__info, styles.black__sec__padd])}>
+                                            <div className={cs([styles.common__pad__left, styles.box__down, styles.black__bg__info, styles.black__sec__padd, styles.common__padd__left])}>
                                                 <div className={cs([styles.common_text, styles.text__white])}>
                                                     <h5>Overview</h5>
                                                 </div>
@@ -828,8 +865,8 @@ export default function Home() {
                                             </div>
                                         </div>
 
-                                        <div className={cs(['col-md-12', 'col-lg-5', styles.box__down, 'p-0'])}>
-                                            <div className={cs([styles.discovery_workshop_right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
+                                        <div className={cs(['col-md-12', 'col-lg-5', styles.box__down, 'p-0', styles.mobile__white__bg])}>
+                                            <div className={cs([styles.discovery__workshop__right, styles.design__box, styles.uipl_section_reveal_check, styles.reveal_me])}>
                                                 <img className={cs([styles.blur__out, styles.design__box_img])} src="https://www.unifiedinfotech.net/assets/images/maintenance@2x.jpg" alt="Unified Infotech process" />
                                             </div>
                                         </div>
@@ -845,27 +882,27 @@ export default function Home() {
                     <div className={cs("row")}>
                         <div className={cs("col-12")}>
                             <div className={cs([styles.common_text, styles.text__black, 'text-center'])}>
-                                <h3 className={cs("mb-5")} > Project Communication Structure</h3>
+                                <h3 className={cs("mb-5", styles.h3)} > Project Communication Structure</h3>
                             </div>
                         </div>
                         <div className={cs(["col-sm-6", "col-md-6", "col-lg-3", "col-xl-3", "mb-3"])} >
                             <div className={cs(["card", styles.project__card, styles.black__bg__info, styles.text__white])} >
-                                < div className={cs("card-body")} >
+                                < div className={cs("card-body", styles.card__body)} >
                                     <h5 className={cs("card-title")} > Daily Scrum < span > Standup</span></h5>
                                 </div>
                                 <ul className={cs(["list-group", styles.black__bg__info, styles.list__group])}>
                                     <li className={cs(["list-group-item", styles.list__text, styles.list__group__item])} > Mon - Fri < span > 30 minutes</span></li>
                                     <li className={cs(["list-group-item", styles.list__text, styles.list__group__item])} >Check previous day’s work, current day’s plans, any queries, hurdles etc</li>
                                 </ul >
-                                <div className={cs("card-body", "card-footer")} >
+                                <div className={cs(["card-body", "card-footer", styles.card__body])} >
                                     <p className={cs(["list-text", styles.list__text])} > Project Manager  with the entire Project Team</ p>
                                 </div>
                             </div >
                         </div >
                         <div className={cs(['col-sm-6', 'col-md-6', 'col-lg-3', 'col-xl-3', 'mb-3'])} >
                             <div className={cs(["card", styles.project__card, styles.black__bg__info, styles.text__white])} >
-                                <div className={cs("card-body")} >
-                                    <h5 className={cs("card-title")} > Weekly < span > Review</span ></h5 >
+                                <div className={cs("card-body", styles.card__body)} >
+                                    <h5 className={cs(["card-title", styles.card__title])} > Weekly < span > Review</span ></h5 >
                                 </div >
                                 <ul className={cs(["list-group", styles.black__bg__info, styles.list__group])}>
                                     <li className={cs(["list-group-item", styles.list__text, styles.list__group__item])} > Weekly < span > 45 - 60 minutes</span ></li >
