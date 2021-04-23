@@ -9,7 +9,7 @@ import Button from '../../../components/button';
 
 export default function HouesLab() {
     return (
-        <Layout darkHeader>
+        <Layout>
             <Head>
                 <title>HouseLab</title>
                 <link
@@ -45,12 +45,12 @@ export default function HouesLab() {
             <section className={cs(houselabstyles.wraper__houselabs__welcome__card)} >
 
                 <div className={cs(houselabstyles.houselabs__welcome__card)} >
-                    <div className={cs("container")} >
+                    <div className={cs(["container", houselabstyles.container])} >
 
                         <div className={cs("row")} >
                             <div className={cs(['col-xl-9', 'col-lg-9', 'col-md-9', 'col-sm-12', 'col-12'])} >
 
-                                <div className={cs([houselabstyles.welcome__card__box, houselabstyles.black__bg__info, houselabstyles.common_text, styles.text__white])} >
+                                <div className={cs([houselabstyles.welcome__card__box, houselabstyles.black__bg__info, houselabstyles.common_text, styles.text__white, houselabstyles.houselabs__welcome__card__box])} >
                                     <h4>Houselabs</h4>
                                     <h3>Engineered this cloud based document management platform for developers, architects, designers, agents and homeowners</h3>
                                 </div>
@@ -97,7 +97,7 @@ export default function HouesLab() {
                 <div className={cs(['container', 'p-0', 'p-md-3'])}>
                     <div className={cs('row', 'justify-content-center')}>
                         <div className={cs("col-sm-12 col-md-6")}>
-                            <div className={cs([houselabstyles.comm__works, 'sofy-challenges', 'mr-2', 'h-100', 'aos-init', 'aos-animate'])} data-aos="fade-up" data-aos-delay="100">
+                            <div className={cs([houselabstyles.comm__works, 'sofy-challenges', 'mr-2', 'h-100', 'aos-init', 'aos-animate', houselabstyles.mr__2])} data-aos="fade-up" data-aos-delay="100">
                                 <h3>Challenges</h3>
                                 <ul>
                                     <li><p>Homeowner face trouble to manage a stack of papers and files for invoices, warranties and other property related documents</p></li>
@@ -106,7 +106,7 @@ export default function HouesLab() {
                             </div>
                         </div>
                         <div className={cs("col-sm-12", "col-md-6")}>
-                            <div className={cs([houselabstyles.comm__works, houselabstyles.bg__orange, styles.text__white, 'sofy-solutions', 'ml-2', 'h-100', 'aos-init', 'aos-animate'])} data-aos="fade-up" data-aos-delay="100">
+                            <div className={cs([houselabstyles.comm__works, houselabstyles.bg__orange, styles.text__white, 'sofy-solutions', 'ml-2', 'h-100', 'aos-init', 'aos-animate', houselabstyles.ml__2])} data-aos="fade-up" data-aos-delay="100">
                                 <h3 className={styles.text__white}>Solutions</h3>
                                 <ul>
                                     <li><p>HouseLab provides a solution to manage the soft copies of the document organized properly in the application</p></li>

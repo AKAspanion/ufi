@@ -150,12 +150,7 @@
     font-weight: 700;
     font-size: 20px;
 }
-@media (max-width: 1920px){
-    .common_text p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-}
+
 .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text>*:last-child {
     margin-bottom: 0 !important;
 }
@@ -287,6 +282,14 @@
         font-size: 16px;
     }
 }
+.wraper__houselabs__features .houselabs__features__screens>[class*='container']>.row>[class*='col-']:not(:empty) {
+    padding-top: 100px;
+}
+.wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__text.d__inline__block {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 500px;
+}
 .comm__works .bg__orange .text__white h3{
     color: #fff;
 }
@@ -398,6 +401,19 @@
     height: 70px;
     margin: auto;
 }
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .features>.features__item p {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    line-height: 1.6;
+}
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .features>.features__item p a {
+    color: inherit;
+}
 .wraper__houselabs__hero__video .houselabs__hero__video .houselabs__hero__video__video>.play__btn>.holder {
     position: relative;
     display: flex;
@@ -422,6 +438,12 @@
     font-weight: 600;
 }
 
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .features>.features__item {
+    margin-bottom: 20px;
+}
+
+
+
 .wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__boxes>.houselabs__features__screens__boxes__item.item__one {
     width: 47px;
     height: 47px;
@@ -434,3 +456,169 @@
     margin-right: 50px;
     background-color: rgba(0,0,0,0.2);
 }
+@media (max-width: 1920px){
+    .common_text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 1600.98px){
+    .sofy__portfolio__sec__2 {
+        padding: 0 0 6rem;
+    }
+
+}
+@media (max-width:1200.98px){
+    .common_text h3, .common_text .h3 {
+        line-height: normal;
+    }
+}
+@media (max-width: 1466.98px){
+    .common_text p {
+        font-size: 16px;
+    }
+    
+}
+@media (max-width:1366.98px){
+    .comm__works ul {
+        font-size: 20px;
+        line-height: normal;
+    }
+}
+@media (max-width: 991.98px){
+    .wraper__houselabs__welcome__card .houselabs__welcome__card {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .wraper__houselabs__welcome__card .houselabs__welcome__card .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .sofy__portfolio__sec__2 {
+        padding: 0 0 5rem;
+    }
+    .wraper__houselabs__features .houselabs__features__title>.container {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    .wraper__houselabs__features .houselabs__features__screens>[class*='container']>.row>[class*='col-']:not(:empty) {
+        padding-top: 30px;
+    }
+    .wraper__houselabs__welcome__card .houselabs__welcome__card .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+}
+@media(max-width: 851.98px){
+    .wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__boxes {
+        display: none;
+    }
+}
+@media (max-width: 768.98px){
+    .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box {
+        margin-top: 0;
+    }
+    .wraper__houselabs__welcome__card .houselabs__welcome__card {
+        max-width: initial;
+    }
+
+    .wraper__portfolio__section__strategy .portfolio__section__strategy>.container__fluid, .wraper__portfolio__section__results .portfolio__section__results>.container, .wraper__houselabs__overview .houselabs__overview>.container, .wraper__freshclinic__components .freshclinic__components__title>.container, .wraper__londonrag__promo.padding__top__bottom>.container, .wraper__londonrag__promo.padding__top__bottom>.container__fluid, .sofy__portfolio__sec__5.joyscape__page, .wraper__pwa__background>.container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .wraper__portfolio__section__overview .portfolio__section__overview>.container, .wraper__portfolio__section__seamless .portfolio__section__seamless__title>.container, .wraper__portfolio__section__features .portfolio__section__features__title>.container, .wraper__portfolio__section__features .portfolio__section__features__parallax>.container__fluid, .wraper__portfolio__section__browser .portfolio__section__browser__screens>.container, .wraper__portfolio__section__integrations .portfolio__section__integrations>.container, .wraper__portfolio__section__results .portfolio__section__results>.container, .wraper__houselabs__overview .houselabs__overview>.container, .wraper__freshclinic__components .freshclinic__components__title>.container, .wraper__freshclinic__showcase .freshclinic__showcase__section>.container__fluid, .wraper__freshclinic__screenshots .freshclinic__screenshots__box>.container, .wraper__happydna__testimonial .happydna__testimonial__main>.container__fluid, .wraper__londonrag__promo.padding__top__bottom>.container, .wraper__londonrag__promo.padding__top__bottom>.container__fluid, .wraper__londonrag__promo.padding__top>.container, .wraper__londonrag__promo.padding__top>.container__fluid, .wraper__pwa__background>.container, .wraper__pwa__action>.container {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sofy__portfolio__sec__2 {
+        padding: 0 0 3rem;
+    }
+    .wraper__houselabs__welcome__card .houselabs__welcome__card .container {
+        max-width: initial;
+    }
+}
+@media (max-width: 767.98px){
+
+    .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box {
+        margin-top: 0;
+    }
+    .common_text p {
+        line-height: 1.50;
+    }
+    .sofy__portfolio__sec__2 {
+        padding: 0;
+    }
+    .comm__works.mr__2 {
+        margin-right: 0 !important;
+    }
+    .comm__works.ml__2 {
+        margin-left: 0 !important;
+    }
+
+    .comm__works {
+        padding: 8% 6% 5% 6%;
+    }
+    .common_text h3, .common_text .h3 {
+        line-height: normal;
+        font-weight: normal !important;
+    }
+}
+@media (max-width: 575.98px){
+    .wraper__houselabs__hero__video .houselabs__hero__video .houselabs__hero__video__video>.video img {
+        width: auto;
+        height: 50vh;
+        max-width: initial;
+    }
+    .wraper__houselabs__hero__video .houselabs__hero__video .houselabs__hero__video__video>.play__btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .wraper__houselabs__welcome__card .houselabs__welcome__card .houselabs__welcome__card__box>h3, .wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__text h3 {
+        font-size: 28px;
+    }
+    .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text h3, .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .h3 {
+        font-weight: 700 !important;
+        font-size: 28px;
+    }
+    .common_text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .wraper__portfolio__section__features .portfolio__section__features__title .portfolio__section__features__title__text h3, .wraper__houselabs__features .houselabs__features__title .houselabs__features__title__text h3 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+}
+
+.wraper__houselabs__hero__video .houselabs__hero__video .houselabs__hero__video__video>.play__btn>.holder:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    z-index: 1;
+    background-color: var(--main-white-color);
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+}
+
+.wraper-houselabs-overview .houselabs-overview .houselabs-overview-text .features>.features-item p {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    line-height: 1.6;
+}
+

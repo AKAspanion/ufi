@@ -1370,6 +1370,9 @@
   flex-direction: row;
   width: 100%;
 }
+.we__work__section .common_text h4.commonh4 {
+  display: none;
+}
 .common__padd__wrap .common__padd__left {
   padding: 0 10rem 3rem 5rem;
 }
