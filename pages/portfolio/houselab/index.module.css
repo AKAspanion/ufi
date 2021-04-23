@@ -596,6 +596,12 @@
         font-size: 16px;
         letter-spacing: 5px;
     }
+    .overflow__x__hidden{
+        overflow-x: hidden;
+    }
+    .special__padding__rm{
+        padding-right: 0px;
+    }
 }
 
 .wraper__houselabs__hero__video .houselabs__hero__video .houselabs__hero__video__video>.play__btn>.holder:before {

@@ -24,8 +24,7 @@ export default function HouesLab() {
                     <div className={cs("container-fluid", "px-0")}>
 
                         <div className={cs("row", "align-items-center")}>
-
-                            <div className={cs([houselabstyles.houselabs__hero__video__video, 'col-xl-12', 'col-lg-12', 'col-md-12', 'col-sm-12', 'col-12'])} >
+                            <div className={cs([houselabstyles.houselabs__hero__video__video, 'col-xl-12', 'col-lg-12', 'col-md-12', 'col-sm-12', 'col-12', houselabstyles.overflow__x__hidden])} >
                                 <div className={cs(houselabstyles.video)} >
                                     <img className={cs([houselabstyles.blur__out])} src="https://www.unifiedinfotech.net/assets/images/Houselabs-Hero-Image@2x.png" alt="" />
                                 </div>
@@ -48,7 +47,7 @@ export default function HouesLab() {
                     <div className={cs(["container", houselabstyles.container])} >
 
                         <div className={cs("row")} >
-                            <div className={cs(['col-xl-9', 'col-lg-9', 'col-md-9', 'col-sm-12', 'col-12'])} >
+                            <div className={cs(['col-xl-9', 'col-lg-9', 'col-md-9', 'col-sm-12', 'col-12', houselabstyles.special__padding__rm])} >
 
                                 <div className={cs([houselabstyles.welcome__card__box, houselabstyles.black__bg__info, houselabstyles.common_text, styles.text__white, houselabstyles.houselabs__welcome__card__box])} >
                                     <h4>Houselabs</h4>
@@ -72,7 +71,7 @@ export default function HouesLab() {
                     </div>
                     <div className={cs("container", houselabstyles.container)}>
                         <div className={cs(['row', 'align-items-stretch'])}>
-                            <div className={cs(['col-xl-7', 'col-lg-7', 'col-md-7', 'col-sm-12', 'col-12'])}>
+                            <div className={cs(['col-xl-7', 'col-lg-7', 'col-md-7', 'col-sm-12', 'col-12', houselabstyles.special__padding__rm])}>
                                 <div className={cs([houselabstyles.houselabs__overview__text, houselabstyles.common_text, styles.text__black, 'aos-init', 'aos-animate'])} data-aos="fade-up">
                                     <h3>Overview</h3>
                                     <p>HouseLab is a great new system for builders, developers, architects, designers, real estate agents and homeowners. Warranties, manuals, plans, permits, paint colours, key contact details can be uploaded to a secure, branded online hub and then handed over — elegantly, sustainably and simply. Includes systems to support defect management and periodic servicing.</p>
