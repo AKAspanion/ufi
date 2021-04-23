@@ -1,18 +1,12 @@
 import cs from 'classnames';
 import Head from 'next/head';
-import { FaQuoteLeft } from 'react-icons/fa';
-import { Carousel } from 'react-responsive-carousel';
-import { useResizeDetector } from 'react-resize-detector';
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { useCallback, useRef, useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-
-import Button from '../../components/button';
 
 import Layout from '../../components/layout';
 
 import styles from './index.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { useEffect, useRef, useState } from 'react';
 
 const process = [
   {
@@ -278,8 +272,6 @@ const getSubSection = obj => {
 export default function Home() {
   const contentRef = useRef(null);
   const [scrollY, setScrollY] = useState(0);
-  const [selectedNav, setSelectedNav] = useState(0);
-  const { width, ref } = useResizeDetector();
   const [collapsible, setcollapsible] = useState({
     collapsible1: false,
     collapsible2: false,
@@ -291,9 +283,9 @@ export default function Home() {
     const contentDimensions = contentRef.current.getBoundingClientRect();
     isFixed = contentDimensions.y < 24;
     barHeight =
-      (Math.abs(contentDimensions.y - 384) / contentDimensions.height) * 100;
+      (Math.abs(contentDimensions.y - 900) / contentDimensions.height) * 100;
 
-    if (barHeight > 100) {
+    if (barHeight > 105) {
       isFixed = false;
     }
   }
@@ -301,8 +293,7 @@ export default function Home() {
   useScrollPosition(({ currPos }) => {
     setScrollY(currPos.y);
   });
-  const isSmall = width < 575;
-  const isMedium = width < 980;
+
   const handleCollapse = id => {
     if (id == 1) {
       setcollapsible(prevState => ({
@@ -377,13 +368,16 @@ export default function Home() {
               {processNav.map(({ id, name }, index) => (
                 <li
                   key={id}
-                  onClick={() => setSelectedNav(id - 1)}
+                  onClick={() => {
+                    document.getElementById(`section${id}`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
                   className={cs({
                     [styles.a]: parseInt(-1 * (scrollY / 1000) - 3) == id,
                   })}
                 >
                   <a
-                    href=""
                     className={cs([styles.a_link, styles.a__li], {
                       [styles.a__is__selected]:
                         barHeight - 6 * index > (index + 1) * 10,
@@ -411,35 +405,74 @@ export default function Home() {
             <ul>
               <li>
                 <a
-                  href="#section1"
-                  className={cs('is-selected')}
+                  onClick={() => {
+                    document.getElementById(`section1`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                  className={cs(styles.is__selected)}
                   data-number="1"
                 >
                   <span className={cs('cd-label')}>1</span>
                 </a>
               </li>
               <li>
-                <a href="#section2" data-number="2">
+                <a
+                  onClick={() => {
+                    document.getElementById(`section2`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                  data-number="2"
+                >
                   <span className={cs('cd-label')}>2</span>
                 </a>
               </li>
               <li>
-                <a href="#section3" data-number="3">
+                <a
+                  onClick={() => {
+                    document.getElementById(`section3`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                  data-number="3"
+                >
                   <span className={cs('cd-label')}>3</span>
                 </a>
               </li>
               <li>
-                <a href="#section4" data-number="4">
+                <a
+                  onClick={() => {
+                    document.getElementById(`section4`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                  data-number="4"
+                >
                   <span className={cs('cd-label')}>4</span>
                 </a>
               </li>
               <li>
-                <a href="#section5" data-number="5">
+                <a
+                  onClick={() => {
+                    document.getElementById(`section5`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                  data-number="5"
+                >
                   <span className={cs('cd-label')}>5</span>
                 </a>
               </li>
               <li>
-                <a href="#section6" data-number="6">
+                <a
+                  onClick={() => {
+                    document.getElementById(`section6`).scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                  data-number="6"
+                >
                   <span className={cs('cd-label')}>6</span>
                 </a>
               </li>
@@ -453,7 +486,7 @@ export default function Home() {
           {process.map(
             obj =>
               obj.id == 1 && (
-                <div key={obj.id}>
+                <div key={obj.id} id="section1">
                   <section
                     className={cs([
                       styles.common__work__sec,
@@ -461,14 +494,13 @@ export default function Home() {
                       styles.discovery__workshop__sec,
                     ])}
                     key={`section${obj.id}`}
-                    id="section1"
                   >
                     {getSubSection(obj)}
                   </section>
                 </div>
               ),
           )}
-          <div key="2">
+          <div key="2" id="section2">
             <section
               className={cs([styles.standout, styles.planning__sec])}
               key={`section2`}
@@ -683,7 +715,7 @@ export default function Home() {
               </div>
             </section>
           </div>
-          <div key="3">
+          <div key="3" id="section3">
             <section
               className={cs([styles.common__work__sec, styles.design__sec])}
               key={`section3`}
@@ -1046,7 +1078,7 @@ export default function Home() {
               </div>
             </section>
           </div>
-          <div key="4">
+          <div key="4" id="section4">
             <section
               className={cs([
                 styles.standout,
@@ -1299,7 +1331,7 @@ export default function Home() {
               </div>
             </section>
           </div>
-          <div key="5">
+          <div key="5" id="section5">
             <section
               className={cs([
                 'common__work__sec',
@@ -1594,7 +1626,7 @@ export default function Home() {
               </div>
             </section>
           </div>
-          <div key="6">
+          <div key="6" id="section6">
             <section
               className={cs([
                 'common__work__sec',

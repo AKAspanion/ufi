@@ -1238,9 +1238,6 @@
 .work__mobile__heading .common_text h3 {
   display: none;
 }
-.mobile__progressbar {
-  display: none;
-}
 .sidebar {
   position: relative;
 }
@@ -1249,6 +1246,10 @@
   margin: 0;
   list-style-type: none;
 }
+.mobile__progressbar {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .sidebar ul {
     padding: 0px 0 30px;
@@ -1273,7 +1274,7 @@
 @media (max-width: 991.98px) {
   .mobile__progressbar {
     padding: 15px 0px;
-    display: none;
+    display: block;
     width: 100%;
     background: #fff;
     -webkit-transition: all 0.5s ease;
