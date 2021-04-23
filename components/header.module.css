@@ -336,13 +336,13 @@
 .li .has__uipl__mega__menu {
   position: static !important;
 }
-.main__bottom__navbar .nav__item>.nav__link {
+.main__bottom__navbar .nav__item > .nav__link {
   display: block;
   padding: 11px 18px !important;
 }
 .uipl__sub__menu__arrow {
   position: absolute;
-  top: calc( 100% + 16px);
+  top: calc(100% + 16px);
   right: 1px;
   z-index: 1;
   opacity: 0;
@@ -352,48 +352,51 @@
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.uipl__sub__menu__arrow>span:before {
+.uipl__sub__menu__arrow > span:before {
   position: absolute;
   bottom: 100%;
   left: calc(100% - 10px);
   border: solid transparent;
-  content: " ";
+  content: ' ';
   width: 0;
   height: 0;
   pointer-events: none;
 }
-.li.has__uipl__mega__menu.sub__menu__active .uipl__sub__menu__arrow, li.has__uipl__sub__menu.sub__menu__active .uipl__sub__menu__arrow {
+.li.has__uipl__mega__menu.sub__menu__active .uipl__sub__menu__arrow,
+li.has__uipl__sub__menu.sub__menu__active .uipl__sub__menu__arrow {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.uipl__sub__menu__arrow>span:after, .uipl__sub__menu__arrow>span:before {
+.uipl__sub__menu__arrow > span:after,
+.uipl__sub__menu__arrow > span:before {
   position: absolute;
   bottom: 100%;
   left: calc(100% - 10px);
   border: solid transparent;
-  content: " ";
+  content: ' ';
   width: 0;
   height: 0;
   pointer-events: none;
+  transform: translate3d(0, -1px, 0);
 }
-.uipl__sub__menu__arrow>span:before {
+.uipl__sub__menu__arrow > span:before {
   margin-left: -11px;
   border-color: transparent;
   border-bottom-color: #000;
   border-width: 11px;
 }
-.uipl__sub__menu__arrow>span:after {
+.uipl__sub__menu__arrow > span:after {
   margin-left: -8px;
-  border-color: rgba(255,255,255,0);
+  border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #fff;
   border-width: 8px;
 }
 
 .uipl__mega__menu__wraper {
   position: absolute;
-  top: calc( 100% + 14px);
+  top: calc(100% + 14px);
   right: 40px;
   width: 1200px;
   opacity: 1;
