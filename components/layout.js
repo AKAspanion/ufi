@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import MobileFloater from '../components/mobilefloater';
 
 export default function Layout({ darkHeader, children }) {
   return (
@@ -16,6 +17,7 @@ export default function Layout({ darkHeader, children }) {
       <Header darkHeader={darkHeader} />
       <main>{children}</main>
       <Footer />
+      <MobileFloater />
     </div>
   );
 }
