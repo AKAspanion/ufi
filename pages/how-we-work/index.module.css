@@ -1047,6 +1047,9 @@
     line-height: 1.5;
   }
 }
+.common_text {
+  width: 100%;
+}
 .common__text p {
   font-family: 'Circular Std Book';
   font-size: 18px;
@@ -1376,9 +1379,11 @@
 .development__sec .development__mobile,
 .testing__sec .testing__mobile,
 .development__sec .maintenance__mobile,
-.discovery__workshop__head {
+.discovery__workshop__head,
+.testing__heading {
   display: none;
 }
+
 @media (max-width: 2299px) {
   .discovery__workshop__sec {
     padding-top: 4rem;
@@ -1561,7 +1566,8 @@
   .development__sec .development__mobile .commonh4,
   .testing__sec .testing__mobile .commonh4,
   .development__sec .maintenance__mobile .commonh4,
-  .discovery__workshop__head {
+  .discovery__workshop__head,
+  .testing__heading {
     display: block;
     font-size: 22px;
     font-family: 'Circular Std Book';
@@ -1573,6 +1579,9 @@
     text-align: center;
     color: #000000;
     margin: 0 0 20px;
+  }
+  .testing__heading {
+    width: 100%;
   }
   .planning__sec .planning__mobile,
   .design__sec .design__mobile,
