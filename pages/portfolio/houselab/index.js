@@ -133,10 +133,7 @@ export default function HouesLab() {
               alt=""
             />
           </div>
-          <div
-            ref={overviewRef}
-            className={cs('container', houselabstyles.container)}
-          >
+          <div className={cs('container', houselabstyles.container)}>
             <div className={cs(['row', 'align-items-stretch'])}>
               <div
                 className={cs([
