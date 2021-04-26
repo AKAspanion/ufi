@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Circular Std Book';
 }
 
 .p_0 {
@@ -13,12 +14,41 @@ a:hover {
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none !important;
 }
+
 a {
   cursor: pointer;
   text-decoration: none;
   color: inherit !important;
 }
-img, video {
+
+img,
+video {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+  -webkit-text-decoration-skip: objects;
+  transition: all ease-in-out 300ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -moz-transition: all ease-in-out 300ms;
+  -ms-transition: all ease-in-out 300ms;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+  touch-action: manipulation;
+}
+
+.carousel .control-dots .dot {
+  background: #000000 !important;
 }

@@ -325,6 +325,26 @@ export const praiseList = [
   },
 ];
 
+
+export const praiseListStartup = [
+  {
+    name: 'Cecil Usher',
+    title: 'CEO, Music Plug LLC',
+    quote:
+      'It really transcends everything we’ve done to date. Everyone who’s seen the app has loved it.',
+  },
+  {
+    name: 'Leonardo Rodriguez',
+    title: 'Technical PM, Reliable Group',
+    quote:
+      'The team’s in-depth knowledge of user interaction and behavior resulted in an impressive UI/UX design.',
+  },
+  {
+    name: 'Fabien Mahieu',
+    title: 'Co-Founder/Director Flexiwork, UK',
+    quote: 'They’re available to help us around the clock.',
+  },
+];
 export const coreItems = [
   {
     id: 1,
