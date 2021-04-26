@@ -1,6 +1,47 @@
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
+export const webDevPortfolio = [
+  {
+    id: 1,
+    color: '#FB5D02',
+    bgColor: '#FEF6F1',
+    name: 'Houselab',
+    category: 'Real estate',
+    type: 'management',
+    desc:
+      'A property management platform for architects, agents, brokers and homeowners.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/houselabs-mobile@1.5x.png',
+    btnText: 'View case study',
+  },
+  {
+    id: 2,
+    color: '#EB4F7D',
+    bgColor: '#E8FFFA',
+    name: 'Joyscape',
+    category: 'Revamping travel',
+    type: 'experience',
+    desc:
+      'Created a platform for Joyscape to help travellers choose fun activities around Singapore.',
+    img: 'https://www.unifiedinfotech.net/assets/images/joyscape-mobile@2x.png',
+    btnText: 'View case study',
+  },
+  {
+    id: 3,
+    color: '#38AB91',
+    bgColor: '#FFF1F4',
+    name: 'London Rag',
+    category: 'Redefining shopping',
+    type: 'experience',
+    desc:
+      'Engineered this ecommerce platform to make shopping experience easier for millennials.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/londonrag-mobile@2x.png',
+    btnText: 'Build similar',
+  },
+];
+
 export const work = [
   {
     id: 1,

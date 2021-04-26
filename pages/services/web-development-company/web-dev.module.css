@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url('/fonts/circular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.web__banner {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.web__banner__img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 550px;
+  max-height: 900px;
+}
+
+.web__banner__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.web__banner__content {
+  bottom: 0;
+  color: white;
+  padding: 80px 10%;
+  position: absolute;
+  font-family: 'Circular Std Book';
+}
+
+.web__banner__title {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.web__banner__subtitle {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.web__excellence,
+.web__portfolio {
+  padding: 7% 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.web__excellence__left,
+.web__excellence__right,
+.web__portfolio__left,
+.web__portfolio__right {
+  width: 50%;
+}
+
+.web__excellence__left,
+.web__portfolio__left {
+  opacity: 0;
+  transition-delay: 0.2s;
+  transform: translate3d(0, 25%, 0);
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+.web__excellence__right {
+  display: flex;
+  padding-left: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.web__excellence__left.web__excellence__left__visibile,
+.web__portfolio__left.web__portfolio__left__visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.web__excellence__col {
+  padding: 12px;
+}
+
+.web__excellence__stat {
+  color: white;
+  will-change: transform;
+  transition-delay: 0.3s;
+  background-color: black;
+  padding: 20px 20px 23px 20px;
+  transition: transform 1.5s ease;
+  transform: perspective(1000) rotateX(-90deg);
+}
+
+.web__excellence__stat.web__excellence__stat__visible {
+  transform: perspective(1000) rotateX(0deg);
+}
+
+.web__excellence__stat h3 {
+  font-size: 26px;
+  line-height: 40px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.25px;
+}
+
+.web__excellence__stat p {
+  margin-bottom: 0 !important;
+}
+
+.web__excellence__left h3 {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 16px;
+}
+.web__excellence__left p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.web__excellence__companies {
+  margin-top: 30px;
+  list-style: none;
+}
+.web__excellence__companies li {
+  margin-right: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.web__excellence__companies li img {
+  width: 100px;
+}
+
+.web__excellence__companies li.deloitte img {
+  width: 200px;
+}
+
+.web__portfolio {
+  background: var(--bg-color);
+}
+.web__portfolio__left {
+  padding-right: 30px;
+}
+.web__portfolio__right {
+  padding: 0px 30px;
+  position: relative;
+}
+
+.web__portfolio__right > h3 {
+  position: absolute;
+  top: 50%;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+.web__portfolio__right > h3::before {
+  content: ' ';
+  position: absolute;
+  bottom: -16px;
+  width: 48px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color);
+}
+
+.web__portfolio__right > p {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 28px;
+  color: black;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+
+.web__portfolio__head {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+}
+
+.web__portfolio__head h2 {
+  width: 80px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: black;
+  line-height: 1.1;
+  font-size: 40px;
+}
+.web__portfolio__head p {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
+  line-height: 28px;
+}
+
+.web__portfolio__left img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 980px) {
+  .web__banner {
+    height: 40vh;
+    overflow: hidden;
+    min-height: 325px;
+  }
+
+  .web__banner__img {
+    height: 40vh;
+    min-height: 325px;
+  }
+
+  .web__banner__content {
+    padding: 80px 5%;
+  }
+
+  .web__banner__title {
+    margin-bottom: 0.8rem;
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .web__banner__subtitle {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+
+  .web__excellence__left,
+  .web__excellence__right,
+  .web__portfolio__left,
+  .web__portfolio__right {
+    width: 100%;
+  }
+
+  .web__excellence__right,
+  .web__banner__btn {
+    display: none;
+  }
+
+  .web__excellence {
+    padding: 15% 5%;
+  }
+
+  .web__excellence__left h3 {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .web__excellence__left p {
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  .web__excellence__companies li {
+    margin-right: 15px;
+  }
+  .web__excellence__companies li img {
+    width: 65px;
+  }
+
+  .web__excellence__companies li.deloitte img {
+    width: 140px;
+  }
+
+  .web__portfolio__left {
+    padding: 0px;
+  }
+
+  .web__portfolio__right {
+    padding: 5% 0px;
+  }
+  .web__portfolio__head {
+    left: 80px;
+  }
+  .web__portfolio__head > h2 {
+    font-size: 35px;
+  }
+  .web__portfolio__right > h3 {
+    top: 42%;
+  }
+  .web__portfolio__right > p {
+    margin-top: -60px;
+  }
+}
