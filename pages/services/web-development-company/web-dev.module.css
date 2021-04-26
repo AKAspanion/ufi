@@ -574,6 +574,8 @@
   }
 
   .web__timeline {
+    width: 100%;
+    overflow: hidden;
     padding: 10% 5%;
   }
   .web__timeline__heading {
