@@ -1,6 +1,33 @@
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
+export const smartData = [
+  {
+    id: 1,
+    name: 'Expansive',
+    desc:
+      'We follow the standard set of principles and techniques to deliver scalable web applications and solutions to meet your business demands.',
+  },
+  {
+    id: 2,
+    name: 'Responsive',
+    desc:
+      'Our professional web artisans make sure to deliver the right user experience regardless of the screen size and resolution of the device users use.',
+  },
+  {
+    id: 3,
+    name: 'Fast',
+    desc:
+      'We map out a complex project, break it down into working tasks, maximize the workflow and deliver it sooner and more efficiently.',
+  },
+  {
+    id: 4,
+    name: 'Secure',
+    desc:
+      'With us being in charge of your website, we ensure the complete security of your website against any kind of malware attack.',
+  },
+];
+
 export const techStack = [
   {
     id: 1,

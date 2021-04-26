@@ -64,8 +64,10 @@
   width: 50%;
 }
 
+.web__smart__grid__holder,
 .web__excellence__left,
-.web__portfolio__left {
+.web__portfolio__left,
+.web__tech__stack {
   opacity: 0;
   transition-delay: 0.2s;
   transform: translate3d(0, 25%, 0);
@@ -79,8 +81,10 @@
   justify-content: center;
 }
 
+.web__smart__grid__holder.web__smart__grid__visible,
 .web__excellence__left.web__excellence__left__visibile,
-.web__portfolio__left.web__portfolio__left__visible {
+.web__portfolio__left.web__portfolio__left__visible,
+.web__tech__stack.web__tech__stack__visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -209,7 +213,7 @@
 .web__tech__stack {
   padding: 7% 10%;
 }
-.web__tech__stack > h2 {
+.web__tech__stack > div > h2 {
   font-size: 36px;
   line-height: 42px;
   margin-bottom: 2rem;
@@ -250,6 +254,63 @@
   min-height: 80px;
   -ms-flex-preferred-size: 0;
   -webkit-box-flex: 1;
+}
+
+.web__smart {
+  display: flex;
+  padding: 7% 10%;
+  align-items: center;
+  background: #f2f5f6;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.web__smart__heading {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.web__smart__heading h2 {
+  margin-top: 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  line-height: 1.42;
+  font-size: 36px;
+  max-width: 80%;
+}
+.web__smart__heading p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.web__smart__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.web__smart__grid__holder {
+  width: 25%;
+  padding: 0px 15px;
+}
+.web__smart__grid__item {
+  background: white;
+  margin-bottom: 40px;
+  height: calc(100% - 30px);
+  padding: 35px 30px 30px 30px;
+}
+
+.web__smart__grid__item > h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+}
+.web__smart__grid__item > p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 @media (max-width: 980px) {
   .web__banner {
@@ -352,8 +413,31 @@
   .web__tech__table__row > h3 {
     border-right: 0px;
   }
-  .web__tech__stack > h2 {
+  .web__tech__stack > div > h2 {
     font-size: 24px;
     margin-bottom: 2rem;
+  }
+
+  .web__smart {
+    padding: 10% 5%;
+  }
+  .web__smart__grid__holder {
+    width: 50%;
+  }
+  .web__smart__heading {
+    width: 90%;
+  }
+  .web__smart__heading h2 {
+    font-size: 28px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .web__smart {
+    padding: 10% 0%;
+  }
+  .web__smart__grid__holder {
+    width: 100%;
   }
 }

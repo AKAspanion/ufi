@@ -1,11 +1,11 @@
 import cs from 'classnames';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
-import { techStack, webDevPortfolio } from '../../../assets/data';
 
 import Button from '../../../components/button';
 import Layout from '../../../components/layout';
 import Project from '../../../components/project';
+import { smartData, techStack, webDevPortfolio } from '../../../assets/data';
 
 import styles from './web-dev.module.css';
 
@@ -15,6 +15,7 @@ const defaults = {
 
 export default function WebDev() {
   const { ref: excellenceRef, inView: excellenceInView } = useInView(defaults);
+  const { ref: tectStackRef, inView: tectStackInView } = useInView(defaults);
 
   return (
     <Layout>
@@ -135,20 +136,49 @@ export default function WebDev() {
       {webDevPortfolio.map((detail, index) => (
         <DevPortfolioCard key={index} detail={detail} />
       ))}
-      <section className={styles.web__tech__stack}>
-        <h2>Our Technology Stack</h2>
-        <div className={styles.web__tech__table}>
-          {techStack.map(({ id, name, technologies }) => (
-            <div key={id} className={styles.web__tech__table__row}>
-              <h3 className={styles.web__tech__table__cell}>{name + ':'}</h3>
-              {technologies.map(({ id: techId, name: techName }) => (
-                <div key={techId} className={styles.web__tech__table__cell}>
-                  {techName}
-                </div>
-              ))}
-            </div>
+      <section
+        className={cs(styles.web__tech__stack, {
+          [styles.web__tech__stack__visible]: tectStackInView === true,
+        })}
+      >
+        <div ref={tectStackRef}>
+          <h2>Our Technology Stack</h2>
+          <div className={styles.web__tech__table}>
+            {techStack.map(({ id, name, technologies }) => (
+              <div key={id} className={styles.web__tech__table__row}>
+                <h3 className={styles.web__tech__table__cell}>{name + ':'}</h3>
+                {technologies.map(({ id: techId, name: techName }) => (
+                  <div key={techId} className={styles.web__tech__table__cell}>
+                    {techName}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className={styles.web__smart}>
+        <div className={styles.web__smart__heading}>
+          <h2>They call it best-in-class. We call it SMART thinking.</h2>
+          <p>
+            We take pride in developing enterprise web services and small
+            business web solutions to meet your specific needs. Smart choices of
+            latest technologies and deployment of standardized coding
+            frameworks, help us ensure that our processes and solutions are
+            scalable and future-proof, enhancing the user experience.
+            Invariably, the result is a powerful software to the world. Our 10+
+            years of combined expertise in web design and big/small business web
+            development sets us apart.
+          </p>
+        </div>
+        <div className={styles.web__smart__grid}>
+          {smartData.map((detail, index) => (
+            <SmatCard key={index} detail={detail} />
           ))}
         </div>
+        <Button dark borderedReverse>
+          How we work
+        </Button>
       </section>
       <Project />
     </Layout>
@@ -201,6 +231,27 @@ const DevPortfolioCard = ({ detail }) => {
         </Button>
       </div>
     </section>
+  );
+};
+
+const SmatCard = ({ detail }) => {
+  const { id, name, desc } = detail;
+
+  const { ref, inView } = useInView(defaults);
+
+  return (
+    <div
+      ref={ref}
+      key={id}
+      className={cs(styles.web__smart__grid__holder, {
+        [styles.web__smart__grid__visible]: inView === true,
+      })}
+    >
+      <div key={id} className={styles.web__smart__grid__item}>
+        <h3>{name}</h3>
+        <p>{desc}</p>
+      </div>
+    </div>
   );
 };
 
