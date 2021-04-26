@@ -1,6 +1,57 @@
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
+export const techStack = [
+  {
+    id: 1,
+    name: 'Back-end',
+    technologies: [
+      { id: '11', name: 'Laravel' },
+      { id: '12', name: 'Ruby' },
+      { id: '13', name: 'Python' },
+      { id: '14', name: 'Node.JS' },
+      { id: '15', name: 'PHP' },
+      { id: '16', name: 'Java' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Front-end',
+    technologies: [
+      { id: '21', name: 'AngularJS' },
+      { id: '22', name: 'ReactJS' },
+      { id: '23', name: 'VueJS' },
+      { id: '24', name: 'HTML5' },
+      { id: '25', name: 'CSS' },
+      { id: '25', name: '' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Database',
+    technologies: [
+      { id: '31', name: 'MongoDB' },
+      { id: '32', name: 'Mysql' },
+      { id: '33', name: 'PostgreSQL' },
+      { id: '34', name: 'Firebase' },
+      { id: '35', name: '' },
+      { id: '36', name: '' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'OpenSource',
+    technologies: [
+      { id: '41', name: 'Drupal' },
+      { id: '42', name: 'Magento' },
+      { id: '43', name: 'Wordpress' },
+      { id: '44', name: '' },
+      { id: '45', name: '' },
+      { id: '46', name: '' },
+    ],
+  },
+];
+
 export const webDevPortfolio = [
   {
     id: 1,

@@ -1,7 +1,7 @@
 import cs from 'classnames';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
-import { webDevPortfolio } from '../../../assets/data';
+import { techStack, webDevPortfolio } from '../../../assets/data';
 
 import Button from '../../../components/button';
 import Layout from '../../../components/layout';
@@ -135,6 +135,21 @@ export default function WebDev() {
       {webDevPortfolio.map((detail, index) => (
         <DevPortfolioCard key={index} detail={detail} />
       ))}
+      <section className={styles.web__tech__stack}>
+        <h2>Our Technology Stack</h2>
+        <div className={styles.web__tech__table}>
+          {techStack.map(({ id, name, technologies }) => (
+            <div key={id} className={styles.web__tech__table__row}>
+              <h3 className={styles.web__tech__table__cell}>{name + ':'}</h3>
+              {technologies.map(({ id: techId, name: techName }) => (
+                <div key={techId} className={styles.web__tech__table__cell}>
+                  {techName}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
       <Project />
     </Layout>
   );
