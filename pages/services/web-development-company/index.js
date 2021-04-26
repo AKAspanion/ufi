@@ -5,7 +5,12 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../../../components/button';
 import Layout from '../../../components/layout';
 import Project from '../../../components/project';
-import { smartData, techStack, webDevPortfolio } from '../../../assets/data';
+import {
+  smartData,
+  techStack,
+  timeline,
+  webDevPortfolio,
+} from '../../../assets/data';
 
 import styles from './web-dev.module.css';
 
@@ -180,10 +185,89 @@ export default function WebDev() {
           How we work
         </Button>
       </section>
+      <section className={styles.web__timeline}>
+        <div className={styles.web__timeline__heading}>
+          <h1>Our development process</h1>
+          <p>
+            Our process ensures that an interface is seamless for the end-user
+            to become familiar with and competent in using during the first
+            contact they make. The agile approach makes it intuitive for users
+            to achieve their objectives and easy to recall on subsequent visits.
+            Our designers work with developers to make the attributes stand out
+            by turning the usability to the max.
+          </p>
+        </div>
+        {timeline.map((detail, index) => (
+          <TimeLine key={index} detail={detail} />
+        ))}
+      </section>
       <Project />
     </Layout>
   );
 }
+
+const TimeLine = ({ detail }) => {
+  const { id, title, orientation, list } = detail;
+
+  const isLeft = orientation === 'left';
+  const isRight = orientation === 'right';
+
+  const { ref, inView } = useInView(defaults);
+
+  return (
+    <>
+      <div
+        className={cs(
+          styles.web__timeline__item,
+          styles.web__timeline__item__divider,
+          styles.web__timeline__item__divider__mobile,
+        )}
+      >
+        <h1>{id}</h1>
+      </div>
+      <div ref={ref} className={styles.web__timeline__content}>
+        <div
+          className={cs(styles.web__timeline__item, {
+            [styles.web__timeline__item__left]: isLeft,
+            [styles.web__timeline__item__left__visible]: inView === true,
+          })}
+        >
+          {isLeft && <TimeLineCard title={title} list={list} isLeft={isLeft} />}
+        </div>
+        <div
+          className={cs(
+            styles.web__timeline__item,
+            styles.web__timeline__item__divider,
+            styles.web__timeline__item__divider__desktop,
+          )}
+        >
+          <h1>{id}</h1>
+        </div>
+        <div
+          className={cs(styles.web__timeline__item, {
+            [styles.web__timeline__item__right]: isRight,
+            [styles.web__timeline__item__right__visible]: inView === true,
+          })}
+        >
+          {isRight && <TimeLineCard title={title} list={list} />}
+        </div>
+      </div>
+    </>
+  );
+};
+
+const TimeLineCard = ({ title, list }) => {
+  return (
+    <div className={styles.web__timeline__item__card}>
+      <h2>{title}</h2>
+      <ul>
+        {list.map((l, index) => (
+          <li key={index}>{l}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 const DevPortfolioCard = ({ detail }) => {
   const {

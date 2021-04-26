@@ -1,6 +1,66 @@
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
+export const timeline = [
+  {
+    id: '01',
+    orientation: 'left',
+    title: 'Technical Discovery',
+    list: [
+      'We establish a detailed idea about the business goals and objectives',
+      'Assess the situation',
+      'Understand the target market and competitive landscape',
+      'Clarify all doubts and queries',
+      'Understand and document clients’ design and branding preferences',
+    ],
+  },
+  {
+    id: '02',
+    orientation: 'right',
+    title: 'Planning',
+    list: [
+      'Define the project plan',
+      'Define the branding guidelines of the project',
+      'We assist you to develop a content strategy',
+      'We will assist you with a user acquisition strategy',
+    ],
+  },
+  {
+    id: '03',
+    orientation: 'left',
+    title: 'PlannIA, Web Design + Copywritinging',
+    list: [
+      'We will craft your corporate branding',
+      'Will start designing the user interface on the approved wireframes making it completely customer-centric',
+      'Mobile, Tablet, Web-specific UX',
+      'Getting all the UI designs approved and confirmed by the client',
+    ],
+  },
+  {
+    id: '04',
+    orientation: 'right',
+    title: 'Front-end and Back-End Coding',
+    list: [
+      'We will build your website’s front-end to match the beautiful designs we’ve created',
+      'Will create an intuitive backend that you can easily manage',
+      'Will cater the requirement for API integration',
+      'We craft an optimized code structure',
+      'Set up a 2-3 week frequency for milestones/sprints and involve client review in each sprint',
+    ],
+  },
+  {
+    id: '05',
+    orientation: 'left',
+    title: 'QA & Launch',
+    list: [
+      'Each milestone/sprint is tested manually',
+      'Bugs are reported and added to product backlog',
+      'Quality release is provided and then final demo of the sprint is sent to the client for approval',
+      'Regression testing after each sprint to ensure proper functioning of the previously approved sprints',
+    ],
+  },
+];
+
 export const smartData = [
   {
     id: 1,
