@@ -1,6 +1,185 @@
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
+export const timeline = [
+  {
+    id: '01',
+    orientation: 'left',
+    title: 'Technical Discovery',
+    list: [
+      'We establish a detailed idea about the business goals and objectives',
+      'Assess the situation',
+      'Understand the target market and competitive landscape',
+      'Clarify all doubts and queries',
+      'Understand and document clients’ design and branding preferences',
+    ],
+  },
+  {
+    id: '02',
+    orientation: 'right',
+    title: 'Planning',
+    list: [
+      'Define the project plan',
+      'Define the branding guidelines of the project',
+      'We assist you to develop a content strategy',
+      'We will assist you with a user acquisition strategy',
+    ],
+  },
+  {
+    id: '03',
+    orientation: 'left',
+    title: 'PlannIA, Web Design + Copywritinging',
+    list: [
+      'We will craft your corporate branding',
+      'Will start designing the user interface on the approved wireframes making it completely customer-centric',
+      'Mobile, Tablet, Web-specific UX',
+      'Getting all the UI designs approved and confirmed by the client',
+    ],
+  },
+  {
+    id: '04',
+    orientation: 'right',
+    title: 'Front-end and Back-End Coding',
+    list: [
+      'We will build your website’s front-end to match the beautiful designs we’ve created',
+      'Will create an intuitive backend that you can easily manage',
+      'Will cater the requirement for API integration',
+      'We craft an optimized code structure',
+      'Set up a 2-3 week frequency for milestones/sprints and involve client review in each sprint',
+    ],
+  },
+  {
+    id: '05',
+    orientation: 'left',
+    title: 'QA & Launch',
+    list: [
+      'Each milestone/sprint is tested manually',
+      'Bugs are reported and added to product backlog',
+      'Quality release is provided and then final demo of the sprint is sent to the client for approval',
+      'Regression testing after each sprint to ensure proper functioning of the previously approved sprints',
+    ],
+  },
+];
+
+export const smartData = [
+  {
+    id: 1,
+    name: 'Expansive',
+    desc:
+      'We follow the standard set of principles and techniques to deliver scalable web applications and solutions to meet your business demands.',
+  },
+  {
+    id: 2,
+    name: 'Responsive',
+    desc:
+      'Our professional web artisans make sure to deliver the right user experience regardless of the screen size and resolution of the device users use.',
+  },
+  {
+    id: 3,
+    name: 'Fast',
+    desc:
+      'We map out a complex project, break it down into working tasks, maximize the workflow and deliver it sooner and more efficiently.',
+  },
+  {
+    id: 4,
+    name: 'Secure',
+    desc:
+      'With us being in charge of your website, we ensure the complete security of your website against any kind of malware attack.',
+  },
+];
+
+export const techStack = [
+  {
+    id: 1,
+    name: 'Back-end',
+    technologies: [
+      { id: '11', name: 'Laravel' },
+      { id: '12', name: 'Ruby' },
+      { id: '13', name: 'Python' },
+      { id: '14', name: 'Node.JS' },
+      { id: '15', name: 'PHP' },
+      { id: '16', name: 'Java' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Front-end',
+    technologies: [
+      { id: '21', name: 'AngularJS' },
+      { id: '22', name: 'ReactJS' },
+      { id: '23', name: 'VueJS' },
+      { id: '24', name: 'HTML5' },
+      { id: '25', name: 'CSS' },
+      { id: '25', name: '' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Database',
+    technologies: [
+      { id: '31', name: 'MongoDB' },
+      { id: '32', name: 'Mysql' },
+      { id: '33', name: 'PostgreSQL' },
+      { id: '34', name: 'Firebase' },
+      { id: '35', name: '' },
+      { id: '36', name: '' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'OpenSource',
+    technologies: [
+      { id: '41', name: 'Drupal' },
+      { id: '42', name: 'Magento' },
+      { id: '43', name: 'Wordpress' },
+      { id: '44', name: '' },
+      { id: '45', name: '' },
+      { id: '46', name: '' },
+    ],
+  },
+];
+
+export const webDevPortfolio = [
+  {
+    id: 1,
+    color: '#FB5D02',
+    bgColor: '#FEF6F1',
+    name: 'Houselab',
+    category: 'Real estate',
+    type: 'management',
+    desc:
+      'A property management platform for architects, agents, brokers and homeowners.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/houselabs-mobile@1.5x.png',
+    btnText: 'View case study',
+  },
+  {
+    id: 2,
+    color: '#EB4F7D',
+    bgColor: '#E8FFFA',
+    name: 'Joyscape',
+    category: 'Revamping travel',
+    type: 'experience',
+    desc:
+      'Created a platform for Joyscape to help travellers choose fun activities around Singapore.',
+    img: 'https://www.unifiedinfotech.net/assets/images/joyscape-mobile@2x.png',
+    btnText: 'View case study',
+  },
+  {
+    id: 3,
+    color: '#38AB91',
+    bgColor: '#FFF1F4',
+    name: 'London Rag',
+    category: 'Redefining shopping',
+    type: 'experience',
+    desc:
+      'Engineered this ecommerce platform to make shopping experience easier for millennials.',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/londonrag-mobile@2x.png',
+    btnText: 'Build similar',
+  },
+];
+
 export const work = [
   {
     id: 1,
