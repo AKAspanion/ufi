@@ -5,8 +5,10 @@ import 'swiper/swiper-bundle.css';
 
 import cs from 'classnames';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useCountUp } from 'react-countup';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { useInView } from 'react-intersection-observer';
 import { useResizeDetector } from 'react-resize-detector';
 import { Carousel } from 'react-responsive-carousel';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
@@ -40,6 +42,7 @@ export default function Home() {
 
   const isSmall = width < 575;
   const isMedium = width < 980;
+
   return (
     <Layout>
       <Head>
@@ -76,13 +79,8 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.stats}>
-        {stats.map(({ id, name, value }) => (
-          <div key={id} className={styles.stat}>
-            <div key={id} className={styles.stat_wrapper}>
-              <div className={styles.stat__value}>{value}</div>
-              <div className={styles.stat__title}>{name}</div>
-            </div>
-          </div>
+        {stats.map((detail, index) => (
+          <StatCard key={index} detail={detail} />
         ))}
       </section>
       <section className={styles.standout}>
@@ -305,3 +303,41 @@ export default function Home() {
     </Layout>
   );
 }
+
+const StatCard = ({ detail }) => {
+  const { id, name } = detail;
+
+  const [view, setView] = useState(false);
+
+  const { ref: statsRef, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView && !view) {
+      setView(true);
+    }
+  }, [inView, view]);
+
+  return (
+    <div key={id} className={styles.stat}>
+      <div ref={statsRef} key={id} className={styles.stat_wrapper}>
+        {view ? <CountNum detail={detail} /> : 0}
+        <div className={styles.stat__title}>{name}</div>
+      </div>
+    </div>
+  );
+};
+
+const CountNum = ({ detail }) => {
+  const { value, postfix = '', prefix = '' } = detail;
+
+  const { countUp } = useCountUp({ end: value, duration: 3 });
+
+  console.log(Number(countUp).toFixed());
+  return (
+    <div className={styles.stat__value}>{`${prefix}${parseInt(
+      countUp
+    ).toLocaleString()}${postfix}+`}</div>
+  );
+};

@@ -493,10 +493,10 @@ export const portfolio = [
 ];
 
 export const stats = [
-  { id: 1, name: 'Years in the business', value: '10+' },
-  { id: 2, name: 'Solutions delivered', value: '1,200+' },
-  { id: 3, name: 'Technology experts', value: '150+' },
-  { id: 4, name: 'Business delivered', value: '$50M+' },
+  { id: 1, name: 'Years in the business', value: 10 },
+  { id: 2, name: 'Solutions delivered', value: 1200 },
+  { id: 3, name: 'Technology experts', value: 150 },
+  { id: 4, name: 'Business delivered', value: 50, prefix: '$', postfix: 'M' },
 ];
 
 export const process = [
