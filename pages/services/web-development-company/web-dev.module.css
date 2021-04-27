@@ -350,7 +350,7 @@
   border-right: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .web__timeline__item {
-  width: calc(50% - 100px);
+  width: calc(50% -80px);
 }
 .web__timeline__item__divider {
   z-index: 1;

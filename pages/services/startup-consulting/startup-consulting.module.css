@@ -1876,10 +1876,10 @@
 }
 
 .praise__left {
-  width: 80px;
+  width: 48px;
 }
 .praise__right {
-  width: calc(100% - 100px);
+  width: calc(100% - 80px);
 }
 
 .praise__quote {
@@ -1946,5 +1946,18 @@
 @media (max-width: 575.98px) {
   .mobile__app__sec__9 {
     padding: 1rem 5px 4rem;
+  }
+  .praise {
+    flex-direction: column;
+  }
+  .praise__left {
+    width: 48px;
+  }
+  .praise__right {
+    width: 100%;
+  }
+  .praise__quote {
+    font-size: 24px;
+    margin-bottom: 8px;
   }
 }
