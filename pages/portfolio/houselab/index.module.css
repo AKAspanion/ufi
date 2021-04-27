@@ -20,16 +20,11 @@
   padding-top: 0;
   padding-bottom: 0;
 }
-.wraper__houselabs__welcome__card
-  .houselabs__welcome__card
-  .welcome__card__box {
+.wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box {
   margin-top: -13%;
   padding: 10% 5%;
 }
-.wraper__houselabs__welcome__card
-  .houselabs__welcome__card
-  .welcome__card__box
-  h4 {
+.wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box h4 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 24px;
@@ -39,10 +34,7 @@
   padding: 0;
 }
 @media (max-width: 1799.98px) {
-  .wraper__houselabs__welcome__card
-    .houselabs__welcome__card
-    .welcome__card__box
-    h4 {
+  .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box h4 {
     font-size: 18px;
   }
 }
@@ -67,10 +59,7 @@
 .common_text p {
   font-family: 'Circular Std Book';
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  .features {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .features {
   margin-top: 40px;
 }
 
@@ -102,9 +91,7 @@
 }
 
 @media (max-width: 1799.98px) {
-  .wraper__houselabs__welcome__card
-    .houselabs__welcome__card
-    .welcome__card__box {
+  .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box {
     font-size: 18px;
   }
 }
@@ -115,27 +102,18 @@
   font-weight: bold;
   line-height: normal;
 }
-.wraper__houselabs__welcome__card
-  .houselabs__welcome__card
-  .welcome__card__box
-  h3 {
+.wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box h3 {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 34px;
 }
 @media (max-width: 1799.98px) {
-  .wraper__houselabs__welcome__card
-    .houselabs__welcome__card
-    .welcome__card__box
-    h3 {
+  .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box h3 {
     font-size: 30px;
   }
 }
-.wraper__houselabs__welcome__card
-  .houselabs__welcome__card
-  .welcome__card__box
-  > *:last-child {
+.wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -146,9 +124,7 @@
   position: relative;
   width: 100%;
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  > .houselabs__overview__sideimage {
+.wraper__houselabs__overview .houselabs__overview > .houselabs__overview__sideimage {
   top: -20%;
   bottom: 0;
   right: 0;
@@ -156,9 +132,7 @@
 .blur__out {
   animation: blurOut 0.9s ease-out;
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  > .houselabs__overview__sideimage__mobile {
+.wraper__houselabs__overview .houselabs__overview > .houselabs__overview__sideimage__mobile {
   margin-bottom: -80px;
   text-align: right;
 }
@@ -166,10 +140,7 @@
   margin-bottom: 20px;
 }
 .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text h3,
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  .h3 {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .h3 {
   margin-bottom: 20px;
   font-size: 32px;
   line-height: 42px;
@@ -177,35 +148,22 @@
 .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text p {
   margin-bottom: 25px;
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  h4 {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text h4 {
   margin-top: 25px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 20px;
 }
 
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  > *:last-child {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text > *:last-child {
   margin-bottom: 0 !important;
 }
 
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  ul {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text ul {
   padding-left: 0;
   list-style: none;
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  ul
-  li {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text ul li {
   position: relative;
   margin-bottom: 4px;
   padding-left: 25px;
@@ -215,11 +173,7 @@
   line-height: 1.94;
   font-family: 'Circular Std Book';
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  .houselabs__overview__text
-  ul
-  li:before {
+.wraper__houselabs__overview .houselabs__overview .houselabs__overview__text ul li:before {
   position: absolute;
   top: 11px;
   left: 0;
@@ -230,10 +184,7 @@
   background-color: #000;
   border-radius: 50%;
 }
-.wraper__houselabs__overview
-  .houselabs__overview
-  > .houselabs__overview__sideimage
-  img {
+.wraper__houselabs__overview .houselabs__overview > .houselabs__overview__sideimage img {
   width: 30vw;
 }
 .wraper__houselabs__overview .houselabs__overview > .container {
@@ -409,9 +360,7 @@
   vertical-align: top;
   max-width: 500px;
 }
-.wraper__houselabs__features
-  .houselabs__features__screens
-  .houselabs__features__screens__boxes {
+.wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__boxes {
   position: absolute;
   top: 50%;
   left: 0;
@@ -470,10 +419,7 @@
   vertical-align: top;
   max-width: 500px;
 }
-.wraper__houselabs__features
-  .houselabs__features__screens
-  .houselabs__features__screens__text
-  h3 {
+.wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__text h3 {
   margin-bottom: 20px;
   font-size: 30px;
 }
@@ -483,12 +429,8 @@
   > *:last-child {
   margin-bottom: 0 !important;
 }
-.wraper__houselabs__features
-  .houselabs__features__screens.last__item
-  > .container,
-.wraper__houselabs__features
-  .houselabs__features__screens.last__item
-  > .container__fluid {
+.wraper__houselabs__features .houselabs__features__screens.last__item > .container,
+.wraper__houselabs__features .houselabs__features__screens.last__item > .container__fluid {
   padding-bottom: 120px;
 }
 .wraper__houselabs__hero__video {
@@ -498,9 +440,7 @@
   position: relative;
   width: 100%;
 }
-.wraper__houselabs__hero__video
-  .houselabs__hero__video
-  .houselabs__hero__video__video {
+.wraper__houselabs__hero__video .houselabs__hero__video .houselabs__hero__video__video {
   position: relative;
 }
 .wraper__houselabs__hero__video
@@ -660,28 +600,20 @@
   }
 }
 @media (max-width: 851.98px) {
-  .wraper__houselabs__features
-    .houselabs__features__screens
-    .houselabs__features__screens__boxes {
+  .wraper__houselabs__features .houselabs__features__screens .houselabs__features__screens__boxes {
     display: none;
   }
 }
 @media (max-width: 768.98px) {
-  .wraper__houselabs__welcome__card
-    .houselabs__welcome__card
-    .welcome__card__box {
+  .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box {
     margin-top: 0;
   }
   .wraper__houselabs__welcome__card .houselabs__welcome__card {
     max-width: initial;
   }
 
-  .wraper__portfolio__section__strategy
-    .portfolio__section__strategy
-    > .container__fluid,
-  .wraper__portfolio__section__results
-    .portfolio__section__results
-    > .container,
+  .wraper__portfolio__section__strategy .portfolio__section__strategy > .container__fluid,
+  .wraper__portfolio__section__results .portfolio__section__results > .container,
   .wraper__houselabs__overview .houselabs__overview > .container,
   .wraper__freshclinic__components .freshclinic__components__title > .container,
   .wraper__londonrag__promo.padding__top__bottom > .container,
@@ -692,36 +624,18 @@
     padding-bottom: 50px;
   }
 
-  .wraper__portfolio__section__overview
-    .portfolio__section__overview
-    > .container,
-  .wraper__portfolio__section__seamless
-    .portfolio__section__seamless__title
-    > .container,
-  .wraper__portfolio__section__features
-    .portfolio__section__features__title
-    > .container,
-  .wraper__portfolio__section__features
-    .portfolio__section__features__parallax
-    > .container__fluid,
-  .wraper__portfolio__section__browser
-    .portfolio__section__browser__screens
-    > .container,
-  .wraper__portfolio__section__integrations
-    .portfolio__section__integrations
-    > .container,
-  .wraper__portfolio__section__results
-    .portfolio__section__results
-    > .container,
+  .wraper__portfolio__section__overview .portfolio__section__overview > .container,
+  .wraper__portfolio__section__seamless .portfolio__section__seamless__title > .container,
+  .wraper__portfolio__section__features .portfolio__section__features__title > .container,
+  .wraper__portfolio__section__features .portfolio__section__features__parallax > .container__fluid,
+  .wraper__portfolio__section__browser .portfolio__section__browser__screens > .container,
+  .wraper__portfolio__section__integrations .portfolio__section__integrations > .container,
+  .wraper__portfolio__section__results .portfolio__section__results > .container,
   .wraper__houselabs__overview .houselabs__overview > .container,
   .wraper__freshclinic__components .freshclinic__components__title > .container,
-  .wraper__freshclinic__showcase
-    .freshclinic__showcase__section
-    > .container__fluid,
+  .wraper__freshclinic__showcase .freshclinic__showcase__section > .container__fluid,
   .wraper__freshclinic__screenshots .freshclinic__screenshots__box > .container,
-  .wraper__happydna__testimonial
-    .happydna__testimonial__main
-    > .container__fluid,
+  .wraper__happydna__testimonial .happydna__testimonial__main > .container__fluid,
   .wraper__londonrag__promo.padding__top__bottom > .container,
   .wraper__londonrag__promo.padding__top__bottom > .container__fluid,
   .wraper__londonrag__promo.padding__top > .container,
@@ -740,9 +654,7 @@
   }
 }
 @media (max-width: 767.98px) {
-  .wraper__houselabs__welcome__card
-    .houselabs__welcome__card
-    .welcome__card__box {
+  .wraper__houselabs__welcome__card .houselabs__welcome__card .welcome__card__box {
     margin-top: 0;
   }
   .common_text p {
@@ -785,24 +697,15 @@
     height: 45px;
   }
 
-  .wraper__houselabs__welcome__card
-    .houselabs__welcome__card
-    .houselabs__welcome__card__box
-    > h3,
+  .wraper__houselabs__welcome__card .houselabs__welcome__card .houselabs__welcome__card__box > h3,
   .wraper__houselabs__features
     .houselabs__features__screens
     .houselabs__features__screens__text
     h3 {
     font-size: 28px;
   }
-  .wraper__houselabs__overview
-    .houselabs__overview
-    .houselabs__overview__text
-    h3,
-  .wraper__houselabs__overview
-    .houselabs__overview
-    .houselabs__overview__text
-    .h3 {
+  .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text h3,
+  .wraper__houselabs__overview .houselabs__overview .houselabs__overview__text .h3 {
     font-weight: 700 !important;
     font-size: 28px;
   }
@@ -814,10 +717,7 @@
     .portfolio__section__features__title
     .portfolio__section__features__title__text
     h3,
-  .wraper__houselabs__features
-    .houselabs__features__title
-    .houselabs__features__title__text
-    h3 {
+  .wraper__houselabs__features .houselabs__features__title .houselabs__features__title__text h3 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 16px;

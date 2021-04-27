@@ -1,13 +1,13 @@
-import cs from 'classnames';
-import { FaQuoteLeft } from 'react-icons/fa';
-import { Carousel } from 'react-responsive-carousel';
-import { useResizeDetector } from 'react-resize-detector';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Button from './button';
-import styles from '../pages/index.module.css';
+import cs from 'classnames';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { useResizeDetector } from 'react-resize-detector';
+import { Carousel } from 'react-responsive-carousel';
 
 import { praiseList } from '../assets/data';
+import styles from '../pages/index.module.css';
+import Button from './button';
 
 export default function Project() {
   const { width, ref } = useResizeDetector();
@@ -15,17 +15,15 @@ export default function Project() {
   const isSmall = width < 575;
   const isMedium = width < 980;
   return (
-    <section className={styles.project}>
+    <section ref={ref} className={styles.project}>
       <div className={styles.project__left}>
         <Carousel
           swipeable
           infiniteLoop
           showThumbs={false}
           autoPlay={isMedium}
-          showThumbs={false}
           showStatus={false}
-          showArrows={!isMedium && !isSmall}
-        >
+          showArrows={!isMedium && !isSmall}>
           {praiseList.map(({ name, title, quote }, index) => (
             <div key={index} style={{ padding: '5%' }}>
               <section className={styles.praise}>
@@ -57,16 +55,12 @@ export default function Project() {
         </div>
 
         <div className={styles.project__input__wrapper}>
-          <div
-            className={cs(styles.project__input, styles.project__input__right)}
-          >
+          <div className={cs(styles.project__input, styles.project__input__right)}>
             <label>Email *</label>
             <input />
           </div>
           <div style={{ width: '24px' }}></div>
-          <div
-            className={cs(styles.project__input, styles.project__input__left)}
-          >
+          <div className={cs(styles.project__input, styles.project__input__left)}>
             <label>Phone</label>
             <input />
           </div>

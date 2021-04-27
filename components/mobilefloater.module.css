@@ -1,62 +1,60 @@
 .mobile__float__sec {
-    background-color: #000000;
-    font-family: inherit;
-    bottom: -2px;
-    position: fixed;
-    display: none;
-    z-index: 99;
-    height: 70px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    box-shadow: 2px -1px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  font-family: inherit;
+  bottom: -2px;
+  position: fixed;
+  display: none;
+  z-index: 99;
+  height: 70px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  box-shadow: 2px -1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .mobile__float__sec h3 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.83;
-    letter-spacing: 1.7px;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Circular Std Book';
-    margin-top: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.83;
+  letter-spacing: 1.7px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Circular Std Book';
+  margin-top: 2px;
 }
 .mobile__float__sec a {
-    padding: 7px 0;
-    cursor: pointer;
+  padding: 7px 0;
+  cursor: pointer;
 }
-@media (max-width: 575.98px){
-    .mobile__float__sec {
-        height: 60px;
-    }
-    .mobile__float__sec a {
-        padding: 4px 0;
-    }
-    .mobile__float__sec h3 {
-        font-size: 14px;
-        margin-top: 3px;
-    }
-    
+@media (max-width: 575.98px) {
+  .mobile__float__sec {
+    height: 60px;
+  }
+  .mobile__float__sec a {
+    padding: 4px 0;
+  }
+  .mobile__float__sec h3 {
+    font-size: 14px;
+    margin-top: 3px;
+  }
 }
-@media (max-width: 991.98px){
-    .mobile__float__sec {
-        display: block;
-    }
+@media (max-width: 991.98px) {
+  .mobile__float__sec {
+    display: block;
+  }
 }
-
 
 .stiky__border {
-    border-right: 2px solid var(--main-black-4-color);
+  border-right: 2px solid var(--main-black-4-color);
 }
 .mobile__float__sec a svg {
-    width: 25px;
-    height: 17px;
+  width: 25px;
+  height: 17px;
 }
 .svg:not(:root) {
-    overflow: hidden;
+  overflow: hidden;
 }
 .h3 {
-    font-size: 1.125em;
-    font-weight: 600;
-    margin-bottom: 0;
+  font-size: 1.125em;
+  font-weight: 600;
+  margin-bottom: 0;
 }

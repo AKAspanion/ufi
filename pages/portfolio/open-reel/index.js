@@ -1,22 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import cs from 'classnames';
 import Head from 'next/head';
-import { BsPlayFill } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
 import { AiFillCheckSquare } from 'react-icons/ai';
+import { BsPlayFill } from 'react-icons/bs';
 import { useInView } from 'react-intersection-observer';
 import { useResizeDetector } from 'react-resize-detector';
 
+import { overviewLinks, parallaxMeta, results, serviceList } from '../../../assets/data';
 import Button from '../../../components/button';
 import Layout from '../../../components/layout';
-
 import styles from './open-reel.module.css';
-
-import {
-  overviewLinks,
-  parallaxMeta,
-  serviceList,
-  results,
-} from '../../../assets/data';
-import { useEffect, useState } from 'react';
 
 export default function OpenReel() {
   const { width, ref } = useResizeDetector();
@@ -75,20 +69,17 @@ export default function OpenReel() {
           <div
             className={cs(styles.overview__content__left, {
               [styles.overview__in_view]: overviewInView === true,
-            })}
-          >
+            })}>
             <h2>Evolving stories brought to life!</h2>
             <p>
-              OpenReel started with a vision of changing the video world by
-              creating the ability to capture footage remotely. That journey
-              geared towards developing an innovative video and marketing
-              platform that’s utilized from small business to global enterprise.
+              OpenReel started with a vision of changing the video world by creating the ability to
+              capture footage remotely. That journey geared towards developing an innovative video
+              and marketing platform that’s utilized from small business to global enterprise.
             </p>
             <p className="mt-3">
-              We teamed up to deliver an intuitive and updated platform that
-              speaks to a broader audience enabling them to capture up to 4K
-              video anywhere be it on the phone, iPad or computer right from the
-              desk.
+              We teamed up to deliver an intuitive and updated platform that speaks to a broader
+              audience enabling them to capture up to 4K video anywhere be it on the phone, iPad or
+              computer right from the desk.
             </p>
             <div className={styles.overview__links}>
               {overviewLinks.map(({ id, action, name }) => (
@@ -107,7 +98,7 @@ export default function OpenReel() {
             <div className={styles.overview__services__box}>
               <div className={styles.overview__services}>Services</div>
               <ul className={styles.overview__services__list}>
-                {serviceList.map(l => (
+                {serviceList.map((l) => (
                   <li key={l}>{l}</li>
                 ))}
               </ul>
@@ -119,30 +110,26 @@ export default function OpenReel() {
         <div
           className={cs(styles.strategy__left, {
             [styles.strategy__in_view]: strategyInView === true,
-          })}
-        >
+          })}>
           <h2>
             Intelligent Strategy <br />
             and Planning
           </h2>
           <p>
-            The OpenReel platform encompasses different modules consisting of
-            remote director control guiding a user to record a video through his
-            device, chrome plugin, and a mobile app to shoot users’ own video,
-            campaign creation and analytics.
+            The OpenReel platform encompasses different modules consisting of remote director
+            control guiding a user to record a video through his device, chrome plugin, and a mobile
+            app to shoot users’ own video, campaign creation and analytics.
           </p>
           <p className="mt-3">
-            Hence following a design thinking approach was inevitable to
-            understand how the system works at a holistic level by doing user
-            persona, task-flow analysis, and high fidelity wireframes.
+            Hence following a design thinking approach was inevitable to understand how the system
+            works at a holistic level by doing user persona, task-flow analysis, and high fidelity
+            wireframes.
           </p>
         </div>
         <div className={styles.strategy__right}>
           <img
             alt={'strategy'}
-            src={
-              'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Strategy@2x.jpg'
-            }
+            src={'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Strategy@2x.jpg'}
           />
         </div>
       </section>
@@ -150,15 +137,13 @@ export default function OpenReel() {
         <div
           className={cs(styles.seamless__title, {
             [styles.seamless__in_view]: seamlessInView === true,
-          })}
-        >
+          })}>
           <h1>Seamless User Experience</h1>
           <p>
-            Ensuring a quality cross channel customer journey, the entire system
-            flow depicts a great user experience, with not only OpenReel’s use
-            in mind but also the entire process of acquiring, owning, and even
-            troubleshooting it. We identified roadblocks, triggers and next
-            steps to deliver a meaningful experience.
+            Ensuring a quality cross channel customer journey, the entire system flow depicts a
+            great user experience, with not only OpenReel’s use in mind but also the entire process
+            of acquiring, owning, and even troubleshooting it. We identified roadblocks, triggers
+            and next steps to deliver a meaningful experience.
           </p>
         </div>
         <div className={styles.seamless__slider}>
@@ -179,11 +164,7 @@ export default function OpenReel() {
         </div>
       </section>
       {parallaxMeta(styles, isMedium).map((detail, index) => (
-        <ParallaxCard
-          title={isMedium ? index === 0 : true}
-          detail={detail}
-          key={index}
-        />
+        <ParallaxCard title={isMedium ? index === 0 : true} detail={detail} key={index} />
       ))}
       <section className={styles.integrations}>
         <div className={styles.integrations__left}>
@@ -192,10 +173,9 @@ export default function OpenReel() {
         <div className={styles.integrations__right}>
           <h2>3rd party integrations</h2>
           <p>
-            The ecosystem of web app development keeps evolving and to make it
-            state-of-the-art, all you need to do is keep adopting and stay on
-            course. OpenReel comes with the right choices of application with
-            regard to the abundant market offer.
+            The ecosystem of web app development keeps evolving and to make it state-of-the-art, all
+            you need to do is keep adopting and stay on course. OpenReel comes with the right
+            choices of application with regard to the abundant market offer.
           </p>
         </div>
       </section>
@@ -247,8 +227,7 @@ const ParallaxCard = ({ detail = {}, title = true }) => {
             <div
               className={cs(styles.parallax__features__text, {
                 [styles.parallax__text__in_view]: view === true,
-              })}
-            >
+              })}>
               <h2>{name}</h2>
               <p>{desc}</p>
             </div>
@@ -260,16 +239,10 @@ const ParallaxCard = ({ detail = {}, title = true }) => {
 };
 
 const IntegrationImages = () => {
-  const refs = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(i =>
-    useInView({
-      threshold: 0,
-    }),
-  );
-
   return (
     <div className={styles.integration__images}>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => (
-        <IntegrationImage id={n} />
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+        <IntegrationImage key={n} id={n} />
       ))}
     </div>
   );
@@ -282,6 +255,7 @@ const IntegrationImage = ({ id }) => {
 
   return (
     <img
+      alt={id}
       key={id}
       ref={ref}
       className={cs(styles.integration__img, styles[`integration__img_${id}`], {

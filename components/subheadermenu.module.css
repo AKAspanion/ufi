@@ -76,7 +76,18 @@
 
 .nav__submenu__services {
   padding: 12px;
-  width: 750px;
+  width: 880px;
+  display: flex;
+}
+
+.nav__submenu__services__content {
+  flex-grow: 1;
+}
+
+.nav__submenu__services__img {
+  width: 240px;
+  margin-top: 56px;
+  margin-left: 32px;
 }
 
 .nav__submenu__services_title {

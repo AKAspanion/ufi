@@ -317,7 +317,7 @@
 .process__content {
   display: flex;
   padding: 2.5% 0px;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 

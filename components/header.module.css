@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: 'LineAwesome';
-  src: url('https://www.unifiedinfotech.net/assets/fonts/line-awesome.woff2')
-    format('woff2');
+  src: url('https://www.unifiedinfotech.net/assets/fonts/line-awesome.woff2') format('woff2');
 }
 
 .navbar {
@@ -189,7 +188,7 @@
 
 .menu__header {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
