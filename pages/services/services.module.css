@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url('/fonts/circular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 .banner {
   padding: 0 8%;
   padding-top: 180px;
@@ -10,6 +18,7 @@
   letter-spacing: 4px;
   margin-bottom: 16px;
   text-transform: uppercase;
+  font-family: 'Circular Std Book';
 }
 
 .banner p {
@@ -20,11 +29,13 @@
   line-height: 48px;
   color: black;
   margin-bottom: 2.5rem;
+  font-family: 'Circular Std Book';
 }
 
 .service__wrapper {
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Circular Std Book';
 }
 
 .service {
@@ -132,6 +143,7 @@
   font-size: 30px;
   line-height: 1.33;
   cursor: pointer;
+  font-family: 'Circular Std Book';
 }
 .service__right h3::before {
   position: absolute;
@@ -149,6 +161,7 @@
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  font-family: 'Circular Std Book';
 }
 .service__right ul {
   display: inline-block;
@@ -217,6 +230,7 @@
   background: black;
   align-items: center;
   flex-direction: column;
+  font-family: 'Circular Std Book';
 }
 .gallery__wrapper h2 {
   width: 100%;
@@ -225,6 +239,7 @@
   line-height: 42px;
   text-align: center;
   margin-bottom: 32px;
+  font-family: 'Circular Std Book';
 }
 .gallery {
   display: flex;
@@ -243,6 +258,7 @@
   display: inline-block;
   margin-top: 15px;
   letter-spacing: 0.5px;
+  font-family: 'Circular Std Book';
 }
 
 @keyframes blurOut {
