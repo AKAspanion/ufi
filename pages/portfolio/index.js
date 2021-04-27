@@ -1,13 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import cs from 'classnames';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import styles from './index.module.css';
 import { work } from '../../assets/data';
 import Button from '../../components/button';
 import Layout from '../../components/layout';
+import styles from './index.module.css';
 
 let scrollTimeout;
 
@@ -47,7 +48,7 @@ export default function Portfolio() {
       <section className={styles.portfolio__wrapper}>
         <h2 className={styles.portfolio__heading}>Our Work</h2>
         <p className={styles.portfolio__description}>
-          Some highlights of our favorite projects we've done
+          Some highlights of our favorite projects we&apos;ve done
           <br /> for forward thinking clients.
         </p>
       </section>
@@ -63,7 +64,7 @@ export default function Portfolio() {
 
 const PortfolioCard = ({ key, detail = {}, scrolling }) => {
   const [view, setView] = useState(false);
-  const { id, img, link = '#', name, color, description, tags } = detail;
+  const { img, link = '#', name, color, description, tags } = detail;
 
   const { ref, inView } = useInView({
     threshold: 0,

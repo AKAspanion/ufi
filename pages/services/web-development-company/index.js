@@ -2,11 +2,10 @@ import cs from 'classnames';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
 
+import { smartData, techStack, timeline, webDevPortfolio } from '../../../assets/data';
 import Button from '../../../components/button';
 import Layout from '../../../components/layout';
 import Project from '../../../components/project';
-import { smartData, techStack, timeline, webDevPortfolio } from '../../../assets/data';
-
 import styles from './web-dev.module.css';
 
 const defaults = {

@@ -1,6 +1,7 @@
-import styles from './footer.module.css';
 import cs from 'classnames';
+
 import Button from './button';
+import styles from './footer.module.css';
 
 export default function Footer() {
   return (
@@ -119,7 +120,7 @@ export default function Footer() {
     					https://www.unifiedinfotech.net/assets/images/footer-banner1@0.75x.jpg
     					"
             src="https://www.unifiedinfotech.net/assets/images/footer-banner1@2x.jpg"
-            alt="Footer Banner Image"
+            alt="Footer Banner"
           />
         </div>
       </div>

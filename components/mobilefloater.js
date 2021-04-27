@@ -1,6 +1,6 @@
-import styles from './mobilefloater.module.css';
 import cs from 'classnames';
-import Button from './button';
+
+import styles from './mobilefloater.module.css';
 
 export default function MobileFloater() {
   return (

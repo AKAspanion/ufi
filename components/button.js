@@ -1,5 +1,6 @@
-import styles from './button.module.css';
 import cs from 'classnames';
+
+import styles from './button.module.css';
 
 export default function Button({ tag, dark, icon, bordered, children, borderedReverse }) {
   return (

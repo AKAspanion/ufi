@@ -1,5 +1,5 @@
+import { AiOutlineAntDesign, AiOutlineCode } from 'react-icons/ai';
 import { FaMobileAlt } from 'react-icons/fa';
-import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
 export const services = [
   {

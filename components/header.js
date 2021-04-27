@@ -1,14 +1,15 @@
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import cs from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
-import { CgClose } from 'react-icons/cg';
 import Collapsible from 'react-collapsible';
-import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 import { BsChevronDown } from 'react-icons/bs';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-import SubHeaderMenu from './subheadermenu.js';
-import styles from './header.module.css';
+import { CgClose } from 'react-icons/cg';
+import { HiOutlineMenuAlt4 } from 'react-icons/hi';
+
 import Button from './button';
+import styles from './header.module.css';
+import SubHeaderMenu from './subheadermenu.js';
 
 const liMeta = [
   { id: 1, name: 'Services', link: '' },
@@ -203,7 +204,7 @@ export default function Header({ darkHeader = false }) {
                                 {submeta.length !== 0 && <BsChevronDown />}
                               </div>
                             }>
-                            {submeta.map(({ id, name, link = '#' }) => (
+                            {submeta.map(({ id, name }) => (
                               <div key={id} className={styles.menu_sub__sub}>
                                 {name}
                               </div>

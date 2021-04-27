@@ -1,17 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import cs from 'classnames';
 import Head from 'next/head';
-import { BsPlayFill } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
 import { AiFillCheckSquare } from 'react-icons/ai';
+import { BsPlayFill } from 'react-icons/bs';
 import { useInView } from 'react-intersection-observer';
 import { useResizeDetector } from 'react-resize-detector';
 
+import { overviewLinks, parallaxMeta, results, serviceList } from '../../../assets/data';
 import Button from '../../../components/button';
 import Layout from '../../../components/layout';
-
 import styles from './open-reel.module.css';
-
-import { overviewLinks, parallaxMeta, serviceList, results } from '../../../assets/data';
-import { useEffect, useState } from 'react';
 
 export default function OpenReel() {
   const { width, ref } = useResizeDetector();
@@ -240,16 +239,10 @@ const ParallaxCard = ({ detail = {}, title = true }) => {
 };
 
 const IntegrationImages = () => {
-  const refs = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) =>
-    useInView({
-      threshold: 0,
-    })
-  );
-
   return (
     <div className={styles.integration__images}>
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
-        <IntegrationImage id={n} />
+        <IntegrationImage key={n} id={n} />
       ))}
     </div>
   );
@@ -262,6 +255,7 @@ const IntegrationImage = ({ id }) => {
 
   return (
     <img
+      alt={id}
       key={id}
       ref={ref}
       className={cs(styles.integration__img, styles[`integration__img_${id}`], {

@@ -1,22 +1,22 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import 'swiper/swiper-bundle.css';
+
 import cs from 'classnames';
 import Head from 'next/head';
 import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
-import { Carousel } from 'react-responsive-carousel';
-import { useResizeDetector } from 'react-resize-detector';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { useResizeDetector } from 'react-resize-detector';
+import { Carousel } from 'react-responsive-carousel';
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { coreItems, expertise, portfolio, process, processNav, stats } from '../assets/data';
 import Button from '../components/button';
 import Layout from '../components/layout';
 import Project from '../components/project';
-
 import styles from './index.module.css';
-import 'swiper/swiper-bundle.css';
-
-import { stats, process, coreItems, expertise, portfolio, processNav } from '../assets/data';
 
 const arrowStyles = {
   position: 'absolute',
@@ -108,7 +108,7 @@ export default function Home() {
                     https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image@2x.jpg,
                     https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image.jpg"
             src="https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image@2x.jpg"
-            alt="New-Home-Welcome-Image"
+            alt="New-Home-Welcome"
           />
         </div>
       </section>
@@ -229,7 +229,7 @@ export default function Home() {
                 <div key={id}>
                   <section className={cs(styles.standout, styles.standout__carousel)}>
                     <div className={cs(styles.standout__right, styles.carousel__right)}>
-                      <img src={img} alt="New-Home-Welcome-Image" />
+                      <img src={img} alt="New-Home-Welcome" />
                     </div>
                     <div className={cs(styles.standout__left, styles.carousel__left)}>
                       <h2

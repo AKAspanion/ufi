@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['simple-import-sort'],
   root: true, // Make sure eslint picks up the config at the root of the directory
   parserOptions: {
     ecmaVersion: 2020, // Use the latest ecmascript standard
@@ -25,8 +26,14 @@ module.exports = {
     'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
+    'no-prototype-builtins': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    'simple-import-sort/imports': 'error',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {

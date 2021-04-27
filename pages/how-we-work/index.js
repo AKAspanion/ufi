@@ -1,12 +1,17 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-prototype-builtins */
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import cs from 'classnames';
 import Head from 'next/head';
-import { useCallback, useRef, useState } from 'react';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useRef, useState } from 'react';
 
 import Layout from '../../components/layout';
-
 import styles from './index.module.css';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const process = [
   {
@@ -132,7 +137,7 @@ const processNav = [
 ];
 
 const getSubSection = (obj) => {
-  const { id, img, desc } = obj;
+  const { id, img } = obj;
   const subdata = proces_steps.find((item) => item.hasOwnProperty(id));
   if (!subdata) return;
   const subdataObj = subdata[Object.keys(subdata)[0]];
@@ -162,9 +167,9 @@ const getSubSection = (obj) => {
                     <h5 className={styles.sub__header}>{commontexSubHeader}</h5>
                   </div>
                   <ul className={cs([styles.text__white, styles.ul__list])}>
-                    {objectives.map((desc) => {
+                    {objectives.map((desc, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <span>{desc}</span>
                         </li>
                       );
@@ -210,9 +215,9 @@ const getSubSection = (obj) => {
                           <h5 className={styles.sub__header}>{title}</h5>
                         </div>
                         <ul className={cs([styles.text__black, styles.ul__list])}>
-                          {list__data.map((desc) => {
+                          {list__data.map((desc, i) => {
                             return (
-                              <li>
+                              <li key={i}>
                                 <span>{desc}</span>
                               </li>
                             );
@@ -1402,7 +1407,7 @@ export default function Home() {
                       styles.list__group__item,
                     ])}>
                     {' '}
-                    "Improvements to process (No finger pointing!)"
+                    {'"Improvements to process (No finger pointing!)"'}
                   </li>
                 </ul>
                 <div className={cs('card-body', 'card-footer')}>

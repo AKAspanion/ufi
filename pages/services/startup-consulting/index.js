@@ -1,37 +1,31 @@
-import cs from 'classnames';
-import Head from 'next/head';
-import { BsPlayFill } from 'react-icons/bs';
-import { AiFillCheckSquare } from 'react-icons/ai';
-import { useInView } from 'react-intersection-observer';
-import { useResizeDetector } from 'react-resize-detector';
-import Link from 'next/link';
-import { Carousel } from 'react-responsive-carousel';
-
-import Button from '../../../components/button';
-import Layout from '../../../components/layout';
-import { FaQuoteLeft } from 'react-icons/fa';
-import styles from './startup-consulting.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+import cs from 'classnames';
+import Head from 'next/head';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { useResizeDetector } from 'react-resize-detector';
+import { Carousel } from 'react-responsive-carousel';
+
 import { praiseListStartup } from '../../../assets/data';
-import { useEffect, useState } from 'react';
+import Layout from '../../../components/layout';
+import styles from './startup-consulting.module.css';
 
 export default function StartupConsulting() {
   const { width, ref } = useResizeDetector();
 
   const isMedium = width < 980;
 
-  const { ref: overviewRef, inView: overviewInView } = useInView({
-    threshold: 0,
-  });
+  // const { ref: overviewRef, inView: overviewInView } = useInView({
+  //   threshold: 0,
+  // });
 
-  const { ref: strategyRef, inView: strategyInView } = useInView({
-    threshold: 0,
-  });
+  // const { ref: strategyRef, inView: strategyInView } = useInView({
+  //   threshold: 0,
+  // });
 
-  const { ref: seamlessRef, inView: seamlessInView } = useInView({
-    threshold: 0,
-  });
+  // const { ref: seamlessRef, inView: seamlessInView } = useInView({
+  //   threshold: 0,
+  // });
 
   const consult_add = [
     {
@@ -61,6 +55,7 @@ export default function StartupConsulting() {
         />
       </Head>
       <section
+        ref={ref}
         className={cs([
           styles.banner__sec__text,
           styles.consulting__banner__sec,
@@ -433,8 +428,10 @@ export default function StartupConsulting() {
             </div>
           </div>
           <div className={cs(['row', 'justify-content-center'])}>
-            {consult_add.map(({ title, description }) => (
-              <div className={cs(['col-12', 'col-sm-12', 'col-md-4', 'col-lg-4', 'r-p-0'])}>
+            {consult_add.map(({ title, description }, index) => (
+              <div
+                key={index}
+                className={cs(['col-12', 'col-sm-12', 'col-md-4', 'col-lg-4', 'r-p-0'])}>
                 <div
                   className={cs([
                     styles.web__app__box,
@@ -602,7 +599,6 @@ export default function StartupConsulting() {
             infiniteLoop
             showThumbs={false}
             autoPlay={isMedium}
-            showThumbs={false}
             showStatus={false}
             showArrows={false}>
             {praiseListStartup.map(({ name, title, quote }, index) => (
