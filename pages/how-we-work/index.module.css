@@ -297,7 +297,7 @@
 .process__content {
   display: flex;
   padding: 2.5% 0px;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 .process__content__left {
@@ -633,7 +633,7 @@
   flex-wrap: wrap;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -ms-flex-pack: start;
+  -ms-flex-pack: flex-start;
   justify-content: flex-start;
   margin-left: 2%;
   margin-right: 0px;
@@ -832,7 +832,7 @@
   flex-wrap: wrap;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -ms-flex-pack: start;
+  -ms-flex-pack: flex-start;
   justify-content: flex-start;
   margin-left: 0px;
   margin-right: 0px;
@@ -1338,7 +1338,7 @@
   flex-wrap: wrap;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -ms-flex-pack: start;
+  -ms-flex-pack: flex-start;
   justify-content: flex-start;
   margin-left: 0px;
   margin-right: 0px;
@@ -1360,7 +1360,7 @@
   flex-wrap: wrap;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -ms-flex-pack: start;
+  -ms-flex-pack: flex-start;
   justify-content: flex-start;
   margin-left: 0px;
   margin-right: 0px;
@@ -1763,7 +1763,7 @@
   flex-wrap: wrap;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -ms-flex-pack: start;
+  -ms-flex-pack: flex-start;
   justify-content: flex-start;
   margin-left: 0px;
   margin-right: 0px;
