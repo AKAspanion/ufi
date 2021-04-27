@@ -24,8 +24,7 @@ export default function Project() {
           autoPlay={isMedium}
           showThumbs={false}
           showStatus={false}
-          showArrows={!isMedium && !isSmall}
-        >
+          showArrows={!isMedium && !isSmall}>
           {praiseList.map(({ name, title, quote }, index) => (
             <div key={index} style={{ padding: '5%' }}>
               <section className={styles.praise}>
@@ -57,16 +56,12 @@ export default function Project() {
         </div>
 
         <div className={styles.project__input__wrapper}>
-          <div
-            className={cs(styles.project__input, styles.project__input__right)}
-          >
+          <div className={cs(styles.project__input, styles.project__input__right)}>
             <label>Email *</label>
             <input />
           </div>
           <div style={{ width: '24px' }}></div>
-          <div
-            className={cs(styles.project__input, styles.project__input__left)}
-          >
+          <div className={cs(styles.project__input, styles.project__input__left)}>
             <label>Phone</label>
             <input />
           </div>

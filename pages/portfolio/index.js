@@ -80,8 +80,7 @@ const PortfolioCard = ({ key, detail = {}, scrolling }) => {
       <div
         className={cs(styles.portfolio__list__item__img, {
           [styles.img__inview]: view === true,
-        })}
-      >
+        })}>
         <Link href={link}>
           <div className={styles.portfolio__list__item__wrapper}>
             <img alt={name} src={img} />
@@ -89,17 +88,14 @@ const PortfolioCard = ({ key, detail = {}, scrolling }) => {
         </Link>
       </div>
       <div className={styles.portfolio__list__item__data}>
-        <div
-          style={{ '--title-color': color }}
-          className={styles.portfolio__list__item__title}
-        >
+        <div style={{ '--title-color': color }} className={styles.portfolio__list__item__title}>
           <Link href={link}>{name}</Link>
         </div>
         <div className={styles.portfolio__list__item__desc}>
           <Link href={link}>{description}</Link>
         </div>
         <div className={styles.portfolio__list__item__tags}>
-          {tags.map(tag => (
+          {tags.map((tag) => (
             <>
               <Button tag>{tag}</Button>
               <div style={{ width: 16 }}></div>

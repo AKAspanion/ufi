@@ -1,6 +1,120 @@
 import { FaMobileAlt } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineAntDesign } from 'react-icons/ai';
 
+export const services = [
+  {
+    id: 1,
+    name: 'Consulting',
+    imageOrientation: 'left',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Consulting-Image@2x.jpg',
+    desc:
+      'We can help your idea get visibility with putting up the right development and design strategy in this crowded market with our consulting expertise.',
+    links: ['Enterprise', 'Startup'],
+  },
+  {
+    id: 2,
+    name: 'Web',
+    imageOrientation: 'right',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Web-Development-Image@2x.jpg',
+    desc:
+      'We understand the science of enhancing user experience with a combination of human-centric approach and development ingenuity.',
+    links: ['Web app development', 'Web design', 'Progressive web apps'],
+  },
+  {
+    id: 3,
+    name: 'Mobile Apps',
+    imageOrientation: 'left',
+    img:
+      'https://www.unifiedinfotech.net/assets/images/Service-Page-Mobile-Development-Image@2x.jpg',
+    desc:
+      'Leveraging mobility to bring business stability and visibility for you, we make your product next gen ready with the best of technology.',
+    links: [
+      'iOS app development',
+      'Android app development',
+      'React Native app development',
+      'Enterprise Mobility',
+    ],
+  },
+  {
+    id: 4,
+    name: 'UX UI Design',
+    imageOrientation: 'center',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-UI-UX-Design-Image@2x.jpg',
+    desc:
+      'Turn to Unified Infotech’s extensive design expertise combining human-centered design with a story weaved to drive ROI.',
+    links: ['Learn more about UI/UX process'],
+  },
+  {
+    id: 5,
+    name: 'Blockchain development',
+    imageOrientation: 'center',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Blockchain-Image@2x.jpg',
+    desc:
+      'We take pride in building secure and powerful Blockchain applications- from smart contracts to cryptocurrencies.',
+    links: ['Learn more'],
+  },
+  {
+    id: 6,
+    name: 'eCommerce',
+    imageOrientation: 'center',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-eCommerce-Image@2x.jpg',
+    desc:
+      'Make your business online market ready with our distinctive ecommerce web and app development solutions.',
+    links: ['How we do it'],
+  },
+  {
+    id: 7,
+    name: 'Custom software development',
+    imageOrientation: 'center',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Custom-Software-Image@2x.jpg',
+    desc:
+      'Web or mobile, we have devised the best custom software development solution following agile methodology.',
+    links: ['Learn more'],
+  },
+  {
+    id: 8,
+    name: 'Technology',
+    imageOrientation: 'left',
+    img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Technology-Image@2x.jpg',
+    desc:
+      'Check out what leading technologies we work on to create elegant, robust and scalable application to move your business forward.',
+    links: ['Laravel', 'Node.JS', 'PHP', 'AngularJS', 'Magento'],
+  },
+];
+
+export const gallery = [
+  {
+    id: 1,
+    name: 'Video Streaming App',
+    img: 'https://www.unifiedinfotech.net/assets/images/ux-p1@2x.jpg',
+  },
+  {
+    id: 2,
+    name: 'Events & Activity App',
+    img: 'https://www.unifiedinfotech.net/assets/images/ux-p2@2x.jpg',
+  },
+  {
+    id: 3,
+    name: 'Food Pick-up App',
+    img: 'https://www.unifiedinfotech.net/assets/images/ux-p3@2x.jpg',
+  },
+  {
+    id: 4,
+    name: 'Digital Marketing Website',
+    img: 'https://www.unifiedinfotech.net/assets/images/ux-p4@2x.jpg',
+  },
+  {
+    id: 5,
+    name: 'Social Media App',
+    img: 'https://www.unifiedinfotech.net/assets/images/ux-p5@2x.jpg',
+  },
+  {
+    id: 6,
+    name: 'Learning App',
+    img: 'https://www.unifiedinfotech.net/assets/images/ux-p6@2x.jpg',
+  },
+];
+
 export const timeline = [
   {
     id: '01',
@@ -147,10 +261,8 @@ export const webDevPortfolio = [
     name: 'Houselab',
     category: 'Real estate',
     type: 'management',
-    desc:
-      'A property management platform for architects, agents, brokers and homeowners.',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/houselabs-mobile@1.5x.png',
+    desc: 'A property management platform for architects, agents, brokers and homeowners.',
+    img: 'https://www.unifiedinfotech.net/assets/images/houselabs-mobile@1.5x.png',
     btnText: 'View case study',
   },
   {
@@ -172,10 +284,8 @@ export const webDevPortfolio = [
     name: 'London Rag',
     category: 'Redefining shopping',
     type: 'experience',
-    desc:
-      'Engineered this ecommerce platform to make shopping experience easier for millennials.',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/londonrag-mobile@2x.png',
+    desc: 'Engineered this ecommerce platform to make shopping experience easier for millennials.',
+    img: 'https://www.unifiedinfotech.net/assets/images/londonrag-mobile@2x.png',
     btnText: 'Build similar',
   },
 ];
@@ -188,8 +298,7 @@ export const work = [
     description:
       'Worked to build a new and insightful interface for the community of committed bankers',
     tags: ['Micro interaction', 'Visual design', 'Front-end development'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Citibank@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Citibank@2x.jpg',
   },
   {
     id: 2,
@@ -199,8 +308,7 @@ export const work = [
     description:
       'We helped build this multi-million dollar SaaS video platform with patented technology',
     tags: ['Consulting', 'UI/UX', 'Mobile App Solution'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Openreel-Inc@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Openreel-Inc@2x.jpg',
   },
   {
     id: 3,
@@ -209,8 +317,7 @@ export const work = [
     description:
       'Creating an Artificial Intelligence powered award winning streaming app featuring world’s best short films',
     tags: ['Consulting', 'UI/UX', 'Mobile App Solution'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Largo-Films@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Largo-Films@2x.jpg',
   },
   {
     id: 4,
@@ -220,8 +327,7 @@ export const work = [
     description:
       'Engineered a cloud based document management platform for architects, agents & homeowners',
     tags: ['UI/UX', 'Web App Development'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Houselab@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Houselab@2x.jpg',
   },
   {
     id: 5,
@@ -230,8 +336,7 @@ export const work = [
     description:
       'On-demand marketplace helping nurses connect with doctors and facilitate prescription for Botox',
     tags: ['AI', 'UI/UX', 'Mobile App Design'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Fresh-Clinics@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Fresh-Clinics@2x.jpg',
   },
   {
     id: 6,
@@ -240,8 +345,7 @@ export const work = [
     description:
       'Co-created with this e-commerce startup to be the one stop solution for kids apparel and accessories',
     tags: ['UI/UX', 'Mobile App Development', 'eCommerce'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-ToonyPort@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-ToonyPort@2x.jpg',
   },
   {
     id: 7,
@@ -250,8 +354,7 @@ export const work = [
     description:
       'Transformed Happy DNA’s idea into a full-blown, seamless digital product, impacting 25k+ parents & children',
     tags: ['UI/UX', 'Mobile App Development', 'RESTful API Development'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Happy-DNA@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Happy-DNA@2x.jpg',
   },
   {
     id: 8,
@@ -260,8 +363,7 @@ export const work = [
     description:
       'eCommerce shopping venture for millennials causing much disruption in the market, making shopping fun',
     tags: ['Consulting', 'eCommerce', 'AI', 'Web Development'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-London-Rag@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-London-Rag@2x.jpg',
   },
   {
     id: 9,
@@ -270,8 +372,7 @@ export const work = [
     description:
       'Helping Joyscape a simple engaging platform for users to explore fun activities in Singapore',
     tags: ['AI', 'UI/UX', 'Web Development'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Joyscape@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Joyscape@2x.jpg',
   },
   {
     id: 10,
@@ -280,8 +381,7 @@ export const work = [
     description:
       'Connected C-suite executives with qualified industry consultants through Bridger across various industries',
     tags: ['System Architecture', 'UI/UX', 'Web App Development'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Bridger@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Bridger@2x.jpg',
   },
   {
     id: 11,
@@ -290,8 +390,7 @@ export const work = [
     description:
       'Helped building BitMarket.net to be the most advanced and intuitive cryptocurrency exchange in Europe',
     tags: ['Server Administration', 'BlockChain', 'Back-end Architecture'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Bitmarket@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Bitmarket@2x.jpg',
   },
   {
     id: 12,
@@ -300,8 +399,7 @@ export const work = [
     description:
       'Engineered the concept of real cashless food drive-thru experience for customers through native app development',
     tags: ['Consulting', 'Mobile App', 'UI/UX Design'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Drop@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Drop@2x.jpg',
   },
   {
     id: 13,
@@ -310,8 +408,7 @@ export const work = [
     description:
       'One-stop marketplace for home-cooked foods. It connects home-based chefs with foodies.',
     tags: ['Consulting', 'Native App Development', 'UI/UX Design'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-OOTa@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-OOTa@2x.jpg',
   },
   {
     id: 14,
@@ -320,8 +417,7 @@ export const work = [
     description:
       'Devised this app for unlimited access to music, videos, and to get nearby event updates..',
     tags: ['Consulting', 'Native App Development', 'UI/UX Design'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-DMV@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-DMV@2x.jpg',
   },
   {
     id: 15,
@@ -330,8 +426,7 @@ export const work = [
     description:
       'Created an on-demand grocery delivery and recipe sharing app for fresh & local produce.',
     tags: ['Consulting', 'Native App Development', 'UI/UX Design'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-Frut@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-Frut@2x.jpg',
   },
   {
     id: 16,
@@ -340,8 +435,7 @@ export const work = [
     description:
       'Crafted a seamless digital experience & app for parents’ to find kids’ activities.',
     tags: ['Web App Development', 'Mobile App Development', 'UI/UX Design'],
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Portflio-New-KidsCityPass@2x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Portflio-New-KidsCityPass@2x.jpg',
   },
 ];
 
@@ -350,8 +444,7 @@ export const portfolio = [
     id: 1,
     name: 'Openreel Inc.',
     title: 'A patented multi-million SaaS video platform',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
+    img: 'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
     desc:
       'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
@@ -367,8 +460,7 @@ export const portfolio = [
     id: 3,
     name: 'Openreel Inc.',
     title: 'A patented multi-million SaaS video platform',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
+    img: 'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
     desc:
       'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
@@ -384,8 +476,7 @@ export const portfolio = [
     id: 5,
     name: 'Openreel Inc.',
     title: 'A patented multi-million SaaS video platform',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
+    img: 'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
     desc:
       'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
@@ -410,48 +501,42 @@ export const process = [
   {
     id: 1,
     title: 'Discovery Workshop',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Clutch-Discovery-Workshop-Image@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Clutch-Discovery-Workshop-Image@4x.jpg',
     desc:
       'We give the utmost importance to understand and document client’s inputs, design, and branding preferences. And clarify all the open-ended points to establish a precise and clear idea about both clients’ and project’s goals. We work in a collaborative approach involving key stakeholders to bring alignment in the business process.',
   },
   {
     id: 2,
     title: 'Planning',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Clutch-Planning-Image@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Clutch-Planning-Image@4x.jpg',
     desc:
       'Our services emphasize on well-defined project planning and leave nothing for assumption to avoid miscommunication. We jot down how we are going to proceed further, define detailed technical specifications, devise the design & branding guidelines of the project, and get confirmation and approval from the clients’ end on the documents and materials.',
   },
   {
     id: 3,
     title: 'Design',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Clutch-Design-Image@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Clutch-Design-Image@4x.jpg',
     desc:
       'We provide clients with Web, Tablet, and Mobile-specific UI designs of the projects based on the approved wireframes and design guidelines. As a trusted entity, we deliver clickable prototypes on Invision platform and the source files in either Photoshop or Sketch format. Getting system UI designs approved and confirmed by the client is one of our objectives at this stage.',
   },
   {
     id: 4,
     title: 'Development',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Clutch-Development-Image@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Clutch-Development-Image@4x.jpg',
     desc:
       'At this stage, we cater requirements for frontend, backend, web services, and API development integration. Along with preparing a strategy for Agile Scrum methodology, we factor the aspects of scalability, multi-tenancy, 3rd party integration, and craft an optimized clean code structure using cutting-edge technologies. We make sure to involve and implement clients’ reviews in each sprint/milestone.',
   },
   {
     id: 5,
     title: 'Testing',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Clutch-Testing-Image@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Clutch-Testing-Image@4x.jpg',
     desc:
       'We test each sprint manually, report bugs and add those to product backlog. Once the bug fixing is done, we provide the quality release and then the final demo of the sprint is sent for clients’ approval. We make sure to do regression testing to ensure proper functioning of the previously approved milestones/sprints.',
   },
   {
     id: 6,
     title: 'Maintainence',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Clutch-Maintenance-Image@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Clutch-Maintenance-Image@4x.jpg',
     desc:
       'Our work doesn’t end with development, we go the extra mile for our clients. Through an Agile approach, we ensure product enhancement. We do regular Security Audits, Bi-weekly code backups, and constant system upgradation. Along with testing the entire system each month to find any incompatibility or error, we monitor the traffic and server load and accordingly optimize it.',
   },
@@ -503,7 +588,6 @@ export const praiseList = [
     quote: 'They’re available to help us around the clock.',
   },
 ];
-
 
 export const praiseListStartup = [
   {
@@ -574,8 +658,7 @@ export const expertise = [
   {
     id: 1,
     name: 'AR/VR',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-AR-VR@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-AR-VR@4x.jpg',
     desc:
       'We work with the latest sensations in the tech industry and ensure to \
       deliver best-in-class AR/VR solutions with immersive experiences.',
@@ -583,56 +666,49 @@ export const expertise = [
   {
     id: 2,
     name: 'Media & Entertainment',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Shopping-E-commerce@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-Shopping-E-commerce@4x.jpg',
     desc:
       'We innovate the ways your audience experiences entertainment. Get next-generation solutions for media & entertainment landscape.',
   },
   {
     id: 3,
     name: 'Blockchain & IoT',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Blockchain-IoT@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-Blockchain-IoT@4x.jpg',
     desc:
       'Let your customers experience the future and transform your business with our high-end Blockchain & IoT solutions.',
   },
   {
     id: 4,
     name: 'AI/ML',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-AI-ML@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-AI-ML@4x.jpg',
     desc:
       'With our AI/ML experts, we assist businesses to turn the big promises of AI/ML technologies into quantifiable business impact.',
   },
   {
     id: 5,
     name: 'Health & Fitness',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Health-Finance@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-Health-Finance@4x.jpg',
     desc:
       'Get high-end mHealth solutions to improve medical care & patient services. Our tech solutions are redefining healthcare services.',
   },
   {
     id: 6,
     name: 'Banking & Finance',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Banking-Finance@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-Banking-Finance@4x.jpg',
     desc:
       'Our smart & customer-centric solutions assist businesses to outsmart competitors and modernize banking and finance-related services.',
   },
   {
     id: 7,
     name: 'Shopping & E-Commerce',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Shopping-E-commerce@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-Shopping-E-commerce@4x.jpg',
     desc:
       'We design & develop user-engaging eCommerce applications that improve ROI, increase brand exposure, and skyrocket your online business',
   },
   {
     id: 8,
     name: 'Education & E-Learning',
-    img:
-      'https://www.unifiedinfotech.net/assets/images/Home-Industry-Education-ELearning@4x.jpg',
+    img: 'https://www.unifiedinfotech.net/assets/images/Home-Industry-Education-ELearning@4x.jpg',
     desc:
       'Our high-end tech solutions revamp the education industry and assist it to offer students a more personalized eLearning experience.',
   },

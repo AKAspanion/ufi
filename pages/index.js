@@ -16,14 +16,7 @@ import Project from '../components/project';
 import styles from './index.module.css';
 import 'swiper/swiper-bundle.css';
 
-import {
-  stats,
-  process,
-  coreItems,
-  expertise,
-  portfolio,
-  processNav,
-} from '../assets/data';
+import { stats, process, coreItems, expertise, portfolio, processNav } from '../assets/data';
 
 const arrowStyles = {
   position: 'absolute',
@@ -63,8 +56,7 @@ export default function Home() {
             muted
             autoPlay
             className={styles.video}
-            poster="https://www.unifiedinfotech.net/assets/images/banner.jpg"
-          >
+            poster="https://www.unifiedinfotech.net/assets/images/banner.jpg">
             <source
               src="https://www.unifiedinfotech.net/assets/videos/uipl-banner-video.mp4"
               type="video/mp4"
@@ -74,8 +66,7 @@ export default function Home() {
         <div className={styles.video__overlay}></div>
         <div className={styles.video__hero}>
           <div className={styles.hero__text}>
-            Your technology partner for innovative and impactful digital
-            solutions.
+            Your technology partner for innovative and impactful digital solutions.
           </div>
           <div className={styles.call_to_action}>
             <Button dark>View case studies</Button>
@@ -96,19 +87,15 @@ export default function Home() {
       </section>
       <section className={styles.standout}>
         <div className={styles.standout__left}>
-          <h2 className={styles.standout__title}>
-            How we stand out - We are Proactive Experts
-          </h2>
+          <h2 className={styles.standout__title}>How we stand out - We are Proactive Experts</h2>
           <p className={styles.standout__subtitle}>
-            We proactively consult, design, develop &amp; scale robust web,
-            mobile &amp; custom software solutions, that fuel innovation &amp;
-            deliver digital success!
+            We proactively consult, design, develop &amp; scale robust web, mobile &amp; custom
+            software solutions, that fuel innovation &amp; deliver digital success!
           </p>
           <p className={styles.standout__desc}>
-            At Unified we believe that every project is an important milestone
-            in our journey. So we position ourselves as a boutique digital
-            agency, custom tailoring impactful digital solutions with industry
-            best practices across the board, for Fortune 500's, SMEs, and
+            At Unified we believe that every project is an important milestone in our journey. So we
+            position ourselves as a boutique digital agency, custom tailoring impactful digital
+            solutions with industry best practices across the board, for Fortune 500s, SMEs, and
             Start-up’s around the globe.
           </p>
           <Button borderedReverse>Request Consultation</Button>
@@ -167,8 +154,7 @@ export default function Home() {
                 type="button"
                 title={label}
                 onClick={onClickHandler}
-                style={{ ...arrowStyles, left: 60 }}
-              >
+                style={{ ...arrowStyles, left: 60 }}>
                 <BsChevronLeft />
               </button>
             )
@@ -179,41 +165,21 @@ export default function Home() {
                 type="button"
                 title={label}
                 onClick={onClickHandler}
-                style={{ ...arrowStyles, right: 60 }}
-              >
+                style={{ ...arrowStyles, right: 60 }}>
                 <BsChevronRight />
               </button>
             )
-          }
-        >
+          }>
           {portfolio.map(({ id, name, title, img, desc }) => (
             <div key={id} style={isSmall ? {} : { padding: '5%' }}>
               <section className={styles.standout}>
-                <div
-                  className={cs(styles.standout__right, styles.carousel__right)}
-                >
-                  <img src={img} alt="New-Home-Welcome-Image" />
+                <div className={cs(styles.standout__right, styles.carousel__right)}>
+                  <img src={img} alt="New-Home-Welcome" />
                 </div>
-                <div
-                  className={cs(styles.standout__left, styles.carousel__left)}
-                >
+                <div className={cs(styles.standout__left, styles.carousel__left)}>
                   <h2 className={styles.carousel__heading}>{name}</h2>
-                  <h2
-                    className={cs(
-                      styles.standout__title,
-                      styles.carousel__title,
-                    )}
-                  >
-                    {title}
-                  </h2>
-                  <p
-                    className={cs(
-                      styles.standout__subtitle,
-                      styles.carousel__desc,
-                    )}
-                  >
-                    {desc}
-                  </p>
+                  <h2 className={cs(styles.standout__title, styles.carousel__title)}>{title}</h2>
+                  <p className={cs(styles.standout__subtitle, styles.carousel__desc)}>{desc}</p>
                   <div className={styles.flex}>
                     <div style={{ marginBottom: '24px' }}>
                       <Button borderedReverse>View portfolio</Button>
@@ -244,8 +210,7 @@ export default function Home() {
                     onClick={() => setSelectedNav(id - 1)}
                     className={cs({
                       [styles.process__nav__selected]: id - 1 === selectedNav,
-                    })}
-                  >{`${id}. ${name}`}</li>
+                    })}>{`${id}. ${name}`}</li>
                 ))}
               </ul>
             </div>
@@ -259,49 +224,31 @@ export default function Home() {
               showStatus={false}
               showIndicators={isMedium}
               selectedItem={selectedNav}
-              axis={!isMedium ? 'vertical' : undefined}
-            >
+              axis={!isMedium ? 'vertical' : undefined}>
               {process.map(({ id, title, img, desc }) => (
                 <div key={id}>
-                  <section
-                    className={cs(styles.standout, styles.standout__carousel)}
-                  >
-                    <div
-                      className={cs(
-                        styles.standout__right,
-                        styles.carousel__right,
-                      )}
-                    >
+                  <section className={cs(styles.standout, styles.standout__carousel)}>
+                    <div className={cs(styles.standout__right, styles.carousel__right)}>
                       <img src={img} alt="New-Home-Welcome-Image" />
                     </div>
-                    <div
-                      className={cs(
-                        styles.standout__left,
-                        styles.carousel__left,
-                      )}
-                    >
+                    <div className={cs(styles.standout__left, styles.carousel__left)}>
                       <h2
                         className={cs(
                           styles.standout__title,
                           styles.carousel__title,
-                          styles.process__title,
-                        )}
-                      >
+                          styles.process__title
+                        )}>
                         {title}
                       </h2>
                       <p
                         className={cs(
                           styles.standout__subtitle,
                           styles.carousel__desc,
-                          styles.process__desc,
-                        )}
-                      >
+                          styles.process__desc
+                        )}>
                         {desc}
                       </p>
-                      <div
-                        style={{ paddingBottom: 48 }}
-                        className={styles.flex}
-                      >
+                      <div style={{ paddingBottom: 48 }} className={styles.flex}>
                         <Button bordered dark>
                           get in touch
                         </Button>
@@ -340,8 +287,7 @@ export default function Home() {
                 }
           }
           spaceBetween={32}
-          slidesPerView={isMedium ? 2 : 4}
-        >
+          slidesPerView={isMedium ? 2 : 4}>
           {expertise.map(({ id, name, desc, img }) => (
             <SwiperSlide key={id}>
               <div className={styles.expertise__content}>
