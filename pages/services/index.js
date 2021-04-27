@@ -1,16 +1,32 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import cs from 'classnames';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import { FaQuoteLeft } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { useResizeDetector } from 'react-resize-detector';
+import { Carousel } from 'react-responsive-carousel';
 
-import { services } from '../../assets/data';
+import { gallery, praiseListStartup, services } from '../../assets/data';
+import Button from '../../components/button';
 import Layout from '../../components/layout';
+import startupStyles from '../services/startup-consulting/startup-consulting.module.css';
 import styles from './services.module.css';
 
 export default function Services() {
+  const { width, ref } = useResizeDetector();
+
+  const isMedium = width < 980;
+
   useEffect(() => {
     services.map(({ img }) => {
+      const newImg = new Image();
+      newImg.src = img;
+    });
+
+    gallery.map(({ img }) => {
       const newImg = new Image();
       newImg.src = img;
     });
@@ -25,7 +41,7 @@ export default function Services() {
           href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
         />
       </Head>
-      <section className={styles.banner}>
+      <section ref={ref} className={styles.banner}>
         <h1>OUR SERVICES</h1>
         <p>
           Startup or a Fortune 500 company, Unified Infotech will act as your consultant and
@@ -38,9 +54,90 @@ export default function Services() {
           <ServiceCard key={index} detail={detail} />
         ))}
       </section>
+      <section className={styles.gallery__wrapper}>
+        <h2>Pristine touch in every pixel</h2>
+        <div className={styles.gallery}>
+          {gallery.map((detail, index) => (
+            <GalleryCard key={index} detail={detail} />
+          ))}
+        </div>
+        <div style={{ height: 48 }}></div>
+        <Button dark bordered>
+          view gallery
+        </Button>
+        <div style={{ height: 48 }}></div>
+      </section>
+      <section
+        className={cs(startupStyles.consulting__start__8, startupStyles.mobile__app__sec__9)}>
+        <div className={'container'}>
+          <div
+            className={cs([startupStyles.common__text, startupStyles.text__black, 'text-center'])}>
+            <h3
+              className={cs([
+                'h2',
+                startupStyles.treat__as__h1,
+                'mb-0 font-weight-bold text-center',
+              ])}>
+              From people like you
+            </h3>
+          </div>
+          <Carousel
+            swipeable
+            infiniteLoop
+            showThumbs={false}
+            autoPlay={isMedium}
+            showStatus={false}
+            showArrows={false}>
+            {praiseListStartup.map(({ name, title, quote }, index) => (
+              <div key={index} style={{ padding: '5%' }}>
+                <section className={startupStyles.praise}>
+                  <div className={startupStyles.praise__left}>
+                    <FaQuoteLeft size={48} color="#C7C7C7" />
+                  </div>
+                  <div className={startupStyles.praise__right}>
+                    <div className={cs(startupStyles.praise__quote, 'text-left')}>
+                      <blockquote></blockquote>
+                      <span className={'text-left'}>{quote}</span>
+                    </div>
+                    <div className={cs(startupStyles.praise__name, 'text-left')}>{name}</div>
+                    <div className={cs(startupStyles.praise__title, 'text-left')}>{title}</div>
+                  </div>
+                </section>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </section>
     </Layout>
   );
 }
+
+const GalleryCard = ({ detail }) => {
+  const [view, setView] = useState(false);
+
+  const { id, name, img } = detail;
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView && !view) {
+      setView(true);
+    }
+  }, [inView]);
+  return (
+    <div
+      ref={ref}
+      key={id}
+      className={cs(styles.gallery__item, {
+        [styles.gallery__item__inview]: view === true,
+      })}>
+      <img alt={name} src={img} />
+      <h3>{name}</h3>
+    </div>
+  );
+};
 
 const ServiceCard = ({ detail }) => {
   const [view, setView] = useState(false);

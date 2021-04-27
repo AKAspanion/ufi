@@ -1865,12 +1865,21 @@
   }
 
   .mobile__app__sec__9 {
-    padding: 5rem 0 10rem;
+    padding: 5rem 0 6rem;
   }
 }
 
 .praise {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Circular Std Book';
+}
+
+.praise__left {
+  width: 80px;
+}
+.praise__right {
+  width: calc(100% - 100px);
 }
 
 .praise__quote {

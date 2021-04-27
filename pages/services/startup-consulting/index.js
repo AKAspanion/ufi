@@ -592,7 +592,9 @@ export default function StartupConsulting() {
       <section className={cs(styles.consulting__start__8, styles.mobile__app__sec__9)}>
         <div className={'container'}>
           <div className={cs([styles.common__text, styles.text__black, 'text-center'])}>
-            <h3 className={cs(['h2', styles.treat__as__h1, 'mb-0'])}>From people like you</h3>
+            <h3 className={cs(['h2', styles.treat__as__h1, 'mb-0 font-weight-bold text-center'])}>
+              From people like you
+            </h3>
           </div>
           <Carousel
             swipeable
@@ -604,13 +606,17 @@ export default function StartupConsulting() {
             {praiseListStartup.map(({ name, title, quote }, index) => (
               <div key={index} style={{ padding: '5%' }}>
                 <section className={styles.praise}>
-                  <div className={cs(styles.praise__quote, 'text-left')}>
-                    <FaQuoteLeft size={33} color="#C7C7C7" />
-                    <blockquote></blockquote>
-                    <span className={'text-left'}>{quote}</span>
+                  <div className={styles.praise__left}>
+                    <FaQuoteLeft size={48} color="#C7C7C7" />
                   </div>
-                  <div className={cs(styles.praise__name, 'text-left')}>{name}</div>
-                  <div className={cs(styles.praise__title, 'text-left')}>{title}</div>
+                  <div className={styles.praise__right}>
+                    <div className={cs(styles.praise__quote, 'text-left')}>
+                      <blockquote></blockquote>
+                      <span className={'text-left'}>{quote}</span>
+                    </div>
+                    <div className={cs(styles.praise__name, 'text-left')}>{name}</div>
+                    <div className={cs(styles.praise__title, 'text-left')}>{title}</div>
+                  </div>
                 </section>
               </div>
             ))}
