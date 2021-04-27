@@ -53,3 +53,33 @@ summary {
 .carousel .control-dots .dot {
   background: #000000 !important;
 }
+
+.frem-slider-wrap .swiper-button-next {
+  left: 124px;
+}
+
+.frem-slider-wrap .swiper-button-next,
+.frem-slider-wrap .swiper-button-prev {
+  top: inherit;
+  bottom: -50px;
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+  background-size: 12px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.frem-slider-wrap .swiper-button-next {
+  background-image: url(https://www.unifiedinfotech.net/assets/images/right-panel.svg);
+  right: auto;
+  left: 195px;
+}
+
+
+.frem-slider-wrap .swiper-button-prev {
+  background-image: url(https://www.unifiedinfotech.net/assets/images/left-panel.svg);
+  right: auto;
+  left: 195px;
+}
