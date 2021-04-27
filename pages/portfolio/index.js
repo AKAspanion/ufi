@@ -33,8 +33,8 @@ export default function Portfolio() {
 
     window.addEventListener('scroll', onscroll);
 
-    () => window.removeEventListener('scroll', onscroll);
-  }, []);
+    return () => window.removeEventListener('scroll', onscroll);
+  });
 
   return (
     <Layout darkHeader>
