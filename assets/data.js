@@ -4,8 +4,9 @@ import { FaMobileAlt } from 'react-icons/fa';
 export const services = [
   {
     id: 1,
+    isFifty: true,
     name: 'Consulting',
-    imageOrientation: 'left',
+    orientation: 'left',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Consulting-Image@2x.jpg',
     desc:
       'We can help your idea get visibility with putting up the right development and design strategy in this crowded market with our consulting expertise.',
@@ -14,7 +15,8 @@ export const services = [
   {
     id: 2,
     name: 'Web',
-    imageOrientation: 'right',
+    bgColor: '#F9F9F9',
+    orientation: 'right',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Web-Development-Image@2x.jpg',
     desc:
       'We understand the science of enhancing user experience with a combination of human-centric approach and development ingenuity.',
@@ -23,7 +25,7 @@ export const services = [
   {
     id: 3,
     name: 'Mobile Apps',
-    imageOrientation: 'left',
+    orientation: 'left',
     img:
       'https://www.unifiedinfotech.net/assets/images/Service-Page-Mobile-Development-Image@2x.jpg',
     desc:
@@ -38,7 +40,7 @@ export const services = [
   {
     id: 4,
     name: 'UX UI Design',
-    imageOrientation: 'center',
+    orientation: 'center',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-UI-UX-Design-Image@2x.jpg',
     desc:
       'Turn to Unified Infotech’s extensive design expertise combining human-centered design with a story weaved to drive ROI.',
@@ -47,7 +49,7 @@ export const services = [
   {
     id: 5,
     name: 'Blockchain development',
-    imageOrientation: 'center',
+    orientation: 'center',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Blockchain-Image@2x.jpg',
     desc:
       'We take pride in building secure and powerful Blockchain applications- from smart contracts to cryptocurrencies.',
@@ -56,7 +58,7 @@ export const services = [
   {
     id: 6,
     name: 'eCommerce',
-    imageOrientation: 'center',
+    orientation: 'center',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-eCommerce-Image@2x.jpg',
     desc:
       'Make your business online market ready with our distinctive ecommerce web and app development solutions.',
@@ -65,7 +67,7 @@ export const services = [
   {
     id: 7,
     name: 'Custom software development',
-    imageOrientation: 'center',
+    orientation: 'center',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Custom-Software-Image@2x.jpg',
     desc:
       'Web or mobile, we have devised the best custom software development solution following agile methodology.',
@@ -74,7 +76,7 @@ export const services = [
   {
     id: 8,
     name: 'Technology',
-    imageOrientation: 'left',
+    orientation: 'left',
     img: 'https://www.unifiedinfotech.net/assets/images/Service-Page-Technology-Image@2x.jpg',
     desc:
       'Check out what leading technologies we work on to create elegant, robust and scalable application to move your business forward.',
