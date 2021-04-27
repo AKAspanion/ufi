@@ -1,5 +1,6 @@
 import cs from 'classnames';
 import Link from 'next/link';
+import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './subheadermenu.module.css';
 
@@ -20,30 +21,45 @@ export default function SubHeaderMenu(props) {
         <ul>
           {isFirst ? (
             <div className={styles.nav__submenu__services}>
-              <div className={styles.nav__submenu__services_title}>Our Services</div>
-              <div className={styles.nav__submenu__services_container}>
-                {dataArr.map(({ submeta = [], name, id }) => (
-                  <div key={id} className={styles.nav__submenu__services_item}>
-                    <div className={styles.nav__submenu__services_container_name}>{name}</div>
-                    {submeta.map(({ name: subname, id }) => (
-                      <li
-                        key={id}
-                        className={cs(styles.nav__submenu__item, [
-                          styles.nav__submenu__item_hover,
-                          styles.nav__submenu__item__before,
-                        ])}>
-                        <a>{subname}</a>
-                      </li>
-                    ))}
-                  </div>
-                ))}
+              <div className={styles.nav__submenu__services__content}>
+                <div className={styles.nav__submenu__services_title}>Our Services</div>
+                <div className={styles.nav__submenu__services_container}>
+                  {dataArr.map(({ submeta = [], name, id }) => (
+                    <div key={id} className={styles.nav__submenu__services_item}>
+                      <div className={styles.nav__submenu__services_container_name}>{name}</div>
+                      {submeta.map(({ name: subname, id }) => (
+                        <li
+                          key={id}
+                          className={cs(styles.nav__submenu__item, [
+                            styles.nav__submenu__item_hover,
+                            styles.nav__submenu__item__before,
+                          ])}>
+                          <a>{subname}</a>
+                        </li>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className={styles.nav__submenu__services__extra}>
+                  {items.map((name, index) => (
+                    <div key={index} className={styles.nav__submenu__services__extra__item}>
+                      {name}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className={styles.nav__submenu__services__extra}>
-                {items.map((name, index) => (
-                  <div key={index} className={styles.nav__submenu__services__extra__item}>
-                    {name}
-                  </div>
-                ))}
+              <div className={styles.nav__submenu__services__img}>
+                <img
+                  alt="gallery"
+                  src={
+                    'https://www.unifiedinfotech.net/assets/images/UIPL-Mega-Menu-Gallery-Image.png'
+                  }
+                />
+                <div
+                  className={cs(styles.nav__submenu__services_container_name, 'text-center mt-4')}>
+                  <span className="pr-2">Our UX gallery</span>
+                  <BsArrowRight size={24} />
+                </div>
               </div>
             </div>
           ) : (
