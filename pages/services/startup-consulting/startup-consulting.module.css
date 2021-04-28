@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url('/fonts/circular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 .banner__sec__text {
   padding: 70px 0 0 21rem;
   min-height: 350px;
@@ -60,13 +68,13 @@
 }
 
 .consulting__sec__1 .square__radio label,
-.consulting__sec__1 .square__radio > .label {
+.consulting__sec__1 .square__radio>.label {
   position: relative;
   width: 100%;
 }
 
 .consulting__sec__1 .square-radio label span,
-.consulting__sec__1 .square-radio > .label span {
+.consulting__sec__1 .square-radio>.label span {
   font-size: 18px;
   font-weight: normal;
   padding-left: 15px;
@@ -81,7 +89,7 @@
 }
 
 .consulting__sec__1 .active__black .square__radio label span,
-.consulting__sec__1 .active__black .square__radio > .label span {
+.consulting__sec__1 .active__black .square__radio>.label span {
   color: #ffffff;
 }
 
@@ -90,7 +98,7 @@
 }
 
 .consulting__sec__1 .square__radio label span,
-.consulting__sec__1 .square__radio > .label span {
+.consulting__sec__1 .square__radio>.label span {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.33;
@@ -1041,7 +1049,7 @@
   }
 
   .consulting__sec__1 .square__radio label span,
-  .consulting__sec__1 .square__radio > .label span {
+  .consulting__sec__1 .square__radio>.label span {
     font-size: 18px;
     font-weight: normal;
     padding-left: 15px;
@@ -1142,7 +1150,7 @@
   }
 
   .consulting__sec__1 .square-radio label span,
-  .consulting__sec__1 .square-radio > .label span {
+  .consulting__sec__1 .square-radio>.label span {
     font-size: 24px;
     font-weight: bold;
     line-height: 1.33;
@@ -1273,12 +1281,12 @@
   }
 
   .consulting__sec__1 .square__radio label span,
-  .consulting__sec__1 .square__radio > .label span {
+  .consulting__sec__1 .square__radio>.label span {
     top: 0px;
   }
 
   .consulting__sec__1 .square-radio label span,
-  .consulting__sec__1 .square-radio > .label span {
+  .consulting__sec__1 .square-radio>.label span {
     font-size: 16px;
     padding-left: 7px;
   }
@@ -1289,18 +1297,19 @@
   }
 
   .consulting__sec__1 .square__radio label span,
-  .consulting__sec__1 .square__radio > .label span {
+  .consulting__sec__1 .square__radio>.label span {
     top: 0px;
   }
 
   .consulting__sec__1 .square__radio label span,
-  .consulting__sec__1 .square__radio > .label span {
+  .consulting__sec__1 .square__radio>.label span {
     font-size: 16px;
     padding-left: 7px;
   }
 }
 
 @media (max-width: 389.98px) {
+
   .common__text h3,
   .common__text .h3 {
     font-size: 24px;
@@ -1345,6 +1354,7 @@
 }
 
 @media (max-width: 1920px) {
+
   .client__info__text .client__h1,
   .stories__info__text .stories__h1 {
     font-size: 48px;
@@ -1429,6 +1439,7 @@
 }
 
 @media (max-width: 479.98px) {
+
   .client__info__text .client__h1,
   .stories__info__text .stories__h1 {
     font-size: 26px;
@@ -1493,6 +1504,7 @@
 }
 
 @media (max-width: 1366.98px) {
+
   .mobile__app__sec__8 .work__project__wrap,
   .mobile__app__sec__8.web__app__sec__8 .work__project__wrap {
     padding: 5rem 8rem 1rem;
@@ -1878,6 +1890,7 @@
 .praise__left {
   width: 48px;
 }
+
 .praise__right {
   width: calc(100% - 80px);
 }
@@ -1947,15 +1960,19 @@
   .mobile__app__sec__9 {
     padding: 1rem 5px 4rem;
   }
+
   .praise {
     flex-direction: column;
   }
+
   .praise__left {
     width: 48px;
   }
+
   .praise__right {
     width: 100%;
   }
+
   .praise__quote {
     font-size: 24px;
     margin-bottom: 8px;
