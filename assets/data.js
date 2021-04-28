@@ -1,6 +1,6 @@
 import { AiOutlineAntDesign, AiOutlineCode } from 'react-icons/ai';
 import { FaMobileAlt } from 'react-icons/fa';
-import { AiOutlineCode, AiOutlineAntDesign, AiOutlineApple, AiOutlineAndroid, AiOutlineMobile } from 'react-icons/ai';
+import { AiOutlineApple, AiOutlineAndroid, AiOutlineMobile } from 'react-icons/ai';
 import { FaReact } from 'react-icons/fa';
 
 export const services = [
@@ -956,14 +956,14 @@ export const practicesWeFollow = [
     para : "There are numerous screen size for both Android and iOS devices, and it only makes sense to test the app on various screen size before uploading it on the app stores. The app should be compatible with the designated screen size, resolutions, and forms.",
   },
   {
-    id : 7,
+    id : 8,
     title : "High &amp; Quality Performance",
     imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
     subHeader : "High &amp; Quality Performance",
     para : "We believe that high performance means a lag-free performance. The apps should be optimized regularly and should never keep the user waiting from the moment it is launched. High performance is one of our major mobile app development services.",
   },
   {
-    id : 8,
+    id : 9,
     title : "Offline Mode Importance",
     imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
     subHeader : "Offline Mode Importance",

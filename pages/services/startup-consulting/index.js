@@ -338,7 +338,8 @@ export default function StartupConsulting() {
           <div className={cs(['row', 'justify-content-center', 'm-0'])}>
             <div className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'pr-10'])}>
               <div
-                className={cs([styles.message__text__wrap, 'ui-ux-7', 'aos-init', 'aos-animate'])}>
+                className={cs([styles.message__text__wrap, 'ui-ux-7', 'aos-init', 'aos-animate'])} data-aos="fade-up"
+                data-aos-delay="200">
                 <div
                   className={cs([
                     styles.text__message__info,
@@ -438,7 +439,10 @@ export default function StartupConsulting() {
                     styles.box__gray,
                     'aos-init',
                     'aos-animate',
-                  ])}>
+                  ])}
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  >
                   <div className={cs([styles.box__top, styles.common__text, styles.text__black])}>
                     <h3 className={cs('h2')}>{title}</h3>
                   </div>
@@ -468,7 +472,7 @@ export default function StartupConsulting() {
             </div>
             <div className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
               <div className={cs([styles.stories__info__text])}>
-                <h3 className={cs([styles.stories__h1, styles.text__white__h1])}>stories</h3>
+                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-left'])}>stories</h3>
               </div>
             </div>
           </div>
@@ -508,7 +512,7 @@ export default function StartupConsulting() {
                       <div className={cs([styles.btn__link__wrap])}>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">UX/UI</a>
+                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">UI/UX</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
