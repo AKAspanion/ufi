@@ -276,14 +276,7 @@ export default function Home() {
           autoplay={{
             delay: 2000,
           }}
-          navigation={
-            isMedium
-              ? false
-              : {
-                  prevEl: `.${styles.expertise__left__btn}`,
-                  nextEl: `.${styles.expertise__right__btn}`,
-                }
-          }
+          navigation
           spaceBetween={32}
           slidesPerView={isMedium ? 2 : 4}>
           {expertise.map(({ id, name, desc, img }) => (

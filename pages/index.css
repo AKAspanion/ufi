@@ -61,7 +61,7 @@ summary {
 .frem-slider-wrap .swiper-button-next,
 .frem-slider-wrap .swiper-button-prev {
   top: inherit;
-  bottom: -50px;
+  bottom: 14px;
   width: 30px;
   height: 30px;
   margin-top: 0;
@@ -74,11 +74,33 @@ summary {
 .frem-slider-wrap .swiper-button-next {
   background-image: url(https://www.unifiedinfotech.net/assets/images/right-panel.svg);
   right: auto;
-  left: 195px;
+  left: 116px;
 }
 
 .frem-slider-wrap .swiper-button-prev {
   background-image: url(https://www.unifiedinfotech.net/assets/images/left-panel.svg);
   right: auto;
-  left: 195px;
+  left: 54px;
+}
+
+.frem-slider-wrap .swiper-button-prev:after {
+  content: "";
+}
+
+.frem-slider-wrap .swiper-button-next:after {
+  content: "";
+}
+
+.frem-slider-wrap .swiper-container {
+  height: 100%
+}
+
+@media (max-width: 575.98px) {
+  .frem-slider-wrap .swiper-button-next {
+    left: 171px;
+  }
+
+  .frem-slider-wrap .swiper-button-prev {
+    left: 110px;
+  }
 }
