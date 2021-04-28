@@ -273,7 +273,7 @@ export default function Home() {
         )}
         <Swiper
           loop
-          autoPlay={{
+          autoplay={{
             delay: 2000,
           }}
           navigation={

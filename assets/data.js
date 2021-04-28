@@ -1,6 +1,6 @@
 import { AiOutlineAntDesign, AiOutlineCode } from 'react-icons/ai';
+import { AiOutlineAndroid, AiOutlineApple, AiOutlineMobile } from 'react-icons/ai';
 import { FaMobileAlt } from 'react-icons/fa';
-import { AiOutlineApple, AiOutlineAndroid, AiOutlineMobile } from 'react-icons/ai';
 import { FaReact } from 'react-icons/fa';
 
 export const services = [
@@ -623,13 +623,13 @@ export const praiseListAppDev = [
   {
     name: 'Joe Matthew',
     title: 'CTO Openreel',
-    quote:
-      'They performed flawlessly.',
+    quote: 'They performed flawlessly.',
   },
   {
     name: 'Chris Phillips',
     title: 'MD Phillips Innovation',
-    quote: 'Unified Infotech\'s team is very professional and transparent about deadlines and costs of services.',
+    quote:
+      "Unified Infotech's team is very professional and transparent about deadlines and costs of services.",
   },
 ];
 export const coreItems = [
@@ -828,145 +828,158 @@ export const whatWeDevelop = [
   {
     title: 'iOS App Development',
     icon: <AiOutlineApple size={32} />,
-    maintext: 'Knowing the Human Interface Guidelines from inside out, we develop native iOS apps that speak to your customers. And is built on the latest iOS frameworks and patterns.',
+    maintext:
+      'Knowing the Human Interface Guidelines from inside out, we develop native iOS apps that speak to your customers. And is built on the latest iOS frameworks and patterns.',
     link: 'https://www.unifiedinfotech.net/services/ios-app-development/',
   },
   {
     title: 'Android App Development',
     icon: <AiOutlineAndroid size={32} />,
-    maintext: 'We consciously follow the Material Design Guidelines to create beautiful Android apps, approved the Android community guidelines. Oh, and we know the in and out of the best Android libraries.',
+    maintext:
+      'We consciously follow the Material Design Guidelines to create beautiful Android apps, approved the Android community guidelines. Oh, and we know the in and out of the best Android libraries.',
     link: 'https://www.unifiedinfotech.net/services/android-app-development/',
   },
   {
     title: 'React Native App Development',
     icon: <FaReact size={32} />,
-    maintext: 'Code reusability, cross-platform support, and efficiency are some of the traits of react native apps that attract us and our clients equally. We take it forward to create apps that leave a long-lasting impression.',
+    maintext:
+      'Code reusability, cross-platform support, and efficiency are some of the traits of react native apps that attract us and our clients equally. We take it forward to create apps that leave a long-lasting impression.',
     link: 'https://www.unifiedinfotech.net/services/react-native-app-development/',
   },
   {
     title: 'Enterprise Mobile Solutions',
     icon: <AiOutlineMobile size={32} />,
-    maintext: 'We take pride to be the only app development company that builds powerful applications in the most complex enterprise environment. We know how to make things happen.',
-    link : 'https://www.unifiedinfotech.net/services/enterprise-mobile-application-development/',
-  }
+    maintext:
+      'We take pride to be the only app development company that builds powerful applications in the most complex enterprise environment. We know how to make things happen.',
+    link: 'https://www.unifiedinfotech.net/services/enterprise-mobile-application-development/',
+  },
 ];
 
 export const swiperAppImage = [
-  { 
-    url : "https://www.unifiedinfotech.net/assets/images/Personalisation_01@1x.jpg",
-    id : 1,
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_01@1x.jpg',
+    id: 1,
   },
   {
-    url : "https://www.unifiedinfotech.net/assets/images/Personalisation_02@1x.jpg",
-    id : 2
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_02@1x.jpg',
+    id: 2,
   },
-  { 
-    url : "https://www.unifiedinfotech.net/assets/images/Personalisation_03@1x.jpg",
-    id : 3,
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_03@1x.jpg',
+    id: 3,
   },
-  { 
-    url : "https://www.unifiedinfotech.net/assets/images/Personalisation_04@1x.jpg",
-    id : 4,
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_04@1x.jpg',
+    id: 4,
   },
-  { 
-    url : "https://www.unifiedinfotech.net/assets/images/Personalisation_05@1x.jpg",
-    id : 5,
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_05@1x.jpg',
+    id: 5,
   },
-  { 
-    url : "https://www.unifiedinfotech.net/assets/images/Personalisation@1x.jpg",
-    id : 6,
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation@1x.jpg',
+    id: 6,
   },
 ];
 
 export const imagePng = [
-    {
-      url:"https://www.unifiedinfotech.net/assets/images/Personalisation_05@1x.png", 
-      id: 1
-    },
-    {
-      url:"https://www.unifiedinfotech.net/assets/images/Main-Home@1x.png", 
-      id: 2
-    },
-    {
-      url:"https://www.unifiedinfotech.net/assets/images/Payment-for-Subscription@1x.png", 
-      id: 3
-    },
-    {
-      url:"https://www.unifiedinfotech.net/assets/images/Personalisation@1x.png", 
-      id: 4
-    },
-    {
-      url:"https://www.unifiedinfotech.net/assets/images/Personalisation_01@1x.png", 
-      id: 5
-    },
-    {
-      url:"https://www.unifiedinfotech.net/assets/images/Write_a_review@1x.png", 
-      id: 6
-    },
-]
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_05@1x.png',
+    id: 1,
+  },
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Main-Home@1x.png',
+    id: 2,
+  },
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Payment-for-Subscription@1x.png',
+    id: 3,
+  },
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation@1x.png',
+    id: 4,
+  },
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Personalisation_01@1x.png',
+    id: 5,
+  },
+  {
+    url: 'https://www.unifiedinfotech.net/assets/images/Write_a_review@1x.png',
+    id: 6,
+  },
+];
 
 export const practicesWeFollow = [
   {
-    id : 1,
-    title : "Attention to Memory Limitations",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Attention to Memory Limitations",
-    para : "Mobile devices don’t come with the kind of high memory limitations like desktops. Which is why for mobile programming, we use codes with smaller memory limitations in mind. This is how we prevent the apps from crashing due to \“out of memory\”.",
+    id: 1,
+    title: 'Attention to Memory Limitations',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Attention to Memory Limitations',
+    para:
+      'Mobile devices don’t come with the kind of high memory limitations like desktops. Which is why for mobile programming, we use codes with smaller memory limitations in mind. This is how we prevent the apps from crashing due to “out of memory”.',
   },
   {
-    id : 2,
-    title : "Ease of Default Keyboard",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Ease of Default Keyboard",
-    para : "The keyboard should have the compatible characters for the input text box in an app. When the reader has to write numbers, they should get the numerical keyboard, not the alphabetical one.",
+    id: 2,
+    title: 'Ease of Default Keyboard',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Ease of Default Keyboard',
+    para:
+      'The keyboard should have the compatible characters for the input text box in an app. When the reader has to write numbers, they should get the numerical keyboard, not the alphabetical one.',
   },
   {
-    id : 3,
-    title : "Using Optimized Images",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Using Optimized Images",
-    para : "Not everyone has access to high bandwidth internet, and we know that. Which is why our mobile app developers use optimized images while developing apps for the low bandwidth internet users. Specifically sized images only enhance the user experience.",
+    id: 3,
+    title: 'Using Optimized Images',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Using Optimized Images',
+    para:
+      'Not everyone has access to high bandwidth internet, and we know that. Which is why our mobile app developers use optimized images while developing apps for the low bandwidth internet users. Specifically sized images only enhance the user experience.',
   },
   {
-    id : 4,
-    title : "Convenient UI Elements",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Convenient UI Elements",
-    para : "The UI elements should be easier for the user to tap on, and menus should have options that are easy to find. The UI design needs to be convenient for the user, only then the users will be satisfied with the app.",
+    id: 4,
+    title: 'Convenient UI Elements',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Convenient UI Elements',
+    para:
+      'The UI elements should be easier for the user to tap on, and menus should have options that are easy to find. The UI design needs to be convenient for the user, only then the users will be satisfied with the app.',
   },
   {
-    id : 5,
-    title : "Optimized Battery Consumption",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Optimized Battery Consumption",
-    para : "The background processes of the apps installed to drain the battery which is a real problem with smartphone users. But not every app needs a background process to run. Which is why we make sure that the apps do not drain the phone battery unnecessarily.",
+    id: 5,
+    title: 'Optimized Battery Consumption',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Optimized Battery Consumption',
+    para:
+      'The background processes of the apps installed to drain the battery which is a real problem with smartphone users. But not every app needs a background process to run. Which is why we make sure that the apps do not drain the phone battery unnecessarily.',
   },
   {
-    id : 6,
-    title : "Version Support",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Version Support",
-    para : "Any new app should support the latest and the last two versions. Supporting all the versions is going to make the code complex and creates bugs. So for bug-free app development, we make sure that the updated apps support only the last two versions and the current one.",
+    id: 6,
+    title: 'Version Support',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Version Support',
+    para:
+      'Any new app should support the latest and the last two versions. Supporting all the versions is going to make the code complex and creates bugs. So for bug-free app development, we make sure that the updated apps support only the last two versions and the current one.',
   },
   {
-    id : 7,
-    title : "Screen Variance &amp; Compatibility",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Screen Variance &amp; Compatibility",
-    para : "There are numerous screen size for both Android and iOS devices, and it only makes sense to test the app on various screen size before uploading it on the app stores. The app should be compatible with the designated screen size, resolutions, and forms.",
+    id: 7,
+    title: 'Screen Variance &amp; Compatibility',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Screen Variance &amp; Compatibility',
+    para:
+      'There are numerous screen size for both Android and iOS devices, and it only makes sense to test the app on various screen size before uploading it on the app stores. The app should be compatible with the designated screen size, resolutions, and forms.',
   },
   {
-    id : 8,
-    title : "High &amp; Quality Performance",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "High &amp; Quality Performance",
-    para : "We believe that high performance means a lag-free performance. The apps should be optimized regularly and should never keep the user waiting from the moment it is launched. High performance is one of our major mobile app development services.",
+    id: 8,
+    title: 'High &amp; Quality Performance',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'High &amp; Quality Performance',
+    para:
+      'We believe that high performance means a lag-free performance. The apps should be optimized regularly and should never keep the user waiting from the moment it is launched. High performance is one of our major mobile app development services.',
   },
   {
-    id : 9,
-    title : "Offline Mode Importance",
-    imgSrc: "https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg",
-    subHeader : "Offline Mode Importance",
-    para : "Internet connectivity is obvious for all the apps nowadays, but so is the offline mode. With offline mode user should be able to store within the device for easy access. Even in this age of internet popularity, offline mode is important for everyone, and we understand that.",
+    id: 9,
+    title: 'Offline Mode Importance',
+    imgSrc: 'https://www.unifiedinfotech.net/assets/images/mobile-app-ready@1.5x.jpg',
+    subHeader: 'Offline Mode Importance',
+    para:
+      'Internet connectivity is obvious for all the apps nowadays, but so is the offline mode. With offline mode user should be able to store within the device for easy access. Even in this age of internet popularity, offline mode is important for everyone, and we understand that.',
   },
-]
+];
