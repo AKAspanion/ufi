@@ -201,8 +201,14 @@ export default function StartupConsulting() {
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
-              style={{ paddingRight: '12rem !important' }}
-              className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'aos-init', 'aos-animate'])}>
+              className={cs([
+                styles.valid__before,
+                'col-sm-12',
+                'col-lg-6',
+                'col-xl-5',
+                'aos-init',
+                'aos-animate',
+              ])}>
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -389,7 +395,7 @@ export default function StartupConsulting() {
       <section className={cs(styles.consulting__start__5)}>
         <div className={cs(['container-fluid', 'p-0'])}>
           <div ref={start5} className={cs(['row', 'justify-content-center', 'm-0'])}>
-            <div className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'pr-10'])}>
+            <div className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'px-0'])}>
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -678,7 +684,7 @@ export default function StartupConsulting() {
             showStatus={false}
             showArrows={false}>
             {praiseListStartup.map(({ name, title, quote }, index) => (
-              <div key={index} style={{ padding: '5%' }}>
+              <div key={index}>
                 <section className={styles.praise}>
                   <div className={styles.praise__left}>
                     <FaQuoteLeft size={48} color="#C7C7C7" />

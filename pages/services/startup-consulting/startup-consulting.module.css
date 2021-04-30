@@ -163,6 +163,9 @@
   line-height: 1.63;
 }
 
+.valid__before {
+  padding-right: 12rem !important;
+}
 .common__text.common__text__fix h2 {
   font-weight: bold;
   margin-bottom: 18px;
@@ -175,23 +178,6 @@
   padding-right: 2rem;
   margin: 10px 0 2rem 0;
   font-weight: normal !important;
-}
-
-.uipl__section__reveal__check.reveal__me {
-  opacity: 1;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.uipl__section__reveal__check {
-  overflow: hidden;
-  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  opacity: 0;
-  transition: opacity 1.1s ease 167ms, -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms;
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms,
-    -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .reveal__me {
@@ -1183,6 +1169,10 @@
     margin-bottom: 15px;
   }
 
+  .consulting__start__add .web__app__box {
+    padding: 0px;
+  }
+
   .consulting__sec__1 .square-radio label span,
   .consulting__sec__1 .square-radio > .label span {
     font-size: 24px;
@@ -2010,5 +2000,29 @@
   .praise__quote {
     font-size: 24px;
     margin-bottom: 8px;
+  }
+
+  .valid__before {
+    padding: 12px !important;
+  }
+
+  .message__text__wrap.message__start__3 {
+    padding: 0px !important;
+  }
+  .message__text__wrap.message__start__5 {
+    padding-right: 0px !important;
+  }
+
+  .common__text.common__text__fix h2 {
+    margin-bottom: 1rem;
+    font-size: 28px !important;
+    font-weight: normal !important;
+  }
+
+  .common__text.common__text__fix h3 {
+    font-size: 30px;
+    padding-right: 2rem;
+    margin: 10px 0 2rem 0;
+    font-weight: normal !important;
   }
 }
