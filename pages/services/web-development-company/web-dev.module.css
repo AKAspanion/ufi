@@ -454,43 +454,11 @@
 }
 
 @media (max-width: 980px) {
-  .web__banner {
-    height: 40vh;
-    overflow: hidden;
-    min-height: 325px;
-  }
-
-  .web__banner__img {
-    height: 40vh;
-    min-height: 325px;
-  }
-
-  .web__banner__content {
-    padding: 80px 5%;
-  }
-
-  .web__banner__title {
-    margin-bottom: 0.8rem;
-    font-size: 12px;
-    line-height: 22px;
-  }
-  .web__banner__subtitle {
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 32px;
-    margin-bottom: 0;
-  }
-
   .web__excellence__left,
   .web__excellence__right,
   .web__portfolio__left,
   .web__portfolio__right {
     width: 100%;
-  }
-
-  .web__excellence__right,
-  .web__banner__btn {
-    display: none;
   }
 
   .web__excellence {
@@ -622,6 +590,38 @@
 }
 
 @media (max-width: 575px) {
+  .web__banner {
+    height: 40vh;
+    overflow: hidden;
+    min-height: 325px;
+  }
+
+  .web__banner__img {
+    height: 40vh;
+    min-height: 325px;
+  }
+
+  .web__banner__content {
+    padding: 80px 5%;
+  }
+
+  .web__banner__title {
+    margin-bottom: 0.8rem;
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .web__banner__subtitle {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+
+  .web__excellence__right,
+  .web__banner__btn {
+    display: none;
+  }
+
   .web__smart {
     padding: 10% 0%;
   }
