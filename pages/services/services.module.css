@@ -28,7 +28,6 @@
   font-size: 34px;
   line-height: 48px;
   color: black;
-  margin-bottom: 2.5rem;
   font-family: 'Circular Std Book';
 }
 
@@ -40,10 +39,14 @@
 
 .service {
   width: 100%;
-  padding: 5% 10%;
+  padding: 5% 11.5%;
+  padding-top: 3.5%;
   display: flex;
   flex-wrap: wrap;
   background: var(--bg-color);
+}
+.service:last-of-type {
+  padding-top: 20px;
 }
 
 .service.service__reverse {
@@ -72,7 +75,8 @@
   object-position: center center;
 }
 .service__left > img,
-.gallery__item > img {
+.gallery__item > img,
+.new__york__wrapper > img {
   opacity: 0;
   will-change: clip-path, opacity, filter;
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -95,6 +99,10 @@
 .service.service__center > .service__left,
 .service.service__center > .service__right {
   width: 100%;
+}
+
+.service.service__center > .service__right {
+  padding-bottom: 20px;
 }
 
 .service.service__fifty > .service__left,
@@ -163,7 +171,8 @@
   margin-bottom: 20px;
   font-family: 'Circular Std Book';
 }
-.service__right ul {
+.service__right ul,
+.new__york__content ul {
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -172,7 +181,8 @@
   padding-left: 0;
   list-style: none;
 }
-.service__right ul li {
+.service__right ul li,
+.new__york__content ul li {
   cursor: pointer;
   position: relative;
   margin-bottom: 15px;
@@ -184,17 +194,21 @@
   transition: all 0.3s ease-in-out;
 }
 
-.service__right ul li:hover {
+.service__right ul li:hover,
+.new__york__content ul li:hover {
   padding-left: 54px;
 }
-.service__right ul li:hover::before {
+.service__right ul li:hover::before,
+.new__york__content ul li:hover::before {
   width: 36px;
 }
-.service__right ul li:hover > i {
+.service__right ul li:hover > i,
+.new__york__content ul li:hover > i {
   left: 26px;
 }
 
-.service__right ul li::before {
+.service__right ul li::before,
+.new__york__content ul li::before {
   position: absolute;
   top: 13px;
   left: 0;
@@ -207,7 +221,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-.service__right ul li i {
+.service__right ul li i,
+.new__york__content ul li i {
   position: absolute;
   top: 7px;
   left: 17px;
@@ -216,11 +231,47 @@
 }
 
 .service__left.service__left__inview > img,
-.gallery__item.gallery__item__inview > img {
+.gallery__item.gallery__item__inview > img,
+.new__york__wrapper.new__york__inview > img {
   opacity: 1;
   animation: blurOut 0.9s ease-out;
   will-change: clip-path, opacity, filter;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.new__york__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.new__york__wrapper img {
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.new__york {
+  padding: 8% 11.5%;
+}
+
+.new__york__content {
+  width: 40%;
+  color: black;
+  background: white;
+  padding: 50px 40px 20px 40px;
+}
+.new__york__content > h3 {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.33;
+}
+.new__york__content > p {
+  margin-bottom: 20px;
 }
 
 .gallery__wrapper {
@@ -285,12 +336,20 @@
     font-size: 24px;
     line-height: 36px;
     max-width: 100%;
+    margin-bottom: 50px;
   }
   .service__left {
     max-height: 300px;
   }
   .gallery__item {
     width: 100%;
+  }
+  .new__york {
+    padding: 100px 5%;
+  }
+  .new__york__content {
+    width: 100%;
+    padding: 40px 30px 10px 30px;
   }
 }
 
@@ -303,6 +362,12 @@
     flex-direction: column;
     padding: 10% 5% !important;
     padding-bottom: 0px !important;
+  }
+  .service {
+    padding-top: 50px !important;
+  }
+  .gallery__wrapper {
+    display: none;
   }
   .service__left,
   .service__right {
@@ -322,6 +387,10 @@
   .service__right h3 {
     margin-bottom: 28px;
     font-size: 23px;
+  }
+
+  .service__right ul {
+    margin-bottom: 0px;
   }
 
   .service.service__center {

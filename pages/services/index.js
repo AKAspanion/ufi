@@ -20,6 +20,10 @@ export default function Services() {
 
   const isMedium = width < 980;
 
+  const { ref: newYorkRef, inView } = useInView({
+    threshold: 0,
+  });
+
   useEffect(() => {
     services.map(({ img }) => {
       const newImg = new Image();
@@ -54,6 +58,35 @@ export default function Services() {
           <ServiceCard key={index} detail={detail} />
         ))}
       </section>
+      <section
+        ref={newYorkRef}
+        className={cs(styles.new__york__wrapper, {
+          [styles.new__york__inview]: inView === true,
+        })}>
+        <img
+          alt="new york"
+          src={'https://www.unifiedinfotech.net/assets/images/mobile-app-nyc-banner@2x.jpg'}
+        />
+        <div className={styles.new__york}>
+          <div className={styles.new__york__content}>
+            <h3>About our New York presence</h3>
+            <p>
+              New York became the place for one of our major company expansions. Pay us visit at 79
+              Madison Avenue!
+            </p>
+            <ul>
+              <li>
+                App development in New York
+                <i className="la la-angle-right"></i>
+              </li>
+              <li>
+                Web design services in New York
+                <i className="la la-angle-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section className={styles.gallery__wrapper}>
         <h2>Pristine touch in every pixel</h2>
         <div className={styles.gallery}>
@@ -76,7 +109,7 @@ export default function Services() {
               className={cs([
                 'h2',
                 startupStyles.treat__as__h1,
-                'mb-0 font-weight-bold text-center',
+                'mb-0 font-weight-bold text-center mb-4',
               ])}>
               From people like you
             </h3>
@@ -89,7 +122,7 @@ export default function Services() {
             showStatus={false}
             showArrows={false}>
             {praiseListStartup.map(({ name, title, quote }, index) => (
-              <div key={index} style={{ padding: '5%' }}>
+              <div key={index}>
                 <section className={startupStyles.praise}>
                   <div className={startupStyles.praise__left}>
                     <FaQuoteLeft size={48} color="#C7C7C7" />
@@ -97,7 +130,7 @@ export default function Services() {
                   <div className={startupStyles.praise__right}>
                     <div className={cs(startupStyles.praise__quote, 'text-left')}>
                       <blockquote></blockquote>
-                      <span className={'text-left'}>{quote}</span>
+                      <span className={'text-left font-weight-bold'}>{quote}</span>
                     </div>
                     <div className={cs(startupStyles.praise__name, 'text-left')}>{name}</div>
                     <div className={cs(startupStyles.praise__title, 'text-left')}>{title}</div>

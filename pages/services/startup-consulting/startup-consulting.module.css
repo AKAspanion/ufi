@@ -1879,12 +1879,15 @@
 
 .praise {
   display: flex;
+  margin: 0 auto;
+  max-width: 850px;
   justify-content: space-between;
   font-family: 'Circular Std Book';
 }
 
 .praise__left {
   width: 48px;
+  margin-top: 18px;
 }
 
 .praise__right {
@@ -1963,6 +1966,7 @@
 
   .praise__left {
     width: 48px;
+    margin: 0px;
   }
 
   .praise__right {
