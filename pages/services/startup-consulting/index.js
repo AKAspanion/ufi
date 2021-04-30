@@ -3,6 +3,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import cs from 'classnames';
 import Head from 'next/head';
 import { FaQuoteLeft } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 import { useResizeDetector } from 'react-resize-detector';
 import { Carousel } from 'react-responsive-carousel';
 
@@ -15,17 +16,25 @@ export default function StartupConsulting() {
 
   const isMedium = width < 980;
 
-  // const { ref: overviewRef, inView: overviewInView } = useInView({
-  //   threshold: 0,
-  // });
+  const { ref: start2, inView: start2View } = useInView({
+    threshold: 0,
+  });
 
-  // const { ref: strategyRef, inView: strategyInView } = useInView({
-  //   threshold: 0,
-  // });
+  const { ref: start3, inView: start3View } = useInView({
+    threshold: 0,
+  });
 
-  // const { ref: seamlessRef, inView: seamlessInView } = useInView({
-  //   threshold: 0,
-  // });
+  const { ref: start5, inView: start5View } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: image1, inView: image1View } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: image2, inView: image2View } = useInView({
+    threshold: 0,
+  });
 
   const consult_add = [
     {
@@ -162,7 +171,15 @@ export default function StartupConsulting() {
                 styles.col__xxl__4,
                 styles.padd__all__0,
               ])}>
-              <div className={cs([styles.consulting__up__wrap, styles.black__bg__info])}>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                className={cs([
+                  styles.consulting__up__wrap,
+                  styles.black__bg__info,
+                  'aos-animate',
+                  'aos-init',
+                ])}>
                 <div className={cs([styles.common__text, styles.text__white])}>
                   <h4>Startup strategy to Kick off right</h4>
                   <p>
@@ -180,12 +197,25 @@ export default function StartupConsulting() {
       </section>
       <section className={cs(styles.consulting__start__2)}>
         <div className={cs(['container-fluid', 'p-0'])}>
-          <div className={cs(['row', 'justify-content-center', 'm-0'])}>
-            <div className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'pr-10'])}>
-              <div className={cs([styles.message__text__wrap])}>
+          <div ref={start2} className={cs(['row', 'justify-content-center', 'm-0'])}>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              style={{ paddingRight: '12rem !important' }}
+              className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'aos-init', 'aos-animate'])}>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                className={cs([
+                  styles.message__text__wrap,
+                  styles.message__start__2,
+                  'aos-animate',
+                  'aos-init',
+                ])}>
                 <div
                   className={cs([
                     styles.text__message__info,
+                    styles.common__text__fix,
                     styles.common__text,
                     styles.text__black,
                   ])}>
@@ -208,7 +238,7 @@ export default function StartupConsulting() {
                 className={cs([
                   styles.consulting__img,
                   styles.consulting__start__img1,
-                  styles.uipl__section__reveal__check,
+                  { [styles.img__in__inview]: start2View === true },
                   styles.reveal__me,
                 ])}>
                 <img
@@ -223,12 +253,23 @@ export default function StartupConsulting() {
       </section>
       <section className={cs(styles.consulting__start__3)}>
         <div className={cs('container-fluid', 'p-0')}>
-          <div className={cs(['row', 'justify-content-center', 'flex-row-reverse', 'm-0'])}>
+          <div
+            ref={start3}
+            className={cs(['row', 'justify-content-center', 'flex-row-reverse', 'm-0'])}>
             <div className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'pr-10'])}>
-              <div className={cs(styles.message__text__wrap)}>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                className={cs(
+                  styles.message__text__wrap,
+                  styles.message__start__3,
+                  'aos-animate',
+                  'aos-init'
+                )}>
                 <div
                   className={cs([
                     styles.text__message__info,
+                    styles.common__text__fix,
                     styles.common__text,
                     styles.text__black,
                   ])}>
@@ -248,7 +289,7 @@ export default function StartupConsulting() {
                 className={cs([
                   styles.consulting__img,
                   styles.consulting__start__img2,
-                  styles.uipl__section__reveal__check,
+                  { [styles.img__in__inview]: start3View === true },
                   styles.reveal__me,
                 ])}>
                 <img
@@ -272,7 +313,15 @@ export default function StartupConsulting() {
                 'align-self-center',
                 'padd-all-0',
               ])}>
-              <div className={cs(styles.start__up__text, styles.text__white)}>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className={cs(
+                  styles.start__up__text,
+                  styles.text__white,
+                  'aos-animate',
+                  'aos-init'
+                )}>
                 <p>
                   Unveil potential business threats and reduce long-term losses with Unified
                   Infotech’s expert technology consultation
@@ -299,10 +348,14 @@ export default function StartupConsulting() {
               <div
                 className={cs(['col-md-12', 'col-lg-5', 'col-xl-4', 'align-self-center', 'p-0'])}>
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
                   className={cs([
                     styles.common__padd__left,
                     styles.consulting__margin,
                     styles.black__bg__info,
+                    'aos-animate',
+                    'aos-init',
                   ])}>
                   <div className={cs([styles.common__text, styles.text__white])}>
                     <h2 className={cs('h3')}>Find the value proposition</h2>
@@ -335,15 +388,22 @@ export default function StartupConsulting() {
       </section>
       <section className={cs(styles.consulting__start__5)}>
         <div className={cs(['container-fluid', 'p-0'])}>
-          <div className={cs(['row', 'justify-content-center', 'm-0'])}>
+          <div ref={start5} className={cs(['row', 'justify-content-center', 'm-0'])}>
             <div className={cs(['col-sm-12', 'col-lg-6', 'col-xl-5', 'pr-10'])}>
               <div
-                className={cs([styles.message__text__wrap, 'ui-ux-7', 'aos-init', 'aos-animate'])}
                 data-aos="fade-up"
-                data-aos-delay="200">
+                data-aos-duration="1000"
+                className={cs([
+                  styles.message__text__wrap,
+                  styles.message__start__5,
+                  'ui-ux-7',
+                  'aos-init',
+                  'aos-animate',
+                ])}>
                 <div
                   className={cs([
                     styles.text__message__info,
+                    styles.common__text__fix,
                     styles.common__text,
                     styles.text__black,
                   ])}>
@@ -364,7 +424,7 @@ export default function StartupConsulting() {
               <div
                 className={cs([
                   styles.consulting__img,
-                  styles.uipl__section__reveal__check,
+                  { [styles.img__in__inview]: start5View === true },
                   styles.reveal__me,
                 ])}>
                 <img
@@ -385,6 +445,7 @@ export default function StartupConsulting() {
                 <div
                   className={cs([
                     styles.text__message__info,
+                    styles.common__text__fix,
                     styles.common__text,
                     styles.text__white,
                   ])}>
@@ -421,6 +482,7 @@ export default function StartupConsulting() {
                 <div
                   className={cs([
                     styles.text__message__info,
+                    styles.common__text__fix,
                     styles.common__text,
                     styles.text__black,
                   ])}>
@@ -442,8 +504,14 @@ export default function StartupConsulting() {
                     'aos-animate',
                   ])}
                   data-aos="fade-up"
-                  data-aos-delay="200">
-                  <div className={cs([styles.box__top, styles.common__text, styles.text__black])}>
+                  data-aos-duration="1000">
+                  <div
+                    className={cs([
+                      styles.box__top,
+                      styles.text__black,
+                      styles.common__text,
+                      styles.common__text__fix,
+                    ])}>
                     <h3 className={cs('h2')}>{title}</h3>
                   </div>
 
@@ -483,13 +551,13 @@ export default function StartupConsulting() {
           <div className={cs([styles.features__list, 'text-left'])}>
             <div className={cs([styles.feature__item])}>
               <div className={cs(['row', 'justify-content-center'])}>
-                <div className={cs(['col-md-6', styles.p__lr__4])}>
+                <div ref={image1} className={cs(['col-md-6', styles.p__lr__4])}>
                   <div className={cs([styles.work__project__info, styles.content__col])}>
                     <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
                       <div
                         className={cs([
                           styles.work__project__img,
-                          styles.uipl__section__reveal__check,
+                          { [styles.img__in__inview]: image1View === true },
                           styles.reveal__me,
                         ])}>
                         <img
@@ -532,13 +600,13 @@ export default function StartupConsulting() {
                     </div>
                   </div>
                 </div>
-                <div className={cs(['col-md-6', styles.p__lr__4])}>
+                <div ref={image2} className={cs(['col-md-6', styles.p__lr__4])}>
                   <div className={cs([styles.work__project__info])}>
                     <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
                       <div
                         className={cs([
                           styles.work__project__img,
-                          styles.uipl__section__reveal__check,
+                          { [styles.img__in__inview]: image2View === true },
                           styles.reveal__me,
                         ])}>
                         <img
