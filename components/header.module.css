@@ -34,6 +34,7 @@
 
 .container {
   display: flex;
+  height: 78px;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 10px;
@@ -94,14 +95,16 @@
   border-bottom: 0;
   border-left: 0em solid transparent;
   font-size: 12px;
-  line-height: 22px;
+  padding-left: 2px;
+  line-height: 25px;
 }
 
 .navbar__li {
   list-style: none;
   display: block;
-  padding: 11px 24px !important;
   position: relative;
+  padding: 11px 20px !important;
+  padding-right: 19px !important;
 }
 
 .navbar__li a {
