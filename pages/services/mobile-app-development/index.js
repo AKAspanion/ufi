@@ -43,7 +43,7 @@ export default function MobileDevelopment() {
   return (
     <Layout darkHeader>
       <Head>
-        <title>Startup Consulting</title>
+        <title>Mobile Application Development</title>
         <link
           rel="stylesheet"
           href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
@@ -301,13 +301,13 @@ export default function MobileDevelopment() {
       </section>
       <section className={cs([mobileStyles.mobile__app__sec__4, 'py-5'])}>
         <div className={cs(['container'])}>
-          <div className={cs(['row', 'flex__row__reverse', 'justify-content-center'])}>
+          <div className={cs(['row', 'flex-row-reverse', 'justify-content-center'])}>
             <div className={cs(['col-sm-12', 'col-md-6'])}>
               <div
                 className={cs([
                   styles.design__box,
-                  styles.uipl__section__reveal__check,
-                  styles.reveal__me,
+                  mobileStyles.uipl__section__reveal__check,
+                  mobileStyles.reveal__me,
                 ])}>
                 <img
                   className={cs([styles.blur__out])}
@@ -329,6 +329,7 @@ export default function MobileDevelopment() {
                   className={cs([
                     styles.text__message__info,
                     styles.common__text,
+                    mobileStyles.common__text,
                     styles.text__black__h1,
                   ])}>
                   <h2 className={cs([styles.h3])}>The way we design to engage users</h2>
@@ -343,7 +344,7 @@ export default function MobileDevelopment() {
                   </p>
                   <h5>From ideation to visual manifestation,</h5>
                   <a
-                    className={cs([styles.button__4])}
+                    className={cs([styles.button__4, mobileStyles.button__4])}
                     href="https://www.unifiedinfotech.net/how-we-work/">
                     <div className={cs([styles.eff__4])}></div>
                     <span>The Way We Do It</span>
@@ -361,7 +362,6 @@ export default function MobileDevelopment() {
               <div
                 className={cs([
                   styles.message__text__wrap,
-                  'p-2',
                   'aos-init',
                   'aos-animate',
                   mobileStyles.message__text__wrap,
@@ -457,8 +457,8 @@ export default function MobileDevelopment() {
                       <div
                         className={cs([
                           styles.work__project__img,
-                          styles.uipl__section__reveal__check,
-                          styles.reveal__me,
+                          mobileStyles.uipl__section__reveal__check,
+                          mobileStyles.reveal__me,
                         ])}>
                         <img
                           className={cs([styles.blur__out])}
@@ -504,8 +504,8 @@ export default function MobileDevelopment() {
                       <div
                         className={cs([
                           styles.work__project__img,
-                          styles.uipl__section__reveal__check,
-                          styles.reveal__me,
+                          mobileStyles.uipl__section__reveal__check,
+                          mobileStyles.reveal__me,
                         ])}>
                         <img
                           className={cs([styles.blur__out])}
@@ -564,7 +564,7 @@ export default function MobileDevelopment() {
               <div className={cs([mobileStyles.tab__slide__wrap, mobileStyles.mobile__app__tab])}>
                 <div className={cs([mobileStyles.cta__wrap])}>
                   <a
-                    className={cs([styles.button__4])}
+                    className={cs([styles.button__4, mobileStyles.button__4])}
                     href="https://www.unifiedinfotech.net/about/contact/">
                     <div className={cs([styles.eff__4])}></div>
                     <span>get in touch</span>
