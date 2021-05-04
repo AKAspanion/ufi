@@ -158,11 +158,11 @@
 }
 
 .web__portfolio__right > h3 {
-  position: absolute;
-  top: 50%;
+  margin-top: -60px;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 4px;
+  position: relative;
 }
 .web__portfolio__right > h3::before {
   content: ' ';
@@ -180,6 +180,7 @@
   font-size: 28px;
   color: black;
   line-height: 38px;
+  margin-top: 40px;
   margin-bottom: 30px;
 }
 

@@ -8,6 +8,7 @@
 .navbar {
   --bg-color: transparent;
   --text-color: #ffffff;
+  left: 0;
   padding: 0;
   z-index: 99;
   width: 100%;

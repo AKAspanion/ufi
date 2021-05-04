@@ -84,15 +84,15 @@ summary {
 }
 
 .frem-slider-wrap .swiper-button-prev:after {
-  content: "";
+  content: '';
 }
 
 .frem-slider-wrap .swiper-button-next:after {
-  content: "";
+  content: '';
 }
 
 .frem-slider-wrap .swiper-container {
-  height: 100%
+  height: 100%;
 }
 
 @media (max-width: 1600.98px) {
@@ -103,7 +103,6 @@ summary {
   .frem-slider-wrap .swiper-button-prev {
     left: 85px;
   }
-
 }
 
 @media (max-width: 575.98px) {

@@ -22,19 +22,33 @@ export default function SubHeaderMenu(props) {
           {isFirst ? (
             <div className={styles.nav__submenu__services}>
               <div className={styles.nav__submenu__services__content}>
-                <div className={styles.nav__submenu__services_title}>Our Services</div>
+                <div className={styles.nav__submenu__services_title}>
+                  <Link href="/services">Our Services</Link>
+                </div>
                 <div className={styles.nav__submenu__services_container}>
-                  {dataArr.map(({ submeta = [], name, id }) => (
+                  {dataArr.map(({ submeta = [], name, id, link: toplink }) => (
                     <div key={id} className={styles.nav__submenu__services_item}>
-                      <div className={cs([styles.nav__submenu__services_container_name, styles.nav__submenu__services_container_before])}><a>{name}</a></div>
-                      {submeta.map(({ name: subname, id }) => (
+                      <div
+                        className={cs([
+                          styles.nav__submenu__services_container_name,
+                          styles.nav__submenu__services_container_before,
+                        ])}>
+                        {toplink ? <Link href={`/services${toplink}`}>{name}</Link> : name}
+                      </div>
+                      {submeta.map(({ name: subname, id, link: sublink }) => (
                         <li
                           key={id}
                           className={cs(styles.nav__submenu__item, [
                             styles.nav__submenu__item_hover,
                             styles.nav__submenu__item__before,
                           ])}>
-                          <a>{subname}</a>
+                          <a>
+                            {sublink ? (
+                              <Link href={`/services${sublink}`}>{subname}</Link>
+                            ) : (
+                              subname
+                            )}
+                          </a>
                         </li>
                       ))}
                     </div>

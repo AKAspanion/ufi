@@ -132,7 +132,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 @media (max-width: 2299px) {
   .nav__submenu__services_container_before::before {
     top: 8px;

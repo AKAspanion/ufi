@@ -276,7 +276,14 @@ export default function Home() {
           autoplay={{
             delay: 2000,
           }}
-          navigation
+          navigation={
+            isMedium
+              ? false
+              : {
+                  prevEl: `.${styles.expertise__left__btn}`,
+                  nextEl: `.${styles.expertise__right__btn}`,
+                }
+          }
           spaceBetween={32}
           slidesPerView={isMedium ? 2 : 4}>
           {expertise.map(({ id, name, desc, img }) => (
@@ -327,7 +334,6 @@ const CountNum = ({ detail }) => {
 
   const { countUp } = useCountUp({ end: value, duration: 3 });
 
-  console.log(Number(countUp).toFixed());
   return (
     <div className={styles.stat__value}>{`${prefix}${parseInt(
       countUp

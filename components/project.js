@@ -18,10 +18,11 @@ export default function Project() {
     <section ref={ref} className={styles.project}>
       <div className={styles.project__left}>
         <Carousel
+          autoPlay
           swipeable
           infiniteLoop
+          interval={2000}
           showThumbs={false}
-          autoPlay
           showStatus={false}
           showArrows={!isMedium && !isSmall}>
           {praiseList.map(({ name, title, quote }, index) => (

@@ -228,7 +228,7 @@ export const techStack = [
       { id: '23', name: 'VueJS' },
       { id: '24', name: 'HTML5' },
       { id: '25', name: 'CSS' },
-      { id: '25', name: '' },
+      { id: '26', name: '' },
     ],
   },
   {

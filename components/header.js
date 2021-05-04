@@ -12,7 +12,7 @@ import styles from './header.module.css';
 import SubHeaderMenu from './subheadermenu.js';
 
 const liMeta = [
-  { id: 1, name: 'Services', link: '' },
+  { id: 1, name: 'Services', link: '/services' },
   { id: 2, name: 'How we work', link: '/how-we-work' },
   { id: 3, name: 'Portfolio', link: '' },
   { id: 4, name: 'Company', link: '' },
@@ -24,12 +24,13 @@ const oneData = [
     name: 'Consulting',
     submeta: [
       { id: 111, name: 'Enterprise' },
-      { id: 112, name: 'Startup' },
+      { id: 112, name: 'Startup', link: '/startup-consulting' },
     ],
   },
   {
     id: 12,
     name: 'Web',
+    link: '/web-development-company',
     submeta: [
       { id: 121, name: 'Web App' },
       { id: 122, name: 'Web Design' },
@@ -39,6 +40,7 @@ const oneData = [
   {
     id: 13,
     name: 'Mobile Apps',
+    link: '/mobile-app-development',
     submeta: [
       { id: 131, name: 'iOS' },
       { id: 132, name: 'Android' },
