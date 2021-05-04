@@ -39,6 +39,7 @@
 .nav__submenu__item_hover:hover a {
   color: #000;
   padding-left: 10px !important;
+  font-weight: 500;
   transition: all 0.25s ease-in-out;
 }
 
@@ -53,6 +54,7 @@
   padding-left: 20px !important;
   transition: all 0.25s ease-in-out;
 }
+
 .nav__submenu__item:last-of-type {
   padding-bottom: 0px !important;
 }
@@ -105,6 +107,8 @@
 
 .nav__submenu__services_container_name {
   padding-bottom: 12px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav__submenu__services_item {
@@ -120,4 +124,34 @@
 
 .nav__submenu__services__extra__item {
   font-size: 18px;
+}
+
+.nav__submenu__services_container_name:hover {
+  padding-left: 20px !important;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 2299px) {
+  .nav__submenu__services_container_before::before {
+    top: 8px;
+  }
+}
+
+.nav__submenu__services_container_before:hover::before {
+  width: 10px;
+}
+
+.nav__submenu__services_container_before::before {
+  z-index: 0;
+  position: absolute;
+  top: 11px;
+  left: 0px;
+  content: ' ';
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

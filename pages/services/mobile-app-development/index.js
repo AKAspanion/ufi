@@ -65,7 +65,7 @@ export default function MobileDevelopment() {
                   <span>
                     We leverage the mobile device capabilities to create a memorable end-user
                     experience to spur your brand’s growth. A trusted mobile app development company
-                    for world-className brands.
+                    for world-class brands.
                   </span>
                 </h1>
               </div>
@@ -238,7 +238,7 @@ export default function MobileDevelopment() {
         </div>
         <div className={cs([mobileStyles.wirefram__img__wrap])}>
           <div className={cs(['row'])}>
-            <div className={cs(['col-sm-12'])}>
+            <div className={cs(['col-sm-12', 'col-md-12'])}>
               <div className={cs([styles.design__box])}>
                 <img
                   className={cs([styles.blur__out])}

@@ -95,6 +95,17 @@ summary {
   height: 100%
 }
 
+@media (max-width: 1600.98px) {
+  .frem-slider-wrap .swiper-button-next {
+    left: 135px;
+  }
+
+  .frem-slider-wrap .swiper-button-prev {
+    left: 85px;
+  }
+
+}
+
 @media (max-width: 575.98px) {
   .frem-slider-wrap .swiper-button-next {
     left: 169px;

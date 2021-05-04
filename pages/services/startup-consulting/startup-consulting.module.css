@@ -1394,7 +1394,7 @@
 
   .client__info__text .client__h1,
   .stories__info__text .stories__h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
 }
 
@@ -1765,6 +1765,17 @@
   cursor: pointer;
   font-family: 'Circular Std Book';
   text-transform: uppercase;
+}
+
+.design__box {
+  height: 100%;
+  display: grid;
+  width: 100%;
+  align-items: center;
+}
+
+.design__box img {
+  width: 100%;
 }
 
 .load__btn:hover span,

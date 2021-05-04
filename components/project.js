@@ -21,7 +21,7 @@ export default function Project() {
           swipeable
           infiniteLoop
           showThumbs={false}
-          autoPlay={isMedium}
+          autoPlay
           showStatus={false}
           showArrows={!isMedium && !isSmall}>
           {praiseList.map(({ name, title, quote }, index) => (

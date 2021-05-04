@@ -657,9 +657,13 @@
         padding: 6rem 8rem 7rem;
     }
 
+    .frem__slider__wrap {
+        height: 680px;
+    }
+
     .mobile__showcase {
         width: 340px;
-        height: 680px;
+        height: 630px;
     }
 
     .mobile__app__sec__5 {
@@ -716,9 +720,13 @@
         padding-bottom: 6rem;
     }
 
+    .frem__slider__wrap {
+        height: 600px;
+    }
+
     .mobile__showcase {
         width: 300px;
-        height: 558px;
+        height: 532px;
     }
 
     .mobile__app__sec__5 {
@@ -772,7 +780,7 @@
 
     .mobile__showcase {
         width: 252px;
-        height: 500px;
+        height: 480px;
     }
 
     .mobile__app__sec__5 {
@@ -811,7 +819,7 @@
 
     .mobile__showcase {
         width: 250px;
-        height: 470px;
+        height: 450px;
     }
 
     .mobile__app__sec__5 {
