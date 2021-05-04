@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   flex-wrap: nowrap;
+  background: black;
   align-items: center;
   justify-content: center;
   font-family: 'Circular Std Book';

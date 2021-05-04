@@ -50,6 +50,11 @@ summary {
   touch-action: manipulation;
 }
 
+section {
+  max-width: 2150px;
+  margin: 0 auto !important;
+}
+
 .carousel .control-dots .dot {
   background: #000000 !important;
 }
