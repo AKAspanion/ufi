@@ -1,0 +1,14 @@
+# Netlify builds this site as a fully static Next.js export (no server runtime).
+# These settings override anything set in the Netlify UI.
+[build]
+  command = "npm run export"
+  publish = "out"
+
+[build.environment]
+  # Next.js 16 needs Node.js 20.9 or newer.
+  NODE_VERSION = "22"
+  # Makes next.config.mjs use `output: 'export'` in every build step, including
+  # Netlify's Next.js integration, so the site is treated as static.
+  NEXT_OUTPUT = "export"
+  # Set to "true" (here or in the Netlify UI) to build with the demo content.
+  # NEXT_PUBLIC_DEMO_CONTENT = "true"

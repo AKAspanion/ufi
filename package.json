@@ -9,7 +9,7 @@
     "lint": "eslint --fix .",
     "export": "NEXT_OUTPUT=export next build",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "deploy": "rm -rf out && npm run export && netlify deploy --prod"
+    "deploy": "rm -rf out && npm run export && netlify deploy --prod --dir=out"
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^4.0.0",

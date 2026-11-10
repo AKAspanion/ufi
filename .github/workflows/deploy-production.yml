@@ -1,0 +1,83 @@
+# Builds the static export and deploys it to Netlify production on every push
+# to master (i.e. when a pull request is merged). Can also be run by hand from
+# the Actions tab.
+#
+# Required repository secrets:
+#   NETLIFY_AUTH_TOKEN  Personal access token (Netlify: User settings → Applications)
+#   NETLIFY_SITE_ID     Project ID (Netlify: Project configuration → General → Project details)
+#
+# Optional repository variables (Settings → Secrets and variables → Actions → Variables):
+#   NEXT_PUBLIC_DEMO_CONTENT, NEXT_PUBLIC_COMPANY_NAME, NEXT_PUBLIC_COMPANY_SHORT_NAME,
+#   NEXT_PUBLIC_CONTACT_URL, NEXT_PUBLIC_BEHANCE_URL, NEXT_PUBLIC_DRIBBBLE_URL
+name: Deploy to production
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# One production deploy at a time; a newer push waits for the running one.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: |
+          npx eslint .
+          npx prettier --check './**/*.{js,jsx,mjs,css,md,json}'
+
+      - name: Build static export
+        run: npm run export
+        env:
+          NEXT_PUBLIC_DEMO_CONTENT: ${{ vars.NEXT_PUBLIC_DEMO_CONTENT }}
+          NEXT_PUBLIC_COMPANY_NAME: ${{ vars.NEXT_PUBLIC_COMPANY_NAME }}
+          NEXT_PUBLIC_COMPANY_SHORT_NAME: ${{ vars.NEXT_PUBLIC_COMPANY_SHORT_NAME }}
+          NEXT_PUBLIC_CONTACT_URL: ${{ vars.NEXT_PUBLIC_CONTACT_URL }}
+          NEXT_PUBLIC_BEHANCE_URL: ${{ vars.NEXT_PUBLIC_BEHANCE_URL }}
+          NEXT_PUBLIC_DRIBBBLE_URL: ${{ vars.NEXT_PUBLIC_DRIBBBLE_URL }}
+
+      - name: Check the export has a home page
+        run: test -f out/index.html
+
+      - name: Deploy to Netlify (production)
+        id: deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          DEPLOY_MESSAGE: ${{ github.event.head_commit.message || 'Manual deploy' }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "::error::Set the NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID repository secrets."
+            exit 1
+          fi
+          npx --yes netlify-cli@27.15.0 deploy \
+            --prod \
+            --no-build \
+            --dir=out \
+            --message="${DEPLOY_MESSAGE%%$'\n'*} (${GITHUB_SHA::7})" \
+            --json > deploy.json
+          url=$(jq -r '.url // .deploy_url' deploy.json)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Deployed to $url ($(jq -r '.deploy_url' deploy.json))" >> "$GITHUB_STEP_SUMMARY"
