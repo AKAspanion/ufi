@@ -9,7 +9,12 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { praiseListStartup } from '../../../assets/data';
 import Layout from '../../../components/layout';
+import { COMPANY_NAME, CONTACT_URL, demoLink } from '../../../config/site';
 import styles from './startup-consulting.module.css';
+
+// Read the build-time flag directly (see config/site.js) so demo-only sections are
+// dropped from the bundle when demo content is off.
+const DEMO_CONTENT = process.env.NEXT_PUBLIC_DEMO_CONTENT === 'true';
 
 export default function StartupConsulting() {
   const { width, ref } = useResizeDetector();
@@ -91,7 +96,7 @@ export default function StartupConsulting() {
           <div className={cs('row')}>
             <div className={cs(['col-6', 'col-sm-6', 'col-md-6', styles.p__r__1])}>
               <div className={cs([styles.consulting__radio__wrap, styles.light__gray__bg__info])}>
-                <a href={'/services/enterprises/#Enterprise'}>
+                <a href={'/services'}>
                   <div className={cs(styles.square__radio)}>
                     <div className={cs('label', styles.label)}>
                       <svg
@@ -154,7 +159,7 @@ export default function StartupConsulting() {
         <div className={cs(styles.consulting__banner)}>
           <img
             className={cs(styles.blur__out)}
-            src="https://www.unifiedinfotech.net/assets/images/banner-start-up@1x.jpg"
+            src="/images/placeholders/banner-start-up.svg"
             alt="startup consulting services"
           />
         </div>
@@ -249,7 +254,7 @@ export default function StartupConsulting() {
                 ])}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/validate-build@1x.jpg"
+                  src="/images/placeholders/validate-build.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -300,7 +305,7 @@ export default function StartupConsulting() {
                 ])}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/assumptions@1x.jpg"
+                  src="/images/placeholders/assumptions.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -329,17 +334,15 @@ export default function StartupConsulting() {
                   'aos-init'
                 )}>
                 <p>
-                  Unveil potential business threats and reduce long-term losses with Unified
-                  Infotech’s expert technology consultation
+                  Unveil potential business threats and reduce long-term losses with {COMPANY_NAME}
+                  ’s expert technology consultation
                 </p>
               </div>
             </div>
             <div className={cs(['col-sm-12', 'col-md-4', 'col-xl-4', 'align-self-center'])}>
               <div className={cs([styles.button__4, styles.consulting__touch])}>
                 <div className={cs(styles.eff__4)}></div>
-                <a
-                  className={styles.text__white}
-                  href="https://www.unifiedinfotech.net/about/contact/">
+                <a className={styles.text__white} href={CONTACT_URL}>
                   Get in Touch
                 </a>
               </div>
@@ -435,7 +438,7 @@ export default function StartupConsulting() {
                 ])}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/translate@1x.jpg"
+                  src="/images/placeholders/translate.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -473,7 +476,7 @@ export default function StartupConsulting() {
             <div className={cs(styles.consulting__planning__img)}>
               <img
                 className={styles.blur__out}
-                src="https://www.unifiedinfotech.net/assets/images/ideation-doc@1x.jpg"
+                src="/images/placeholders/ideation-doc.svg"
                 alt="startup consulting services"
               />
             </div>
@@ -531,148 +534,144 @@ export default function StartupConsulting() {
           </div>
         </div>
       </section>
-      <section
-        className={cs([
-          styles.mobile__app__sec__8,
-          styles.consulting__start__7,
-          styles.section__features,
-        ])}>
-        <div className={cs(['container-fluid', 'p-0'])}>
-          <div className={cs(['row', 'm-0'])}>
-            <div className={cs(['col-6', 'p-0', styles.client_info_left, styles.white__bg__info])}>
-              <div className={cs([styles.client__info__text])}>
-                <h3 className={cs([styles.client__h1, styles.text__black__h1])}>Success</h3>
+      {DEMO_CONTENT && (
+        <section
+          className={cs([
+            styles.mobile__app__sec__8,
+            styles.consulting__start__7,
+            styles.section__features,
+          ])}>
+          <div className={cs(['container-fluid', 'p-0'])}>
+            <div className={cs(['row', 'm-0'])}>
+              <div
+                className={cs(['col-6', 'p-0', styles.client_info_left, styles.white__bg__info])}>
+                <div className={cs([styles.client__info__text])}>
+                  <h3 className={cs([styles.client__h1, styles.text__black__h1])}>Success</h3>
+                </div>
               </div>
-            </div>
-            <div className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
-              <div className={cs([styles.stories__info__text])}>
-                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-left'])}>
-                  stories
-                </h3>
+              <div
+                className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
+                <div className={cs([styles.stories__info__text])}>
+                  <h3 className={cs([styles.stories__h1, styles.text__white, 'text-start'])}>
+                    stories
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={cs(['container-fluid', styles.work__project__wrap, 'text__center'])}>
-          <div className={cs([styles.features__list, 'text-left'])}>
-            <div className={cs([styles.feature__item])}>
-              <div className={cs(['row', 'justify-content-center'])}>
-                <div ref={image1} className={cs(['col-md-6', styles.p__lr__4])}>
-                  <div className={cs([styles.work__project__info, styles.content__col])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                      <div
-                        className={cs([
-                          styles.work__project__img,
-                          { [styles.img__in__inview]: image1View === true },
-                          styles.reveal__me,
-                        ])}>
-                        <img
-                          className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/toonyport-ecommerce@1x.jpg"
-                          alt="startup consulting services"
-                        />
-                      </div>
-                    </a>
-                    <div className={cs([styles.work__project__text])}>
-                      <img
-                        className={cs([styles.project__title])}
-                        src="https://www.unifiedinfotech.net/assets/images/toonyport-title.svg"
-                        alt="startup consulting services"
-                      />
-                      <div className={cs([styles.project__text__desc])}>
-                        <h3>
-                          Co-created with this e-commerce startup to be the one stop solution for
-                          kids apparel and accessories, making shopping easy and time saving
-                        </h3>
-                      </div>
-                      <div className={cs([styles.btn__link__wrap])}>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">UI/UX</a>
+          <div className={cs(['container-fluid', styles.work__project__wrap, 'text__center'])}>
+            <div className={cs([styles.features__list, 'text-start'])}>
+              <div className={cs([styles.feature__item])}>
+                <div className={cs(['row', 'justify-content-center'])}>
+                  <div ref={image1} className={cs(['col-md-6', styles.p__lr__4])}>
+                    <div className={cs([styles.work__project__info, styles.content__col])}>
+                      <a href="/portfolio">
+                        <div
+                          className={cs([
+                            styles.work__project__img,
+                            { [styles.img__in__inview]: image1View === true },
+                            styles.reveal__me,
+                          ])}>
+                          <img
+                            className={cs([styles.blur__out])}
+                            src="/images/placeholders/toonyport-ecommerce.svg"
+                            alt="startup consulting services"
+                          />
                         </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                            Mobile App Development
-                          </a>
-                        </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                            eCommerce
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div ref={image2} className={cs(['col-md-6', styles.p__lr__4])}>
-                  <div className={cs([styles.work__project__info])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                      <div
-                        className={cs([
-                          styles.work__project__img,
-                          { [styles.img__in__inview]: image2View === true },
-                          styles.reveal__me,
-                        ])}>
-                        <img
-                          className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo@1x.jpg"
-                          alt="startup consulting services"
-                        />
-                      </div>
-                    </a>
-                    <div className={cs([styles.work__project__text, styles.pb__sm])}>
-                      <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
+                      </a>
+                      <div className={cs([styles.work__project__text])}>
                         <img
                           className={cs([styles.project__title])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo-title.svg"
+                          src="/images/placeholders/toonyport-title.svg"
                           alt="startup consulting services"
                         />
-                      </a>
-                      <div className={cs([styles.project__text__desc])}>
-                        <h3>
-                          Creating an Artificial Intelligence powered award winning streaming app
-                          featuring world’s best short films{' '}
-                        </h3>
+                        <div className={cs([styles.project__text__desc])}>
+                          <h3>
+                            Co-created with this e-commerce startup to be the one stop solution for
+                            kids apparel and accessories, making shopping easy and time saving
+                          </h3>
+                        </div>
+                        <div className={cs([styles.btn__link__wrap])}>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">UI/UX</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">Mobile App Development</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">eCommerce</a>
+                          </div>
+                        </div>
                       </div>
-                      <div className={cs([styles.btn__link__wrap])}>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">UX/UI</a>
+                    </div>
+                  </div>
+                  <div ref={image2} className={cs(['col-md-6', styles.p__lr__4])}>
+                    <div className={cs([styles.work__project__info])}>
+                      <a href="/portfolio">
+                        <div
+                          className={cs([
+                            styles.work__project__img,
+                            { [styles.img__in__inview]: image2View === true },
+                            styles.reveal__me,
+                          ])}>
+                          <img
+                            className={cs([styles.blur__out])}
+                            src="/images/placeholders/largo.svg"
+                            alt="startup consulting services"
+                          />
                         </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                            Mobile App Development
-                          </a>
+                      </a>
+                      <div className={cs([styles.work__project__text, styles.pb__sm])}>
+                        <a href="/portfolio">
+                          <img
+                            className={cs([styles.project__title])}
+                            src="/images/placeholders/largo-title.svg"
+                            alt="startup consulting services"
+                          />
+                        </a>
+                        <div className={cs([styles.project__text__desc])}>
+                          <h3>
+                            Creating an Artificial Intelligence powered award winning streaming app
+                            featuring world’s best short films{' '}
+                          </h3>
                         </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                            RESTful API Development
-                          </a>
+                        <div className={cs([styles.btn__link__wrap])}>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">UX/UI</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">Mobile App Development</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">RESTful API Development</a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className={cs([styles.load__btn, styles.discover__more])}>
-                <div className={cs([styles.eff__3, styles.discover__eff])}></div>
-                <a className={styles.text__white} href="https://www.unifiedinfotech.net/portfolio/">
-                  discover more
-                </a>
+                <div className={cs([styles.load__btn, styles.discover__more])}>
+                  <div className={cs([styles.eff__3, styles.discover__eff])}></div>
+                  <a className={styles.text__white} href={demoLink('/portfolio/', '/portfolio')}>
+                    discover more
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       <section className={cs(styles.consulting__start__8, styles.mobile__app__sec__9)}>
         <div className={'container'}>
           <div className={cs([styles.common__text, styles.text__black, 'text-center'])}>
-            <h3 className={cs(['h2', styles.treat__as__h1, 'mb-0 font-weight-bold text-center'])}>
+            <h3 className={cs(['h2', styles.treat__as__h1, 'mb-0 fw-bold text-center'])}>
               From people like you
             </h3>
           </div>
@@ -690,12 +689,12 @@ export default function StartupConsulting() {
                     <FaQuoteLeft size={48} color="#C7C7C7" />
                   </div>
                   <div className={styles.praise__right}>
-                    <div className={cs(styles.praise__quote, 'text-left')}>
+                    <div className={cs(styles.praise__quote, 'text-start')}>
                       <blockquote></blockquote>
-                      <span className={'text-left'}>{quote}</span>
+                      <span className={'text-start'}>{quote}</span>
                     </div>
-                    <div className={cs(styles.praise__name, 'text-left')}>{name}</div>
-                    <div className={cs(styles.praise__title, 'text-left')}>{title}</div>
+                    <div className={cs(styles.praise__name, 'text-start')}>{name}</div>
+                    <div className={cs(styles.praise__title, 'text-start')}>{title}</div>
                   </div>
                 </section>
               </div>

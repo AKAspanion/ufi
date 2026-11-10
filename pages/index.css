@@ -59,12 +59,12 @@ section {
   background: #000000 !important;
 }
 
-.frem-slider-wrap .swiper-button-next {
+.frem-slider-wrap .swiper .swiper-button-next {
   left: 124px;
 }
 
-.frem-slider-wrap .swiper-button-next,
-.frem-slider-wrap .swiper-button-prev {
+.frem-slider-wrap .swiper .swiper-button-next,
+.frem-slider-wrap .swiper .swiper-button-prev {
   top: inherit;
   bottom: 14px;
   width: 30px;
@@ -76,46 +76,51 @@ section {
   outline: none;
 }
 
-.frem-slider-wrap .swiper-button-next {
-  background-image: url(https://www.unifiedinfotech.net/assets/images/right-panel.svg);
+.frem-slider-wrap .swiper .swiper-button-next {
+  background-image: url(/images/placeholders/right-panel.svg);
   right: auto;
   left: 116px;
 }
 
-.frem-slider-wrap .swiper-button-prev {
-  background-image: url(https://www.unifiedinfotech.net/assets/images/left-panel.svg);
+.frem-slider-wrap .swiper .swiper-button-prev {
+  background-image: url(/images/placeholders/left-panel.svg);
   right: auto;
   left: 54px;
 }
 
-.frem-slider-wrap .swiper-button-prev:after {
+.frem-slider-wrap .swiper .swiper-button-prev:after {
   content: '';
 }
 
-.frem-slider-wrap .swiper-button-next:after {
+.frem-slider-wrap .swiper .swiper-button-next:after {
   content: '';
 }
 
-.frem-slider-wrap .swiper-container {
+/* Swiper 7+ renders its own SVG arrow icon; use the custom background arrows instead. */
+.frem-slider-wrap .swiper .swiper-navigation-icon {
+  display: none;
+}
+
+.frem-slider-wrap .swiper {
   height: 100%;
 }
 
 @media (max-width: 1600.98px) {
-  .frem-slider-wrap .swiper-button-next {
+  .frem-slider-wrap .swiper .swiper-button-next {
     left: 135px;
   }
 
-  .frem-slider-wrap .swiper-button-prev {
+  .frem-slider-wrap .swiper .swiper-button-prev {
     left: 85px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .frem-slider-wrap .swiper-button-next {
+  .frem-slider-wrap .swiper .swiper-button-next {
     left: 169px;
   }
 
-  .frem-slider-wrap .swiper-button-prev {
+  .frem-slider-wrap .swiper .swiper-button-prev {
     left: 128px;
   }
 }

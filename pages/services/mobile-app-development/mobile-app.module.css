@@ -158,7 +158,9 @@
   transition-property: -webkit-transform;
   -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  transition-property:
+    transform,
+    -webkit-transform;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -174,13 +176,15 @@
   transition-property: -webkit-transform;
   -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  transition-property:
+    transform,
+    -webkit-transform;
 }
 
 .mobile__showcase {
   width: 350px;
   height: 670px;
-  background: url(https://www.unifiedinfotech.net/assets/images/iphone.png) no-repeat 0 0;
+  background: url(/images/placeholders/iphone.svg) no-repeat 0 0;
   background-size: contain;
   position: absolute;
   left: -12px;
@@ -342,8 +346,12 @@
   border-left: none;
   background: #ffffff;
   visibility: hidden;
-  -webkit-transition: opacity 600ms, visibility 600ms;
-  transition: opacity 600ms, visibility 600ms;
+  -webkit-transition:
+    opacity 600ms,
+    visibility 600ms;
+  transition:
+    opacity 600ms,
+    visibility 600ms;
 }
 
 .tab__slide__sec .tab__right__side {
@@ -530,9 +538,15 @@
   -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   opacity: 0;
-  transition: opacity 1.1s ease 167ms, -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms;
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms,
+  transition:
+    opacity 1.1s ease 167ms,
+    -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition:
+    clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.1s ease 167ms;
+  transition:
+    clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.1s ease 167ms,
     -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -893,7 +907,7 @@
 
 @media (max-width: 1199px) {
   .mobile__app__sec__6.mobile__app__responsive .pad__box:nth-child(1),
-  .mobile__app__sec__6.mobile__app__responsive .pad__box:nth__child(2) {
+  .mobile__app__sec__6.mobile__app__responsive .pad__box:nth-child(2) {
     margin-bottom: 20px;
   }
 

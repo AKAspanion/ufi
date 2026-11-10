@@ -1,5 +1,6 @@
 import cs from 'classnames';
 
+import { SOCIAL_LINKS } from '../config/site';
 import Button from './button';
 import styles from './footer.module.css';
 
@@ -21,19 +22,13 @@ export default function Footer() {
             <div className={cs(styles.visit__text, styles.visit__text__tilte)}>Visit us at</div>
             <div className={styles.visit__text}>
               <span className={styles.flag}>
-                <img
-                  src="https://www.unifiedinfotech.net/assets/images/icon/Flag-USA.svg"
-                  alt="USA Flag"
-                />
+                <img src="/images/placeholders/flag-usa.svg" alt="USA Flag" />
               </span>
               ABC, Random Avenue, New York, NY 24513
             </div>
             <div className={styles.visit__text}>
               <span className={styles.flag}>
-                <img
-                  src="https://www.unifiedinfotech.net/assets/images/icon/Flag-India.svg"
-                  alt="Indian Flag"
-                />
+                <img src="/images/placeholders/flag-india.svg" alt="Indian Flag" />
               </span>
               XYZ, Salt Lake City, Sec V, Kol-700091
             </div>
@@ -81,10 +76,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.behance.net/unifiedinfotech"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <a href={SOCIAL_LINKS.behance} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 13">
                     <path
                       fill="#ffffff"
@@ -94,10 +86,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://dribbble.com/unifiedinfotech"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <a href={SOCIAL_LINKS.dribbble} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
                     <path
                       fill="#ffffff"
@@ -110,18 +99,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={cs(styles.row, styles.row__right)}>
-          <img
-            data-sizes="xl, l, m, s, xs"
-            data-srcset="
-              https://www.unifiedinfotech.net/assets/images/footer-banner1@4x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@2x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@1.5x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@1x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@0.75x.jpg
-    					"
-            src="https://www.unifiedinfotech.net/assets/images/footer-banner1@2x.jpg"
-            alt="Footer Banner"
-          />
+          <img src="/images/placeholders/footer-banner1.svg" alt="Footer Banner" />
         </div>
       </div>
       <div className={styles.footer__bottom}>

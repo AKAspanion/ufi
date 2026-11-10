@@ -1,23 +1,24 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 
 import cs from 'classnames';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useCountUp } from 'react-countup';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { useInView } from 'react-intersection-observer';
 import { useResizeDetector } from 'react-resize-detector';
 import { Carousel } from 'react-responsive-carousel';
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { coreItems, expertise, portfolio, process, processNav, stats } from '../assets/data';
+import { coreItems, expertise, portfolio, processNav, processSteps, stats } from '../assets/data';
 import Button from '../components/button';
 import Layout from '../components/layout';
 import Project from '../components/project';
+import { COMPANY_SHORT_NAME } from '../config/site';
 import styles from './index.module.css';
 
 const arrowStyles = {
@@ -34,7 +35,7 @@ const arrowStyles = {
   cursor: 'pointer',
 };
 
-SwiperCore.use([Autoplay, Navigation, Pagination]);
+const swiperModules = [Autoplay, Navigation, Pagination];
 
 export default function Home() {
   const [selectedNav, setSelectedNav] = useState(0);
@@ -54,17 +55,7 @@ export default function Home() {
       </Head>
       <section className={styles.video__container}>
         <div className={styles.video__wrapper}>
-          <video
-            loop
-            muted
-            autoPlay
-            className={styles.video}
-            poster="https://www.unifiedinfotech.net/assets/images/banner.jpg">
-            <source
-              src="https://www.unifiedinfotech.net/assets/videos/uipl-banner-video.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <img className={styles.video} src="/images/placeholders/banner.svg" alt="" />
         </div>
         <div className={styles.video__overlay}></div>
         <div className={styles.video__hero}>
@@ -78,11 +69,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.stats}>
-        {stats.map((detail, index) => (
-          <StatCard key={index} detail={detail} />
-        ))}
-      </section>
+      {stats.length > 0 && (
+        <section className={styles.stats}>
+          {stats.map((detail, index) => (
+            <StatCard key={index} detail={detail} />
+          ))}
+        </section>
+      )}
       <section className={styles.standout}>
         <div className={styles.standout__left}>
           <h2 className={styles.standout__title}>How we stand out - We are Proactive Experts</h2>
@@ -91,23 +84,15 @@ export default function Home() {
             software solutions, that fuel innovation &amp; deliver digital success!
           </p>
           <p className={styles.standout__desc}>
-            At Unified we believe that every project is an important milestone in our journey. So we
-            position ourselves as a boutique digital agency, custom tailoring impactful digital
-            solutions with industry best practices across the board, for Fortune 500s, SMEs, and
-            Start-up’s around the globe.
+            At {COMPANY_SHORT_NAME} we believe that every project is an important milestone in our
+            journey. So we position ourselves as a boutique digital agency, custom tailoring
+            impactful digital solutions with industry best practices across the board, for Fortune
+            500s, SMEs, and Start-up’s around the globe.
           </p>
           <Button borderedReverse>Request Consultation</Button>
         </div>
         <div className={styles.standout__right}>
-          <img
-            data-sizes="xl, l, s"
-            data-srcset="
-                    https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image@3x.jpg,
-                    https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image@2x.jpg,
-                    https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image.jpg"
-            src="https://www.unifiedinfotech.net/assets/images/New-Home-Welcome-Image@2x.jpg"
-            alt="New-Home-Welcome"
-          />
+          <img src="/images/placeholders/new-home-welcome-image.svg" alt="New-Home-Welcome" />
         </div>
       </section>
       <section className={styles.core__title}>
@@ -223,7 +208,7 @@ export default function Home() {
               showIndicators={isMedium}
               selectedItem={selectedNav}
               axis={!isMedium ? 'vertical' : undefined}>
-              {process.map(({ id, title, img, desc }) => (
+              {processSteps.map(({ id, title, img, desc }) => (
                 <div key={id}>
                   <section className={cs(styles.standout, styles.standout__carousel)}>
                     <div className={cs(styles.standout__right, styles.carousel__right)}>
@@ -272,6 +257,7 @@ export default function Home() {
           </>
         )}
         <Swiper
+          modules={swiperModules}
           loop
           autoplay={{
             delay: 2000,
@@ -332,11 +318,16 @@ const StatCard = ({ detail }) => {
 const CountNum = ({ detail }) => {
   const { value, postfix = '', prefix = '' } = detail;
 
-  const { countUp } = useCountUp({ end: value, duration: 3 });
+  const countRef = useRef(null);
 
-  return (
-    <div className={styles.stat__value}>{`${prefix}${parseInt(
-      countUp
-    ).toLocaleString()}${postfix}+`}</div>
-  );
+  useCountUp({
+    ref: countRef,
+    end: value,
+    duration: 3,
+    prefix,
+    suffix: `${postfix}+`,
+    separator: ',',
+  });
+
+  return <div ref={countRef} className={styles.stat__value} />;
 };

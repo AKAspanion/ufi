@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import cs from 'classnames';
@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 import { useResizeDetector } from 'react-resize-detector';
 import { Carousel } from 'react-responsive-carousel';
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import {
@@ -18,10 +18,15 @@ import {
   whatWeDevelop,
 } from '../../../assets/data';
 import Layout from '../../../components/layout';
+import { COMPANY_NAME, CONTACT_URL, demoLink } from '../../../config/site';
 import styles from '../startup-consulting/startup-consulting.module.css';
 import mobileStyles from './mobile-app.module.css';
 
-SwiperCore.use([Autoplay, Navigation, Pagination]);
+// Read the build-time flag directly (see config/site.js) so demo-only sections are
+// dropped from the bundle when demo content is off.
+const DEMO_CONTENT = process.env.NEXT_PUBLIC_DEMO_CONTENT === 'true';
+
+const swiperModules = [Autoplay, Navigation, Pagination];
 
 export default function MobileDevelopment() {
   const { width, ref } = useResizeDetector();
@@ -82,7 +87,7 @@ export default function MobileDevelopment() {
               <div className={cs(styles.consulting__banner)}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/mobile-app-banner@1x.jpg"
+                  src="/images/placeholders/mobile-app-banner.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -101,14 +106,14 @@ export default function MobileDevelopment() {
                   </h2>
                   <p>
                     When users are exposed to hundreds of apps- yours, need to be strikingly
-                    distinctive. Hence Unified Infotech will act as an end-to-end software
-                    development partner, serving as a catalyst to your success. We take pride in
-                    delivering human-centric experiences for your mobile app that are valuable and
-                    meaningful to your end-users through a combination of smart consultation,
-                    game-changing strategies, sterling{' '}
+                    distinctive. Hence {COMPANY_NAME} will act as an end-to-end software development
+                    partner, serving as a catalyst to your success. We take pride in delivering
+                    human-centric experiences for your mobile app that are valuable and meaningful
+                    to your end-users through a combination of smart consultation, game-changing
+                    strategies, sterling{' '}
                     <a
                       className={cs([styles.text__black, styles.text__underline])}
-                      href="https://www.unifiedinfotech.net/services/ui-ux-design/">
+                      href={demoLink('/services/ui-ux-design/', '/services')}>
                       UI/UX design services
                     </a>
                     , and the latest technologies. Our mobile app developer team can help you create
@@ -242,7 +247,7 @@ export default function MobileDevelopment() {
               <div className={cs([styles.design__box])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/high-fidelity-wireframe@1x.png"
+                  src="/images/placeholders/high-fidelity-wireframe.svg"
                   alt="high fidelity wireframe"
                 />
               </div>
@@ -255,42 +260,42 @@ export default function MobileDevelopment() {
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Personalisation_05@1x.png"
+                  src="/images/placeholders/personalisation-05.svg"
                   alt="Personalisation"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Main-Home@1x.png"
+                  src="/images/placeholders/main-home.svg"
                   alt="Main Home"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Payment-for-Subscription@1x.png"
+                  src="/images/placeholders/payment-for-subscription.svg"
                   alt="Payment for Subscription"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Personalisation@1x.png"
+                  src="/images/placeholders/personalisation.svg"
                   alt="application testing"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Personalisation_01@1x.png"
+                  src="/images/placeholders/personalisation-01.svg"
                   alt="mobile app interface"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Write_a_review@1x.png"
+                  src="/images/placeholders/write-a-review.svg"
                   alt="write a reviews"
                 />
               </div>
@@ -311,7 +316,7 @@ export default function MobileDevelopment() {
                 ])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/testing@1x.jpg"
+                  src="/images/placeholders/testing.svg"
                   alt="testing"
                 />
               </div>
@@ -343,9 +348,7 @@ export default function MobileDevelopment() {
                     unturned to build an app that engages.
                   </p>
                   <h5>From ideation to visual manifestation,</h5>
-                  <a
-                    className={cs([styles.button__4, mobileStyles.button__4])}
-                    href="https://www.unifiedinfotech.net/how-we-work/">
+                  <a className={cs([styles.button__4, mobileStyles.button__4])} href="/how-we-work">
                     <div className={cs([styles.eff__4])}></div>
                     <span>The Way We Do It</span>
                   </a>
@@ -384,7 +387,10 @@ export default function MobileDevelopment() {
                     Google Play Store for our clients, especially as leading{' '}
                     <a
                       className={cs(['text-underline text-white'])}
-                      href="https://www.unifiedinfotech.net/services/mobile-app-development-new-york/">
+                      href={demoLink(
+                        '/services/mobile-app-development-new-york/',
+                        '/services/mobile-app-development'
+                      )}>
                       app developers New York
                     </a>{' '}
                     and beyond.
@@ -397,6 +403,7 @@ export default function MobileDevelopment() {
                 <div className={cs([mobileStyles.inmobileshowcase])}>
                   <div className={cs([mobileStyles.mobile__showcase])}></div>
                   <Swiper
+                    modules={swiperModules}
                     loop
                     autoplay={{
                       delay: 2000,
@@ -425,136 +432,136 @@ export default function MobileDevelopment() {
         </div>
       </section>
 
-      <section
-        className={cs([
-          styles.mobile__app__sec__8,
-          styles.consulting__start__7,
-          styles.section__features,
-        ])}>
-        <div className={cs(['container-fluid', 'p-0'])}>
-          <div className={cs(['row', 'm-0'])}>
-            <div className={cs(['col-6', 'p-0', styles.client_info_left, styles.white__bg__info])}>
-              <div className={cs([styles.client__info__text])}>
-                <h3 className={cs([styles.client__h1, styles.text__black__h1])}>Success</h3>
+      {DEMO_CONTENT && (
+        <section
+          className={cs([
+            styles.mobile__app__sec__8,
+            styles.consulting__start__7,
+            styles.section__features,
+          ])}>
+          <div className={cs(['container-fluid', 'p-0'])}>
+            <div className={cs(['row', 'm-0'])}>
+              <div
+                className={cs(['col-6', 'p-0', styles.client_info_left, styles.white__bg__info])}>
+                <div className={cs([styles.client__info__text])}>
+                  <h3 className={cs([styles.client__h1, styles.text__black__h1])}>Success</h3>
+                </div>
               </div>
-            </div>
-            <div className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
-              <div className={cs([styles.stories__info__text])}>
-                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-left'])}>
-                  stories
-                </h3>
+              <div
+                className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
+                <div className={cs([styles.stories__info__text])}>
+                  <h3 className={cs([styles.stories__h1, styles.text__white, 'text-start'])}>
+                    stories
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={cs(['container-fluid', styles.work__project__wrap, 'text__center'])}>
-          <div className={cs([styles.features__list, 'text-left'])}>
-            <div className={cs([styles.feature__item])}>
-              <div className={cs(['row', 'justify-content-center'])}>
-                <div className={cs(['col-md-6', styles.p__lr__4])}>
-                  <div className={cs([styles.work__project__info, styles.content__col])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                      <div
-                        className={cs([
-                          styles.work__project__img,
-                          mobileStyles.uipl__section__reveal__check,
-                          mobileStyles.reveal__me,
-                        ])}>
-                        <img
-                          className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/freshclinic@1.5x.jpg"
-                          alt="startup consulting services"
-                        />
-                      </div>
-                    </a>
-                    <div className={cs([styles.work__project__text])}>
-                      <img
-                        className={cs([styles.project__title])}
-                        src="https://www.unifiedinfotech.net/assets/images/toonyport-title.svg"
-                        alt="startup consulting services"
-                      />
-                      <div className={cs([styles.project__text__desc])}>
-                        <h3>
-                          Created this on-demand marketplace helping nurses connect with doctors,
-                          facilitating prescription approval in regards to Botox treatment.
-                        </h3>
-                      </div>
-                      <div className={cs([styles.btn__link__wrap])}>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">IA</a>
+          <div className={cs(['container-fluid', styles.work__project__wrap, 'text__center'])}>
+            <div className={cs([styles.features__list, 'text-start'])}>
+              <div className={cs([styles.feature__item])}>
+                <div className={cs(['row', 'justify-content-center'])}>
+                  <div className={cs(['col-md-6', styles.p__lr__4])}>
+                    <div className={cs([styles.work__project__info, styles.content__col])}>
+                      <a href="/portfolio">
+                        <div
+                          className={cs([
+                            styles.work__project__img,
+                            mobileStyles.uipl__section__reveal__check,
+                            mobileStyles.reveal__me,
+                          ])}>
+                          <img
+                            className={cs([styles.blur__out])}
+                            src="/images/placeholders/freshclinic.svg"
+                            alt="startup consulting services"
+                          />
                         </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">UI/UX</a>
-                        </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                            eCommerce
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className={cs(['col-md-6', styles.p__lr__4])}>
-                  <div className={cs([styles.work__project__info])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                      <div
-                        className={cs([
-                          styles.work__project__img,
-                          mobileStyles.uipl__section__reveal__check,
-                          mobileStyles.reveal__me,
-                        ])}>
-                        <img
-                          className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo@1x.jpg"
-                          alt="startup consulting services"
-                        />
-                      </div>
-                    </a>
-                    <div className={cs([styles.work__project__text, styles.pb__sm])}>
-                      <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
+                      </a>
+                      <div className={cs([styles.work__project__text])}>
                         <img
                           className={cs([styles.project__title])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo-title.svg"
+                          src="/images/placeholders/toonyport-title.svg"
                           alt="startup consulting services"
                         />
-                      </a>
-                      <div className={cs([styles.project__text__desc])}>
-                        <h3>
-                          Creating an Artificial Intelligence powered award winning streaming app
-                          featuring world’s best short films{' '}
-                        </h3>
-                      </div>
-                      <div className={cs([styles.btn__link__wrap])}>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">UI/UX</a>
+                        <div className={cs([styles.project__text__desc])}>
+                          <h3>
+                            Created this on-demand marketplace helping nurses connect with doctors,
+                            facilitating prescription approval in regards to Botox treatment.
+                          </h3>
                         </div>
-                        <div className={cs([styles.button__2])}>
-                          <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                            Mobile App Design
-                          </a>
+                        <div className={cs([styles.btn__link__wrap])}>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">IA</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">UI/UX</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">eCommerce</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={cs(['col-md-6', styles.p__lr__4])}>
+                    <div className={cs([styles.work__project__info])}>
+                      <a href="/portfolio">
+                        <div
+                          className={cs([
+                            styles.work__project__img,
+                            mobileStyles.uipl__section__reveal__check,
+                            mobileStyles.reveal__me,
+                          ])}>
+                          <img
+                            className={cs([styles.blur__out])}
+                            src="/images/placeholders/largo.svg"
+                            alt="startup consulting services"
+                          />
+                        </div>
+                      </a>
+                      <div className={cs([styles.work__project__text, styles.pb__sm])}>
+                        <a href="/portfolio">
+                          <img
+                            className={cs([styles.project__title])}
+                            src="/images/placeholders/largo-title.svg"
+                            alt="startup consulting services"
+                          />
+                        </a>
+                        <div className={cs([styles.project__text__desc])}>
+                          <h3>
+                            Creating an Artificial Intelligence powered award winning streaming app
+                            featuring world’s best short films{' '}
+                          </h3>
+                        </div>
+                        <div className={cs([styles.btn__link__wrap])}>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">UI/UX</a>
+                          </div>
+                          <div className={cs([styles.button__2])}>
+                            <div className={cs([styles.eff__2])}></div>
+                            <a href="/portfolio">Mobile App Design</a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className={cs([styles.load__btn, styles.discover__more])}>
-                <div className={cs([styles.eff__3, styles.discover__eff])}></div>
-                <a className={styles.text__white} href="https://www.unifiedinfotech.net/portfolio/">
-                  discover more
-                </a>
+                <div className={cs([styles.load__btn, styles.discover__more])}>
+                  <div className={cs([styles.eff__3, styles.discover__eff])}></div>
+                  <a className={styles.text__white} href={demoLink('/portfolio/', '/portfolio')}>
+                    discover more
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section
         className={cs([mobileStyles.mobile__app__sec__7, mobileStyles.tab__slide__sec, 'pb-0'])}>
@@ -563,9 +570,7 @@ export default function MobileDevelopment() {
             <div className={cs(['col-sm-12', 'p-0'])}>
               <div className={cs([mobileStyles.tab__slide__wrap, mobileStyles.mobile__app__tab])}>
                 <div className={cs([mobileStyles.cta__wrap])}>
-                  <a
-                    className={cs([styles.button__4, mobileStyles.button__4])}
-                    href="https://www.unifiedinfotech.net/about/contact/">
+                  <a className={cs([styles.button__4, mobileStyles.button__4])} href={CONTACT_URL}>
                     <div className={cs([styles.eff__4])}></div>
                     <span>get in touch</span>
                   </a>
@@ -627,12 +632,12 @@ export default function MobileDevelopment() {
                     <FaQuoteLeft size={48} color="#C7C7C7" />
                   </div>
                   <div className={styles.praise__right}>
-                    <div className={cs(styles.praise__quote, 'text-left')}>
+                    <div className={cs(styles.praise__quote, 'text-start')}>
                       <blockquote></blockquote>
-                      <span className={'text-left'}>{quote}</span>
+                      <span className={'text-start'}>{quote}</span>
                     </div>
-                    <div className={cs(styles.praise__name, 'text-left')}>{name}</div>
-                    <div className={cs(styles.praise__title, 'text-left')}>{title}</div>
+                    <div className={cs(styles.praise__name, 'text-start')}>{name}</div>
+                    <div className={cs(styles.praise__title, 'text-start')}>{title}</div>
                   </div>
                 </section>
               </div>

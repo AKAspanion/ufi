@@ -15,7 +15,7 @@ export default function Project() {
   const isSmall = width < 575;
   const isMedium = width < 980;
   return (
-    <section ref={ref} className={styles.project}>
+    <section ref={ref} id="contact" className={styles.project}>
       <div className={styles.project__left}>
         <Carousel
           autoPlay

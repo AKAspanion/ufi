@@ -1,5 +1,6 @@
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/bootstrap4-compat.css';
 import 'aos/dist/aos.css';
 
 import AOS from 'aos';

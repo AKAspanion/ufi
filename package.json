@@ -7,39 +7,41 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix .",
-    "export": "next build && next export",
+    "export": "NEXT_OUTPUT=export next build",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "deploy": "rm -rf out && npm run export && netlify deploy --prod"
   },
   "dependencies": {
-    "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@n8tb1t/use-scroll-position": "^4.0.0",
     "aos": "^2.3.4",
-    "bootstrap": "^4.6.0",
-    "classnames": "^2.2.6",
-    "next": "^10.0.0",
-    "react": "17.0.1",
-    "react-bootstrap": "^1.5.2",
-    "react-collapsible": "^2.8.3",
-    "react-countup": "^4.3.3",
-    "react-dom": "17.0.1",
-    "react-icons": "^4.2.0",
-    "react-intersection-observer": "^8.31.1",
-    "react-resize-detector": "^6.6.5",
-    "react-responsive-carousel": "^3.2.18",
-    "swiper": "^6.5.7"
+    "bootstrap": "^5.3.8",
+    "classnames": "^2.5.1",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-bootstrap": "^2.10.10",
+    "react-collapsible": "^2.10.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "react-intersection-observer": "^11.0.1",
+    "react-resize-detector": "^12.3.0",
+    "react-responsive-carousel": "^3.2.23",
+    "swiper": "^14.4.0"
   },
   "devDependencies": {
-    "eslint": "^7.25.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "pretty-quick": "^4.2.2"
   },
   "husky": {
     "hooks": {
@@ -50,5 +52,14 @@
     "./**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "overrides": {
+    "react-collapsible": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

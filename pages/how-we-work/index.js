@@ -2,56 +2,39 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useBodyScrollPosition } from '@n8tb1t/use-scroll-position';
 import cs from 'classnames';
 import Head from 'next/head';
 import { useRef, useState } from 'react';
 
 import Layout from '../../components/layout';
+import { COMPANY_NAME } from '../../config/site';
 import styles from './index.module.css';
 
 const process = [
   {
     id: 1,
     title: 'Discovery Workshop',
-    img: 'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
-    desc:
-      'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
   {
     id: 2,
     title: 'Planning',
-    img: 'https://www.unifiedinfotech.net/assets/images/Largo-Home-V3@4x.png',
-    desc:
-      'We designed and developed this AI powered video streaming platform to give a tiff to streaming giants like Netflix and Hulu. We created an out of the box experience to help make the product award-winning.',
   },
   {
     id: 3,
     title: 'Design',
-    img: 'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
-    desc:
-      'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
   {
     id: 4,
     title: 'Development',
-    img: 'https://www.unifiedinfotech.net/assets/images/Largo-Home-V3@4x.png',
-    desc:
-      'We designed and developed this AI powered video streaming platform to give a tiff to streaming giants like Netflix and Hulu. We created an out of the box experience to help make the product award-winning.',
   },
   {
     id: 5,
     title: 'Testing',
-    img: 'https://www.unifiedinfotech.net/assets/images/OpenReel-Home-V3@4x.png',
-    desc:
-      'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
   {
     id: 6,
     title: 'Maintainence',
-    img: 'https://www.unifiedinfotech.net/assets/images/Largo-Home-V3@4x.png',
-    desc:
-      'We designed and developed this AI powered video streaming platform to give a tiff to streaming giants like Netflix and Hulu. We created an out of the box experience to help make the product award-winning.',
   },
 ];
 
@@ -77,7 +60,7 @@ const proces_steps = [
           ],
         },
         bgInfoWhite: {
-          uiplImage: 'https://www.unifiedinfotech.net/assets/images/discovery@4x.jpg',
+          uiplImage: '/images/placeholders/discovery.svg',
         },
       },
     },
@@ -189,7 +172,7 @@ const getSubSection = (obj) => {
                     styles.uipl_section_reveal_check,
                     styles.reveal_me,
                   ])}>
-                  <img alt="Unified Infotech process" src={bgInfoWhite.uiplImage} />
+                  <img alt={`${COMPANY_NAME} process`} src={bgInfoWhite.uiplImage} />
                 </div>
               </div>
             </div>
@@ -253,7 +236,7 @@ export default function Home() {
     }
   }
 
-  useScrollPosition(({ currPos }) => {
+  useBodyScrollPosition(({ currPos }) => {
     setScrollY(currPos.y);
   });
 
@@ -606,8 +589,8 @@ export default function Home() {
                         ])}>
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
-                          src="https://www.unifiedinfotech.net/assets/images/design@2x.jpg"
-                          alt="Unified Infotech process"
+                          src="/images/placeholders/design.svg"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -655,17 +638,7 @@ export default function Home() {
                             <span>UI Designs of the projects</span>
                           </li>
                           <li>
-                            <span>
-                              Clickable prototype on Invision platform -&gt;{' '}
-                              <a
-                                style={{ position: 'relative', zIndex: '3' }}
-                                className={styles.a_link}
-                                href="https://projects.invisionapp.com/share/95OUQVFHSJY#/screens/328514871"
-                                target="_blank"
-                                rel="noreferrer">
-                                example link
-                              </a>
-                            </span>
+                            <span>Clickable prototype on InVision platform</span>
                           </li>
                           <li>
                             <span>Source files in either Photoshop or Sketch format</span>
@@ -680,7 +653,7 @@ export default function Home() {
                           <h5>Tools</h5>
                         </div>
                         <div className={cs('row', 'm-0')}>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="36"
@@ -694,7 +667,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="37"
@@ -711,7 +684,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="37"
@@ -728,7 +701,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="37"
@@ -749,7 +722,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="36"
@@ -765,7 +738,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="40"
@@ -917,8 +890,8 @@ export default function Home() {
                         ])}>
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
-                          src="https://www.unifiedinfotech.net/assets/images/development@2x.jpg"
-                          alt="Unified Infotech process"
+                          src="/images/placeholders/development.svg"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -1076,8 +1049,8 @@ export default function Home() {
                         ])}>
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
-                          src="https://www.unifiedinfotech.net/assets/images/testing@2x.jpg"
-                          alt="Unified Infotech process"
+                          src="/images/placeholders/testing.svg"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -1104,57 +1077,57 @@ export default function Home() {
                           <h5> Tools</h5>
                         </div>
                         <div className={cs('row', 'm-0')}>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
-                                src="https://www.unifiedinfotech.net/assets/images/jira@2x.jpg"
-                                alt="Unified Infotech process"
+                                src="/images/placeholders/jira.svg"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
-                                src="https://www.unifiedinfotech.net/assets/images/mantis-bug-tracker-logo@2x.jpg"
-                                alt="Unified Infotech process"
+                                src="/images/placeholders/mantis-bug-tracker-logo.svg"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
-                                src="https://www.unifiedinfotech.net/assets/images/firebase@2x.jpg"
-                                alt="Unified Infotech process"
+                                src="/images/placeholders/firebase.svg"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
-                                src="https://www.unifiedinfotech.net/assets/images/jmeter@2x.jpg"
-                                alt="Unified Infotech process"
+                                src="/images/placeholders/jmeter.svg"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
-                                src="https://www.unifiedinfotech.net/assets/images/GTmetrix@2x.jpg"
-                                alt="Unified Infotech process"
+                                src="/images/placeholders/gtmetrix.svg"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
-                                src="https://www.unifiedinfotech.net/assets/images/se@2x.jpg"
-                                alt="Unified Infotech process"
+                                src="/images/placeholders/se.svg"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1305,8 +1278,8 @@ export default function Home() {
                         ])}>
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
-                          src="https://www.unifiedinfotech.net/assets/images/maintenance@2x.jpg"
-                          alt="Unified Infotech process"
+                          src="/images/placeholders/maintenance.svg"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -1501,7 +1474,7 @@ export default function Home() {
           <div className={cs('row')}>
             <div className={cs('col-md-5')}>
               <div>
-                <div className={cs([styles.common__text, styles.text__black, 'text-left'])}>
+                <div className={cs([styles.common__text, styles.text__black, 'text-start'])}>
                   <h3 className={cs('mb-3', styles.h3)}> Collaboration Tools</h3>
                   <p>
                     We make sure to use the tools that are top of the market to bring your ideas
@@ -1517,8 +1490,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/jira@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/jira.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1526,8 +1499,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/slack@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/slack.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1535,8 +1508,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/github@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/github.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1544,8 +1517,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/asana@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/asana.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1553,8 +1526,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/invision@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/invision.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1562,8 +1535,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/axure@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/axure.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1571,8 +1544,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/zeplin@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/zeplin.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1580,8 +1553,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/office365@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/office365.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1589,8 +1562,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/zoom@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/zoom.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1598,8 +1571,8 @@ export default function Home() {
                   <div className={cs(styles.tools__img)}>
                     <img
                       className={cs(styles.blur__out)}
-                      src="https://www.unifiedinfotech.net/assets/images/skype@2x.jpg"
-                      alt="Unified Infotech process"
+                      src="/images/placeholders/skype.svg"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1618,7 +1591,7 @@ export default function Home() {
           <div className={cs('row')}>
             <div className={cs('col-md-5')}>
               <div>
-                <div className={cs([styles.common__text, styles.text__black, 'text-left'])}>
+                <div className={cs([styles.common__text, styles.text__black, 'text-start'])}>
                   <h3 className={cs('mb-3', styles.h3)}>Engagement Models</h3>
                   <p>
                     We aim to deliver excellence at every step of projects and finish our job with
@@ -1652,7 +1625,8 @@ export default function Home() {
                     id="collapseOne">
                     <div className={cs(styles.panel__body)}>
                       When the scope of your idea is not clear, we tend to go with the T&amp;M based
-                      model to provide you with more efficiency as we continue with your project.{' '}
+                      model to provide you with more efficiency as we continue with your
+                      project.{' '}
                     </div>
                   </div>
                 </div>
