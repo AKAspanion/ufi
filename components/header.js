@@ -1,4 +1,4 @@
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useBodyScrollPosition } from '@n8tb1t/use-scroll-position';
 import cs from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -57,7 +57,7 @@ const submeta = [
   {
     3: [
       { id: 31, name: 'Projects', link: '/portfolio' },
-      { id: 32, name: 'UI/UX Gallery', link: '/ui-ux' },
+      { id: 32, name: 'UI/UX Gallery' },
     ],
   },
   {
@@ -78,7 +78,7 @@ export default function Header({ darkHeader = false }) {
 
   const isDark = () => (darkHeader ? true : dark);
 
-  useScrollPosition(({ currPos }) => {
+  useBodyScrollPosition(({ currPos }) => {
     setDark(currPos.y < 0);
     setOnTop(currPos.y < 0);
   });

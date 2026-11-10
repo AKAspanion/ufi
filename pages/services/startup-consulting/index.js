@@ -91,7 +91,7 @@ export default function StartupConsulting() {
           <div className={cs('row')}>
             <div className={cs(['col-6', 'col-sm-6', 'col-md-6', styles.p__r__1])}>
               <div className={cs([styles.consulting__radio__wrap, styles.light__gray__bg__info])}>
-                <a href={'/services/enterprises/#Enterprise'}>
+                <a href={'/services'}>
                   <div className={cs(styles.square__radio)}>
                     <div className={cs('label', styles.label)}>
                       <svg
@@ -154,7 +154,7 @@ export default function StartupConsulting() {
         <div className={cs(styles.consulting__banner)}>
           <img
             className={cs(styles.blur__out)}
-            src="https://www.unifiedinfotech.net/assets/images/banner-start-up@1x.jpg"
+            src="/images/placeholders/banner-start-up.svg"
             alt="startup consulting services"
           />
         </div>
@@ -249,7 +249,7 @@ export default function StartupConsulting() {
                 ])}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/validate-build@1x.jpg"
+                  src="/images/placeholders/validate-build.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -300,7 +300,7 @@ export default function StartupConsulting() {
                 ])}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/assumptions@1x.jpg"
+                  src="/images/placeholders/assumptions.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -435,7 +435,7 @@ export default function StartupConsulting() {
                 ])}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/translate@1x.jpg"
+                  src="/images/placeholders/translate.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -473,7 +473,7 @@ export default function StartupConsulting() {
             <div className={cs(styles.consulting__planning__img)}>
               <img
                 className={styles.blur__out}
-                src="https://www.unifiedinfotech.net/assets/images/ideation-doc@1x.jpg"
+                src="/images/placeholders/ideation-doc.svg"
                 alt="startup consulting services"
               />
             </div>
@@ -546,7 +546,7 @@ export default function StartupConsulting() {
             </div>
             <div className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
               <div className={cs([styles.stories__info__text])}>
-                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-left'])}>
+                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-start'])}>
                   stories
                 </h3>
               </div>
@@ -554,12 +554,12 @@ export default function StartupConsulting() {
           </div>
         </div>
         <div className={cs(['container-fluid', styles.work__project__wrap, 'text__center'])}>
-          <div className={cs([styles.features__list, 'text-left'])}>
+          <div className={cs([styles.features__list, 'text-start'])}>
             <div className={cs([styles.feature__item])}>
               <div className={cs(['row', 'justify-content-center'])}>
                 <div ref={image1} className={cs(['col-md-6', styles.p__lr__4])}>
                   <div className={cs([styles.work__project__info, styles.content__col])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
+                    <a href="/portfolio">
                       <div
                         className={cs([
                           styles.work__project__img,
@@ -568,7 +568,7 @@ export default function StartupConsulting() {
                         ])}>
                         <img
                           className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/toonyport-ecommerce@1x.jpg"
+                          src="/images/placeholders/toonyport-ecommerce.svg"
                           alt="startup consulting services"
                         />
                       </div>
@@ -576,7 +576,7 @@ export default function StartupConsulting() {
                     <div className={cs([styles.work__project__text])}>
                       <img
                         className={cs([styles.project__title])}
-                        src="https://www.unifiedinfotech.net/assets/images/toonyport-title.svg"
+                        src="/images/placeholders/toonyport-title.svg"
                         alt="startup consulting services"
                       />
                       <div className={cs([styles.project__text__desc])}>
@@ -588,19 +588,15 @@ export default function StartupConsulting() {
                       <div className={cs([styles.btn__link__wrap])}>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">UI/UX</a>
+                          <a href="/portfolio">UI/UX</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                            Mobile App Development
-                          </a>
+                          <a href="/portfolio">Mobile App Development</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                            eCommerce
-                          </a>
+                          <a href="/portfolio">eCommerce</a>
                         </div>
                       </div>
                     </div>
@@ -608,7 +604,7 @@ export default function StartupConsulting() {
                 </div>
                 <div ref={image2} className={cs(['col-md-6', styles.p__lr__4])}>
                   <div className={cs([styles.work__project__info])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
+                    <a href="/portfolio">
                       <div
                         className={cs([
                           styles.work__project__img,
@@ -617,16 +613,16 @@ export default function StartupConsulting() {
                         ])}>
                         <img
                           className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo@1x.jpg"
+                          src="/images/placeholders/largo.svg"
                           alt="startup consulting services"
                         />
                       </div>
                     </a>
                     <div className={cs([styles.work__project__text, styles.pb__sm])}>
-                      <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
+                      <a href="/portfolio">
                         <img
                           className={cs([styles.project__title])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo-title.svg"
+                          src="/images/placeholders/largo-title.svg"
                           alt="startup consulting services"
                         />
                       </a>
@@ -639,19 +635,15 @@ export default function StartupConsulting() {
                       <div className={cs([styles.btn__link__wrap])}>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">UX/UI</a>
+                          <a href="/portfolio">UX/UI</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                            Mobile App Development
-                          </a>
+                          <a href="/portfolio">Mobile App Development</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                            RESTful API Development
-                          </a>
+                          <a href="/portfolio">RESTful API Development</a>
                         </div>
                       </div>
                     </div>
@@ -672,7 +664,7 @@ export default function StartupConsulting() {
       <section className={cs(styles.consulting__start__8, styles.mobile__app__sec__9)}>
         <div className={'container'}>
           <div className={cs([styles.common__text, styles.text__black, 'text-center'])}>
-            <h3 className={cs(['h2', styles.treat__as__h1, 'mb-0 font-weight-bold text-center'])}>
+            <h3 className={cs(['h2', styles.treat__as__h1, 'mb-0 fw-bold text-center'])}>
               From people like you
             </h3>
           </div>
@@ -690,12 +682,12 @@ export default function StartupConsulting() {
                     <FaQuoteLeft size={48} color="#C7C7C7" />
                   </div>
                   <div className={styles.praise__right}>
-                    <div className={cs(styles.praise__quote, 'text-left')}>
+                    <div className={cs(styles.praise__quote, 'text-start')}>
                       <blockquote></blockquote>
-                      <span className={'text-left'}>{quote}</span>
+                      <span className={'text-start'}>{quote}</span>
                     </div>
-                    <div className={cs(styles.praise__name, 'text-left')}>{name}</div>
-                    <div className={cs(styles.praise__title, 'text-left')}>{title}</div>
+                    <div className={cs(styles.praise__name, 'text-start')}>{name}</div>
+                    <div className={cs(styles.praise__title, 'text-start')}>{title}</div>
                   </div>
                 </section>
               </div>

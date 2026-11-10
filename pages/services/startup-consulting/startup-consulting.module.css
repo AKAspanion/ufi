@@ -373,7 +373,7 @@
   background-size: cover;
   background-position: left top;
   min-height: 100%;
-  background-image: url(https://www.unifiedinfotech.net/assets/images/proposition@2x.jpg);
+  background-image: url(/images/placeholders/proposition.svg);
 }
 
 .consulting__start__4 .common__padd__wrap .common__padd__left.consulting__margin {
@@ -534,7 +534,7 @@
   }
 
   .consulting__bg__info {
-    background-image: url(https://www.unifiedinfotech.net/assets/images/proposition@2x.jpg);
+    background-image: url(/images/placeholders/proposition.svg);
   }
 
   .message__text__wrap .common__text h3,

@@ -63,10 +63,7 @@ export default function Services() {
         className={cs(styles.new__york__wrapper, {
           [styles.new__york__inview]: inView === true,
         })}>
-        <img
-          alt="new york"
-          src={'https://www.unifiedinfotech.net/assets/images/mobile-app-nyc-banner@2x.jpg'}
-        />
+        <img alt="new york" src={'/images/placeholders/mobile-app-nyc-banner.svg'} />
         <div className={styles.new__york}>
           <div className={styles.new__york__content}>
             <h3>About our New York presence</h3>
@@ -106,11 +103,7 @@ export default function Services() {
           <div
             className={cs([startupStyles.common__text, startupStyles.text__black, 'text-center'])}>
             <h3
-              className={cs([
-                'h2',
-                startupStyles.treat__as__h1,
-                'mb-0 font-weight-bold text-center mb-4',
-              ])}>
+              className={cs(['h2', startupStyles.treat__as__h1, 'mb-0 fw-bold text-center mb-4'])}>
               From people like you
             </h3>
           </div>
@@ -128,12 +121,12 @@ export default function Services() {
                     <FaQuoteLeft size={48} color="#C7C7C7" />
                   </div>
                   <div className={startupStyles.praise__right}>
-                    <div className={cs(startupStyles.praise__quote, 'text-left')}>
+                    <div className={cs(startupStyles.praise__quote, 'text-start')}>
                       <blockquote></blockquote>
-                      <span className={'text-left font-weight-bold'}>{quote}</span>
+                      <span className={'text-start fw-bold'}>{quote}</span>
                     </div>
-                    <div className={cs(startupStyles.praise__name, 'text-left')}>{name}</div>
-                    <div className={cs(startupStyles.praise__title, 'text-left')}>{title}</div>
+                    <div className={cs(startupStyles.praise__name, 'text-start')}>{name}</div>
+                    <div className={cs(startupStyles.praise__title, 'text-start')}>{title}</div>
                   </div>
                 </section>
               </div>

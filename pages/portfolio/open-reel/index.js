@@ -55,12 +55,7 @@ export default function OpenReel() {
                 <BsPlayFill size={32} />
               </Button>
             </div>
-            <img
-              alt="open-reel"
-              src={
-                'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Videozone@2x.jpg'
-              }
-            />
+            <img alt="open-reel" src={'/images/placeholders/portfolio-section-videozone.svg'} />
           </div>
         </div>
       </section>
@@ -127,10 +122,7 @@ export default function OpenReel() {
           </p>
         </div>
         <div className={styles.strategy__right}>
-          <img
-            alt={'strategy'}
-            src={'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Strategy@2x.jpg'}
-          />
+          <img alt={'strategy'} src={'/images/placeholders/portfolio-section-strategy.svg'} />
         </div>
       </section>
       <section ref={seamlessRef} className={styles.seamless}>
@@ -150,20 +142,16 @@ export default function OpenReel() {
           <div className={styles.seamless__slide}>
             <img
               alt={'seamless'}
-              src={
-                'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Seamless-Slider-Image@2x.png'
-              }
+              src={'/images/placeholders/portfolio-section-seamless-slider-image.svg'}
             />
             <img
               alt={'seamless'}
-              src={
-                'https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Seamless-Slider-Image@2x.png'
-              }
+              src={'/images/placeholders/portfolio-section-seamless-slider-image.svg'}
             />
           </div>
         </div>
       </section>
-      {parallaxMeta(styles, isMedium).map((detail, index) => (
+      {parallaxMeta(styles).map((detail, index) => (
         <ParallaxCard title={isMedium ? index === 0 : true} detail={detail} key={index} />
       ))}
       <section className={styles.integrations}>
@@ -261,7 +249,7 @@ const IntegrationImage = ({ id }) => {
       className={cs(styles.integration__img, styles[`integration__img_${id}`], {
         [styles.img__inview]: inView === true,
       })}
-      src={`https://www.unifiedinfotech.net/assets/images/Portfolio-Section-Browser-Screens-Integrations-00${id}@2x.png`}
+      src={`/images/placeholders/integration-${id}.svg`}
     />
   );
 };

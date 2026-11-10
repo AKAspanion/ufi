@@ -42,13 +42,13 @@ export default function SubHeaderMenu(props) {
                             styles.nav__submenu__item_hover,
                             styles.nav__submenu__item__before,
                           ])}>
-                          <a>
+                          <span>
                             {sublink ? (
                               <Link href={`/services${sublink}`}>{subname}</Link>
                             ) : (
                               subname
                             )}
-                          </a>
+                          </span>
                         </li>
                       ))}
                     </div>
@@ -63,15 +63,10 @@ export default function SubHeaderMenu(props) {
                 </div>
               </div>
               <div className={styles.nav__submenu__services__img}>
-                <img
-                  alt="gallery"
-                  src={
-                    'https://www.unifiedinfotech.net/assets/images/UIPL-Mega-Menu-Gallery-Image.png'
-                  }
-                />
+                <img alt="gallery" src={'/images/placeholders/uipl-mega-menu-gallery-image.svg'} />
                 <div
                   className={cs(styles.nav__submenu__services_container_name, 'text-center mt-4')}>
-                  <span className="pr-2">Our UX gallery</span>
+                  <span className="pe-2">Our UX gallery</span>
                   <BsArrowRight size={24} />
                 </div>
               </div>
@@ -84,7 +79,7 @@ export default function SubHeaderMenu(props) {
                   styles.nav__submenu__item_hover,
                   styles.nav__submenu__item__before,
                 ])}>
-                <a>{link ? <Link href={link}>{name}</Link> : name}</a>
+                <span>{link ? <Link href={link}>{name}</Link> : name}</span>
               </li>
             ))
           )}

@@ -21,19 +21,13 @@ export default function Footer() {
             <div className={cs(styles.visit__text, styles.visit__text__tilte)}>Visit us at</div>
             <div className={styles.visit__text}>
               <span className={styles.flag}>
-                <img
-                  src="https://www.unifiedinfotech.net/assets/images/icon/Flag-USA.svg"
-                  alt="USA Flag"
-                />
+                <img src="/images/placeholders/flag-usa.svg" alt="USA Flag" />
               </span>
               ABC, Random Avenue, New York, NY 24513
             </div>
             <div className={styles.visit__text}>
               <span className={styles.flag}>
-                <img
-                  src="https://www.unifiedinfotech.net/assets/images/icon/Flag-India.svg"
-                  alt="Indian Flag"
-                />
+                <img src="/images/placeholders/flag-india.svg" alt="Indian Flag" />
               </span>
               XYZ, Salt Lake City, Sec V, Kol-700091
             </div>
@@ -110,18 +104,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={cs(styles.row, styles.row__right)}>
-          <img
-            data-sizes="xl, l, m, s, xs"
-            data-srcset="
-              https://www.unifiedinfotech.net/assets/images/footer-banner1@4x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@2x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@1.5x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@1x.jpg,
-    					https://www.unifiedinfotech.net/assets/images/footer-banner1@0.75x.jpg
-    					"
-            src="https://www.unifiedinfotech.net/assets/images/footer-banner1@2x.jpg"
-            alt="Footer Banner"
-          />
+          <img src="/images/placeholders/footer-banner1.svg" alt="Footer Banner" />
         </div>
       </div>
       <div className={styles.footer__bottom}>

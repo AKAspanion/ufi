@@ -180,7 +180,7 @@
 .mobile__showcase {
   width: 350px;
   height: 670px;
-  background: url(https://www.unifiedinfotech.net/assets/images/iphone.png) no-repeat 0 0;
+  background: url(/images/placeholders/iphone.svg) no-repeat 0 0;
   background-size: contain;
   position: absolute;
   left: -12px;
@@ -893,7 +893,7 @@
 
 @media (max-width: 1199px) {
   .mobile__app__sec__6.mobile__app__responsive .pad__box:nth-child(1),
-  .mobile__app__sec__6.mobile__app__responsive .pad__box:nth__child(2) {
+  .mobile__app__sec__6.mobile__app__responsive .pad__box:nth-child(2) {
     margin-bottom: 20px;
   }
 

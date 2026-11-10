@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import cs from 'classnames';
@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 import { useResizeDetector } from 'react-resize-detector';
 import { Carousel } from 'react-responsive-carousel';
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import {
@@ -21,7 +21,7 @@ import Layout from '../../../components/layout';
 import styles from '../startup-consulting/startup-consulting.module.css';
 import mobileStyles from './mobile-app.module.css';
 
-SwiperCore.use([Autoplay, Navigation, Pagination]);
+const swiperModules = [Autoplay, Navigation, Pagination];
 
 export default function MobileDevelopment() {
   const { width, ref } = useResizeDetector();
@@ -82,7 +82,7 @@ export default function MobileDevelopment() {
               <div className={cs(styles.consulting__banner)}>
                 <img
                   className={cs(styles.blur__out)}
-                  src="https://www.unifiedinfotech.net/assets/images/mobile-app-banner@1x.jpg"
+                  src="/images/placeholders/mobile-app-banner.svg"
                   alt="startup consulting services"
                 />
               </div>
@@ -242,7 +242,7 @@ export default function MobileDevelopment() {
               <div className={cs([styles.design__box])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/high-fidelity-wireframe@1x.png"
+                  src="/images/placeholders/high-fidelity-wireframe.svg"
                   alt="high fidelity wireframe"
                 />
               </div>
@@ -255,42 +255,42 @@ export default function MobileDevelopment() {
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Personalisation_05@1x.png"
+                  src="/images/placeholders/personalisation-05.svg"
                   alt="Personalisation"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Main-Home@1x.png"
+                  src="/images/placeholders/main-home.svg"
                   alt="Main Home"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Payment-for-Subscription@1x.png"
+                  src="/images/placeholders/payment-for-subscription.svg"
                   alt="Payment for Subscription"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Personalisation@1x.png"
+                  src="/images/placeholders/personalisation.svg"
                   alt="application testing"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Personalisation_01@1x.png"
+                  src="/images/placeholders/personalisation-01.svg"
                   alt="mobile app interface"
                 />
               </div>
               <div className={cs([mobileStyles.swiper__slide])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/Write_a_review@1x.png"
+                  src="/images/placeholders/write-a-review.svg"
                   alt="write a reviews"
                 />
               </div>
@@ -311,7 +311,7 @@ export default function MobileDevelopment() {
                 ])}>
                 <img
                   className={cs([styles.blur__out])}
-                  src="https://www.unifiedinfotech.net/assets/images/testing@1x.jpg"
+                  src="/images/placeholders/testing.svg"
                   alt="testing"
                 />
               </div>
@@ -397,6 +397,7 @@ export default function MobileDevelopment() {
                 <div className={cs([mobileStyles.inmobileshowcase])}>
                   <div className={cs([mobileStyles.mobile__showcase])}></div>
                   <Swiper
+                    modules={swiperModules}
                     loop
                     autoplay={{
                       delay: 2000,
@@ -440,7 +441,7 @@ export default function MobileDevelopment() {
             </div>
             <div className={cs(['col-6', 'p-0', styles.client_info_right, styles.black__bg__info])}>
               <div className={cs([styles.stories__info__text])}>
-                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-left'])}>
+                <h3 className={cs([styles.stories__h1, styles.text__white, 'text-start'])}>
                   stories
                 </h3>
               </div>
@@ -448,12 +449,12 @@ export default function MobileDevelopment() {
           </div>
         </div>
         <div className={cs(['container-fluid', styles.work__project__wrap, 'text__center'])}>
-          <div className={cs([styles.features__list, 'text-left'])}>
+          <div className={cs([styles.features__list, 'text-start'])}>
             <div className={cs([styles.feature__item])}>
               <div className={cs(['row', 'justify-content-center'])}>
                 <div className={cs(['col-md-6', styles.p__lr__4])}>
                   <div className={cs([styles.work__project__info, styles.content__col])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
+                    <a href="/portfolio">
                       <div
                         className={cs([
                           styles.work__project__img,
@@ -462,7 +463,7 @@ export default function MobileDevelopment() {
                         ])}>
                         <img
                           className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/freshclinic@1.5x.jpg"
+                          src="/images/placeholders/freshclinic.svg"
                           alt="startup consulting services"
                         />
                       </div>
@@ -470,7 +471,7 @@ export default function MobileDevelopment() {
                     <div className={cs([styles.work__project__text])}>
                       <img
                         className={cs([styles.project__title])}
-                        src="https://www.unifiedinfotech.net/assets/images/toonyport-title.svg"
+                        src="/images/placeholders/toonyport-title.svg"
                         alt="startup consulting services"
                       />
                       <div className={cs([styles.project__text__desc])}>
@@ -482,17 +483,15 @@ export default function MobileDevelopment() {
                       <div className={cs([styles.btn__link__wrap])}>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">IA</a>
+                          <a href="/portfolio">IA</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">UI/UX</a>
+                          <a href="/portfolio">UI/UX</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/toonyport/">
-                            eCommerce
-                          </a>
+                          <a href="/portfolio">eCommerce</a>
                         </div>
                       </div>
                     </div>
@@ -500,7 +499,7 @@ export default function MobileDevelopment() {
                 </div>
                 <div className={cs(['col-md-6', styles.p__lr__4])}>
                   <div className={cs([styles.work__project__info])}>
-                    <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
+                    <a href="/portfolio">
                       <div
                         className={cs([
                           styles.work__project__img,
@@ -509,16 +508,16 @@ export default function MobileDevelopment() {
                         ])}>
                         <img
                           className={cs([styles.blur__out])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo@1x.jpg"
+                          src="/images/placeholders/largo.svg"
                           alt="startup consulting services"
                         />
                       </div>
                     </a>
                     <div className={cs([styles.work__project__text, styles.pb__sm])}>
-                      <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
+                      <a href="/portfolio">
                         <img
                           className={cs([styles.project__title])}
-                          src="https://www.unifiedinfotech.net/assets/images/largo-title.svg"
+                          src="/images/placeholders/largo-title.svg"
                           alt="startup consulting services"
                         />
                       </a>
@@ -531,13 +530,11 @@ export default function MobileDevelopment() {
                       <div className={cs([styles.btn__link__wrap])}>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">UI/UX</a>
+                          <a href="/portfolio">UI/UX</a>
                         </div>
                         <div className={cs([styles.button__2])}>
                           <div className={cs([styles.eff__2])}></div>
-                          <a href="https://www.unifiedinfotech.net/portfolio/sofy/">
-                            Mobile App Design
-                          </a>
+                          <a href="/portfolio">Mobile App Design</a>
                         </div>
                       </div>
                     </div>
@@ -627,12 +624,12 @@ export default function MobileDevelopment() {
                     <FaQuoteLeft size={48} color="#C7C7C7" />
                   </div>
                   <div className={styles.praise__right}>
-                    <div className={cs(styles.praise__quote, 'text-left')}>
+                    <div className={cs(styles.praise__quote, 'text-start')}>
                       <blockquote></blockquote>
-                      <span className={'text-left'}>{quote}</span>
+                      <span className={'text-start'}>{quote}</span>
                     </div>
-                    <div className={cs(styles.praise__name, 'text-left')}>{name}</div>
-                    <div className={cs(styles.praise__title, 'text-left')}>{title}</div>
+                    <div className={cs(styles.praise__name, 'text-start')}>{name}</div>
+                    <div className={cs(styles.praise__title, 'text-start')}>{title}</div>
                   </div>
                 </section>
               </div>

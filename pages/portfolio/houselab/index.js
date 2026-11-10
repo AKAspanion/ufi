@@ -36,7 +36,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.video)}>
                   <img
                     className={cs([houselabstyles.blur__out])}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Hero-Image@2x.png"
+                    src="/images/placeholders/houselabs-hero-image.svg"
                     alt=""
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function HouesLab() {
             ])}>
             <img
               className={cs(houselabstyles.blur__out)}
-              src="https://www.unifiedinfotech.net/assets/images/Houselabs-Overview-Image@2x.png"
+              src="/images/placeholders/houselabs-overview-image.svg"
               alt=""
             />
           </div>
@@ -120,7 +120,7 @@ export default function HouesLab() {
             ])}>
             <img
               className={cs(houselabstyles.blur__out)}
-              src="https://www.unifiedinfotech.net/assets/images/Houselabs-Overview-Image-Mobile.png"
+              src="/images/placeholders/houselabs-overview-image-mobile.svg"
               alt=""
             />
           </div>
@@ -290,7 +290,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Project-and-Property-Management@2x.png"
+                    src="/images/placeholders/houselabs-project-and-property-management.svg"
                     alt=""
                   />
                 </div>
@@ -346,7 +346,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-File-and-folder-storage@2x.png"
+                    src="/images/placeholders/houselabs-file-and-folder-storage.svg"
                     alt=""
                   />
                 </div>
@@ -378,7 +378,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Roles-and-Permission-Management@2x.png"
+                    src="/images/placeholders/houselabs-roles-and-permission-management.svg"
                     alt=""
                   />
                 </div>
@@ -406,7 +406,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Project-Collaboration@2x.png"
+                    src="/images/placeholders/houselabs-project-collaboration.svg"
                     alt=""
                   />
                 </div>
@@ -442,7 +442,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Defect-Management@2x.png"
+                    src="/images/placeholders/houselabs-defect-management.svg"
                     alt=""
                   />
                 </div>
@@ -477,7 +477,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Expense-Management-and-Tracking@2x.png"
+                    src="/images/placeholders/houselabs-expense-management-and-tracking.svg"
                     alt=""
                   />
                 </div>
@@ -505,7 +505,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Reminders-and-Notifications@2x.png"
+                    src="/images/placeholders/houselabs-reminders-and-notifications.svg"
                     alt=""
                   />
                 </div>
@@ -540,7 +540,7 @@ export default function HouesLab() {
                 <div className={cs(houselabstyles.houselabs__features__screens__pic)}>
                   <img
                     className={cs(houselabstyles.blur__out)}
-                    src="https://www.unifiedinfotech.net/assets/images/Houselabs-Project-Handover@2x.png"
+                    src="/images/placeholders/houselabs-project-handover.svg"
                     alt=""
                   />
                 </div>
