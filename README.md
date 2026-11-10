@@ -36,3 +36,17 @@ client case-study pages (`/portfolio/houselab`, `/portfolio/open-reel`) are not 
 
 Replace the sample entries in [`assets/data.js`](assets/data.js) with your own, and swap the
 SVG placeholders in `public/images/placeholders/` for real images.
+
+## Deploying to Netlify
+
+The site deploys as a static export. [`netlify.toml`](netlify.toml) sets the build command
+(`npm run export`), the publish directory (`out`) and Node.js 22, and overrides the matching
+settings in the Netlify UI. To deploy from your machine instead, run `npm run deploy`
+(needs the Netlify CLI, linked to the site).
+
+If an older setup is still attached to the site, remove it in the Netlify UI: under
+**Site configuration → Build & deploy**, uninstall any old "Next.js" / `@netlify/plugin-nextjs`
+plugin and clear a fixed Node.js version below 20.
+
+To build with the demo content, set `NEXT_PUBLIC_DEMO_CONTENT=true` in `netlify.toml` or in the
+site's environment variables.
