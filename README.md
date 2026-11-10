@@ -21,6 +21,7 @@ Copy `.env.example` to `.env.local`. Settings live in [`config/site.js`](config/
 | ----------------------------------------------------- | -------------- | --------------------------------------------- |
 | `NEXT_PUBLIC_DEMO_CONTENT`                            | `false`        | Show the reference agency's demo content      |
 | `NEXT_PUBLIC_COMPANY_NAME`                            | `Your Company` | Company name used in page copy                |
+| `NEXT_PUBLIC_COMPANY_SHORT_NAME`                      | company name   | Short name used in running copy               |
 | `NEXT_PUBLIC_CONTACT_URL`                             | `/#contact`    | Target of "Contact us" / "Get in touch" links |
 | `NEXT_PUBLIC_BEHANCE_URL`, `NEXT_PUBLIC_DRIBBBLE_URL` | —              | Social links in the header and footer         |
 

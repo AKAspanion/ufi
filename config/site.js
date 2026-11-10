@@ -14,6 +14,10 @@ const DEMO_SITE_URL = 'https://www.unifiedinfotech.net';
 export const COMPANY_NAME =
   process.env.NEXT_PUBLIC_COMPANY_NAME || (DEMO_CONTENT ? 'Unified Infotech' : 'Your Company');
 
+// Short form used in running copy ("At Unified we believe…").
+export const COMPANY_SHORT_NAME =
+  process.env.NEXT_PUBLIC_COMPANY_SHORT_NAME || (DEMO_CONTENT ? 'Unified' : COMPANY_NAME);
+
 // Where "Contact us" / "Get in touch" links go. Defaults to the contact form on the home page.
 export const CONTACT_URL =
   process.env.NEXT_PUBLIC_CONTACT_URL ||

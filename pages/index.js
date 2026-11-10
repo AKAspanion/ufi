@@ -18,7 +18,7 @@ import { coreItems, expertise, portfolio, processNav, processSteps, stats } from
 import Button from '../components/button';
 import Layout from '../components/layout';
 import Project from '../components/project';
-import { COMPANY_NAME } from '../config/site';
+import { COMPANY_SHORT_NAME } from '../config/site';
 import styles from './index.module.css';
 
 const arrowStyles = {
@@ -84,7 +84,7 @@ export default function Home() {
             software solutions, that fuel innovation &amp; deliver digital success!
           </p>
           <p className={styles.standout__desc}>
-            At {COMPANY_NAME} we believe that every project is an important milestone in our
+            At {COMPANY_SHORT_NAME} we believe that every project is an important milestone in our
             journey. So we position ourselves as a boutique digital agency, custom tailoring
             impactful digital solutions with industry best practices across the board, for Fortune
             500s, SMEs, and Start-up’s around the globe.

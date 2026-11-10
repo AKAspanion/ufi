@@ -197,7 +197,7 @@ export default function HouesLab() {
                 className={cs([
                   houselabstyles.comm__works,
                   'sofy-challenges',
-                  'mr-2',
+                  'me-2',
                   'h-100',
                   'aos-init',
                   'aos-animate',
@@ -231,7 +231,7 @@ export default function HouesLab() {
                   houselabstyles.bg__orange,
                   styles.text__white,
                   'sofy-solutions',
-                  'ml-2',
+                  'ms-2',
                   'h-100',
                   'aos-init',
                   'aos-animate',

@@ -653,7 +653,7 @@ export default function Home() {
                           <h5>Tools</h5>
                         </div>
                         <div className={cs('row', 'm-0')}>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="36"
@@ -667,7 +667,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="37"
@@ -684,7 +684,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="37"
@@ -701,7 +701,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="37"
@@ -722,7 +722,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="36"
@@ -738,7 +738,7 @@ export default function Home() {
                               </g>
                             </svg>
                           </div>
-                          <div className={cs('col', 'pl-0')}>
+                          <div className={cs('col', 'ps-0')}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="40"
@@ -1077,7 +1077,7 @@ export default function Home() {
                           <h5> Tools</h5>
                         </div>
                         <div className={cs('row', 'm-0')}>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
@@ -1086,7 +1086,7 @@ export default function Home() {
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
@@ -1095,7 +1095,7 @@ export default function Home() {
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
@@ -1104,7 +1104,7 @@ export default function Home() {
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
@@ -1113,7 +1113,7 @@ export default function Home() {
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
@@ -1122,7 +1122,7 @@ export default function Home() {
                               />
                             </div>
                           </div>
-                          <div className={cs(['col-4', styles.tools__col, 'pl-0'])}>
+                          <div className={cs(['col-4', styles.tools__col, 'ps-0'])}>
                             <div className={cs(styles.tools__img)}>
                               <img
                                 className={cs(styles.blur__out)}
