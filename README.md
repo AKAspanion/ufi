@@ -44,6 +44,25 @@ The site deploys as a static export. [`netlify.toml`](netlify.toml) sets the bui
 settings in the Netlify UI. To deploy from your machine instead, run `npm run deploy`
 (needs the Netlify CLI, linked to the site).
 
+### Automatic production deploys
+
+[`.github/workflows/deploy-production.yml`](.github/workflows/deploy-production.yml) lints,
+builds and deploys to Netlify production on every push to `master` (every merged pull
+request). It can also be started by hand from the repository's **Actions** tab.
+
+Add two repository secrets (**Settings → Secrets and variables → Actions**):
+
+| Secret               | Where to find it                                                 |
+| -------------------- | ---------------------------------------------------------------- |
+| `NETLIFY_AUTH_TOKEN` | Netlify → User settings → Applications → Personal access tokens  |
+| `NETLIFY_SITE_ID`    | Netlify → Project configuration → General → Project details → ID |
+
+The `NEXT_PUBLIC_*` settings above can be set as repository **variables** on the same page.
+
+If the Netlify project is also linked to this repository, Netlify builds every push itself
+as well. Turn that off (**Project configuration → Build & deploy → Continuous deployment →
+Stop builds**) so each merge deploys once, from GitHub Actions.
+
 If an older setup is still attached to the site, remove it in the Netlify UI: under
 **Site configuration → Build & deploy**, uninstall any old "Next.js" / `@netlify/plugin-nextjs`
 plugin and clear a fixed Node.js version below 20.
