@@ -8,44 +8,33 @@ import Head from 'next/head';
 import { useRef, useState } from 'react';
 
 import Layout from '../../components/layout';
+import { COMPANY_NAME } from '../../config/site';
 import styles from './index.module.css';
 
 const process = [
   {
     id: 1,
     title: 'Discovery Workshop',
-    img: '/images/placeholders/openreel-home-v3.svg',
-    desc: 'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
   {
     id: 2,
     title: 'Planning',
-    img: '/images/placeholders/largo-home-v3.svg',
-    desc: 'We designed and developed this AI powered video streaming platform to give a tiff to streaming giants like Netflix and Hulu. We created an out of the box experience to help make the product award-winning.',
   },
   {
     id: 3,
     title: 'Design',
-    img: '/images/placeholders/openreel-home-v3.svg',
-    desc: 'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
   {
     id: 4,
     title: 'Development',
-    img: '/images/placeholders/largo-home-v3.svg',
-    desc: 'We designed and developed this AI powered video streaming platform to give a tiff to streaming giants like Netflix and Hulu. We created an out of the box experience to help make the product award-winning.',
   },
   {
     id: 5,
     title: 'Testing',
-    img: '/images/placeholders/openreel-home-v3.svg',
-    desc: 'We created a patented video platform that helps capture and direct video remotely. This has helped companies reduce production cost, resource and time. Now shoot video without even stepping out of your comfort zone.',
   },
   {
     id: 6,
     title: 'Maintainence',
-    img: '/images/placeholders/largo-home-v3.svg',
-    desc: 'We designed and developed this AI powered video streaming platform to give a tiff to streaming giants like Netflix and Hulu. We created an out of the box experience to help make the product award-winning.',
   },
 ];
 
@@ -183,7 +172,7 @@ const getSubSection = (obj) => {
                     styles.uipl_section_reveal_check,
                     styles.reveal_me,
                   ])}>
-                  <img alt="Unified Infotech process" src={bgInfoWhite.uiplImage} />
+                  <img alt={`${COMPANY_NAME} process`} src={bgInfoWhite.uiplImage} />
                 </div>
               </div>
             </div>
@@ -601,7 +590,7 @@ export default function Home() {
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
                           src="/images/placeholders/design.svg"
-                          alt="Unified Infotech process"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -902,7 +891,7 @@ export default function Home() {
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
                           src="/images/placeholders/development.svg"
-                          alt="Unified Infotech process"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -1061,7 +1050,7 @@ export default function Home() {
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
                           src="/images/placeholders/testing.svg"
-                          alt="Unified Infotech process"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -1093,7 +1082,7 @@ export default function Home() {
                               <img
                                 className={cs(styles.blur__out)}
                                 src="/images/placeholders/jira.svg"
-                                alt="Unified Infotech process"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1102,7 +1091,7 @@ export default function Home() {
                               <img
                                 className={cs(styles.blur__out)}
                                 src="/images/placeholders/mantis-bug-tracker-logo.svg"
-                                alt="Unified Infotech process"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1111,7 +1100,7 @@ export default function Home() {
                               <img
                                 className={cs(styles.blur__out)}
                                 src="/images/placeholders/firebase.svg"
-                                alt="Unified Infotech process"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1120,7 +1109,7 @@ export default function Home() {
                               <img
                                 className={cs(styles.blur__out)}
                                 src="/images/placeholders/jmeter.svg"
-                                alt="Unified Infotech process"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1129,7 +1118,7 @@ export default function Home() {
                               <img
                                 className={cs(styles.blur__out)}
                                 src="/images/placeholders/gtmetrix.svg"
-                                alt="Unified Infotech process"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1138,7 +1127,7 @@ export default function Home() {
                               <img
                                 className={cs(styles.blur__out)}
                                 src="/images/placeholders/se.svg"
-                                alt="Unified Infotech process"
+                                alt={`${COMPANY_NAME} process`}
                               />
                             </div>
                           </div>
@@ -1290,7 +1279,7 @@ export default function Home() {
                         <img
                           className={cs([styles.blur__out, styles.design__box_img])}
                           src="/images/placeholders/maintenance.svg"
-                          alt="Unified Infotech process"
+                          alt={`${COMPANY_NAME} process`}
                         />
                       </div>
                     </div>
@@ -1502,7 +1491,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/jira.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1511,7 +1500,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/slack.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1520,7 +1509,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/github.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1529,7 +1518,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/asana.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1538,7 +1527,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/invision.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1547,7 +1536,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/axure.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1556,7 +1545,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/zeplin.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1565,7 +1554,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/office365.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1574,7 +1563,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/zoom.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>
@@ -1583,7 +1572,7 @@ export default function Home() {
                     <img
                       className={cs(styles.blur__out)}
                       src="/images/placeholders/skype.svg"
-                      alt="Unified Infotech process"
+                      alt={`${COMPANY_NAME} process`}
                     />
                   </div>
                 </div>

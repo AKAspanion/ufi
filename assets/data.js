@@ -3,6 +3,12 @@ import { AiOutlineAndroid, AiOutlineApple, AiOutlineMobile } from 'react-icons/a
 import { FaMobileAlt } from 'react-icons/fa';
 import { FaReact } from 'react-icons/fa';
 
+import { COMPANY_NAME, demoLink } from '../config/site';
+
+// Same flag as DEMO_CONTENT in config/site.js, read here directly so the build can
+// drop the demo-only lists below when it is off.
+const DEMO_CONTENT = process.env.NEXT_PUBLIC_DEMO_CONTENT === 'true';
+
 export const services = [
   {
     id: 1,
@@ -40,7 +46,7 @@ export const services = [
     name: 'UX UI Design',
     orientation: 'center',
     img: '/images/placeholders/service-page-ui-ux-design-image.svg',
-    desc: 'Turn to Unified Infotech’s extensive design expertise combining human-centered design with a story weaved to drive ROI.',
+    desc: `Turn to ${COMPANY_NAME}’s extensive design expertise combining human-centered design with a story weaved to drive ROI.`,
     links: ['Learn more about UI/UX process'],
   },
   {
@@ -244,7 +250,7 @@ export const techStack = [
   },
 ];
 
-export const webDevPortfolio = [
+const demoWebDevPortfolio = [
   {
     id: 1,
     color: '#FB5D02',
@@ -280,7 +286,7 @@ export const webDevPortfolio = [
   },
 ];
 
-export const work = [
+const demoWork = [
   {
     id: 1,
     color: '#1572b8',
@@ -429,7 +435,7 @@ export const work = [
   },
 ];
 
-export const portfolio = [
+const demoPortfolio = [
   {
     id: 1,
     name: 'Openreel Inc.',
@@ -474,48 +480,48 @@ export const portfolio = [
   },
 ];
 
-export const stats = [
+const demoStats = [
   { id: 1, name: 'Years in the business', value: 10 },
   { id: 2, name: 'Solutions delivered', value: 1200 },
   { id: 3, name: 'Technology experts', value: 150 },
   { id: 4, name: 'Business delivered', value: 50, prefix: '$', postfix: 'M' },
 ];
 
-export const process = [
+export const processSteps = [
   {
     id: 1,
     title: 'Discovery Workshop',
-    img: '/images/placeholders/clutch-discovery-workshop-image.svg',
+    img: '/images/placeholders/process-discovery-workshop-image.svg',
     desc: 'We give the utmost importance to understand and document client’s inputs, design, and branding preferences. And clarify all the open-ended points to establish a precise and clear idea about both clients’ and project’s goals. We work in a collaborative approach involving key stakeholders to bring alignment in the business process.',
   },
   {
     id: 2,
     title: 'Planning',
-    img: '/images/placeholders/clutch-planning-image.svg',
+    img: '/images/placeholders/process-planning-image.svg',
     desc: 'Our services emphasize on well-defined project planning and leave nothing for assumption to avoid miscommunication. We jot down how we are going to proceed further, define detailed technical specifications, devise the design & branding guidelines of the project, and get confirmation and approval from the clients’ end on the documents and materials.',
   },
   {
     id: 3,
     title: 'Design',
-    img: '/images/placeholders/clutch-design-image.svg',
+    img: '/images/placeholders/process-design-image.svg',
     desc: 'We provide clients with Web, Tablet, and Mobile-specific UI designs of the projects based on the approved wireframes and design guidelines. As a trusted entity, we deliver clickable prototypes on Invision platform and the source files in either Photoshop or Sketch format. Getting system UI designs approved and confirmed by the client is one of our objectives at this stage.',
   },
   {
     id: 4,
     title: 'Development',
-    img: '/images/placeholders/clutch-development-image.svg',
+    img: '/images/placeholders/process-development-image.svg',
     desc: 'At this stage, we cater requirements for frontend, backend, web services, and API development integration. Along with preparing a strategy for Agile Scrum methodology, we factor the aspects of scalability, multi-tenancy, 3rd party integration, and craft an optimized clean code structure using cutting-edge technologies. We make sure to involve and implement clients’ reviews in each sprint/milestone.',
   },
   {
     id: 5,
     title: 'Testing',
-    img: '/images/placeholders/clutch-testing-image.svg',
+    img: '/images/placeholders/process-testing-image.svg',
     desc: 'We test each sprint manually, report bugs and add those to product backlog. Once the bug fixing is done, we provide the quality release and then the final demo of the sprint is sent for clients’ approval. We make sure to do regression testing to ensure proper functioning of the previously approved milestones/sprints.',
   },
   {
     id: 6,
     title: 'Maintainence',
-    img: '/images/placeholders/clutch-maintenance-image.svg',
+    img: '/images/placeholders/process-maintenance-image.svg',
     desc: 'Our work doesn’t end with development, we go the extra mile for our clients. Through an Agile approach, we ensure product enhancement. We do regular Security Audits, Bi-weekly code backups, and constant system upgradation. Along with testing the entire system each month to find any incompatibility or error, we monitor the traffic and server load and accordingly optimize it.',
   },
 ];
@@ -547,7 +553,7 @@ export const processNav = [
   },
 ];
 
-export const praiseList = [
+const demoPraiseList = [
   {
     name: 'Cecil Usher',
     title: 'CEO, Music Plug LLC',
@@ -567,7 +573,7 @@ export const praiseList = [
   },
 ];
 
-export const praiseListStartup = [
+const demoPraiseListStartup = [
   {
     name: 'Cecil Usher',
     title: 'CEO, Music Plug LLC',
@@ -587,7 +593,7 @@ export const praiseListStartup = [
   },
 ];
 
-export const praiseListAppDev = [
+const demoPraiseListAppDev = [
   {
     name: 'Cecil Usher',
     title: 'CEO, Music Plug LLC',
@@ -782,28 +788,31 @@ export const whatWeDevelop = [
     icon: <AiOutlineApple size={32} />,
     maintext:
       'Knowing the Human Interface Guidelines from inside out, we develop native iOS apps that speak to your customers. And is built on the latest iOS frameworks and patterns.',
-    link: 'https://www.unifiedinfotech.net/services/ios-app-development/',
+    link: demoLink('/services/ios-app-development/', '/services/mobile-app-development'),
   },
   {
     title: 'Android App Development',
     icon: <AiOutlineAndroid size={32} />,
     maintext:
       'We consciously follow the Material Design Guidelines to create beautiful Android apps, approved the Android community guidelines. Oh, and we know the in and out of the best Android libraries.',
-    link: 'https://www.unifiedinfotech.net/services/android-app-development/',
+    link: demoLink('/services/android-app-development/', '/services/mobile-app-development'),
   },
   {
     title: 'React Native App Development',
     icon: <FaReact size={32} />,
     maintext:
       'Code reusability, cross-platform support, and efficiency are some of the traits of react native apps that attract us and our clients equally. We take it forward to create apps that leave a long-lasting impression.',
-    link: 'https://www.unifiedinfotech.net/services/react-native-app-development/',
+    link: demoLink('/services/react-native-app-development/', '/services/mobile-app-development'),
   },
   {
     title: 'Enterprise Mobile Solutions',
     icon: <AiOutlineMobile size={32} />,
     maintext:
       'We take pride to be the only app development company that builds powerful applications in the most complex enterprise environment. We know how to make things happen.',
-    link: 'https://www.unifiedinfotech.net/services/enterprise-mobile-application-development/',
+    link: demoLink(
+      '/services/enterprise-mobile-application-development/',
+      '/services/mobile-app-development'
+    ),
   },
 ];
 
@@ -926,3 +935,62 @@ export const practicesWeFollow = [
     para: 'Internet connectivity is obvious for all the apps nowadays, but so is the offline mode. With offline mode user should be able to store within the device for easy access. Even in this age of internet popularity, offline mode is important for everyone, and we understand that.',
   },
 ];
+
+// ---------------------------------------------------------------------------
+// Demo-gated content. The demo* lists above come from the reference agency site
+// (real client names, testimonials and stats); they render only when
+// NEXT_PUBLIC_DEMO_CONTENT=true (see config/site.js). Otherwise these neutral
+// samples are used — replace them with your own.
+// ---------------------------------------------------------------------------
+
+const SAMPLE_IMAGE = '/images/placeholders/sample-project.svg';
+const SAMPLE_MOBILE_IMAGE = '/images/placeholders/sample-project-mobile.svg';
+
+const sampleTestimonials = [1, 2, 3].map((n) => ({
+  name: `Client name ${n}`,
+  title: 'Role, Company',
+  quote: 'Add a short testimonial from one of your clients here.',
+}));
+
+export const work = DEMO_CONTENT
+  ? demoWork
+  : [1, 2, 3, 4].map((n) => ({
+      id: n,
+      color: '#1572b8',
+      name: `Sample project ${n}`,
+      link: '/portfolio',
+      description: 'One or two lines about the problem you solved and the result for the client.',
+      tags: ['Strategy', 'UI/UX', 'Development'],
+      img: SAMPLE_IMAGE,
+    }));
+
+export const webDevPortfolio = DEMO_CONTENT
+  ? demoWebDevPortfolio
+  : [
+      { id: 1, color: '#FB5D02', bgColor: '#FEF6F1', category: 'Industry', type: 'platform' },
+      { id: 2, color: '#EB4F7D', bgColor: '#E8FFFA', category: 'Industry', type: 'experience' },
+      { id: 3, color: '#38AB91', bgColor: '#FFF1F4', category: 'Industry', type: 'experience' },
+    ].map((item) => ({
+      ...item,
+      name: `Sample project ${item.id}`,
+      desc: 'A one-line summary of what you built for this client.',
+      img: SAMPLE_MOBILE_IMAGE,
+      btnText: 'View case study',
+    }));
+
+export const portfolio = DEMO_CONTENT
+  ? demoPortfolio
+  : [1, 2, 3].map((n) => ({
+      id: n,
+      name: `Sample project ${n}`,
+      title: 'A one-line headline for this case study',
+      img: SAMPLE_IMAGE,
+      desc: 'Describe the client, the challenge and the outcome in two or three sentences.',
+    }));
+
+// Stats are company claims, so the section is hidden unless demo content is on.
+export const stats = DEMO_CONTENT ? demoStats : [];
+
+export const praiseList = DEMO_CONTENT ? demoPraiseList : sampleTestimonials;
+export const praiseListStartup = DEMO_CONTENT ? demoPraiseListStartup : sampleTestimonials;
+export const praiseListAppDev = DEMO_CONTENT ? demoPraiseListAppDev : sampleTestimonials;

@@ -8,6 +8,10 @@ import Layout from '../../../components/layout';
 import Project from '../../../components/project';
 import styles from './web-dev.module.css';
 
+// Read the build-time flag directly (see config/site.js) so demo-only sections are
+// dropped from the bundle when demo content is off.
+const DEMO_CONTENT = process.env.NEXT_PUBLIC_DEMO_CONTENT === 'true';
+
 const defaults = {
   threshold: 0,
 };
@@ -64,20 +68,22 @@ export default function WebDev() {
               we strive to deliver remarkable results being an award winning web development
               company, with a presence in the USA.
             </p>
-            <ul className={styles.web__excellence__companies}>
-              <li className={styles.clutch}>
-                <img src="/images/placeholders/technology-clutch-icon-app.svg" alt="Clutch" />
-              </li>
-              <li className={styles.deloitte}>
-                <img
-                  src="/images/placeholders/technology-deloitte-icon-colorful.svg"
-                  alt="Deloitte"
-                />
-              </li>
-              <li className={styles.upwork}>
-                <img src="/images/placeholders/technology-upwork-icon.svg" alt="Upwork" />
-              </li>
-            </ul>
+            {DEMO_CONTENT && (
+              <ul className={styles.web__excellence__companies}>
+                <li className={styles.clutch}>
+                  <img src="/images/placeholders/technology-clutch-icon-app.svg" alt="Clutch" />
+                </li>
+                <li className={styles.deloitte}>
+                  <img
+                    src="/images/placeholders/technology-deloitte-icon-colorful.svg"
+                    alt="Deloitte"
+                  />
+                </li>
+                <li className={styles.upwork}>
+                  <img src="/images/placeholders/technology-upwork-icon.svg" alt="Upwork" />
+                </li>
+              </ul>
+            )}
           </div>
         </div>
         <div className={styles.web__excellence__right}>

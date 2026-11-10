@@ -185,7 +185,9 @@
   opacity: 0;
   will-change: clip-path, opacity, filter;
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms;
+  transition:
+    clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.1s ease 167ms;
 }
 
 .reveal__me.img__in__inview {

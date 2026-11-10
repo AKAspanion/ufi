@@ -158,7 +158,9 @@
   transition-property: -webkit-transform;
   -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  transition-property:
+    transform,
+    -webkit-transform;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -174,7 +176,9 @@
   transition-property: -webkit-transform;
   -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  transition-property:
+    transform,
+    -webkit-transform;
 }
 
 .mobile__showcase {
@@ -342,8 +346,12 @@
   border-left: none;
   background: #ffffff;
   visibility: hidden;
-  -webkit-transition: opacity 600ms, visibility 600ms;
-  transition: opacity 600ms, visibility 600ms;
+  -webkit-transition:
+    opacity 600ms,
+    visibility 600ms;
+  transition:
+    opacity 600ms,
+    visibility 600ms;
 }
 
 .tab__slide__sec .tab__right__side {
@@ -530,9 +538,15 @@
   -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   opacity: 0;
-  transition: opacity 1.1s ease 167ms, -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms;
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease 167ms,
+  transition:
+    opacity 1.1s ease 167ms,
+    -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition:
+    clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.1s ease 167ms;
+  transition:
+    clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.1s ease 167ms,
     -webkit-clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 

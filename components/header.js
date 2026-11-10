@@ -7,6 +7,7 @@ import { BsChevronDown } from 'react-icons/bs';
 import { CgClose } from 'react-icons/cg';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 
+import { SOCIAL_LINKS } from '../config/site';
 import Button from './button';
 import styles from './header.module.css';
 import SubHeaderMenu from './subheadermenu.js';
@@ -262,10 +263,7 @@ export default function Header({ darkHeader = false }) {
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://www.behance.net/unifiedinfotech"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                      <a href={SOCIAL_LINKS.behance} target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 13">
                           <path
                             fill="#444444"
@@ -275,10 +273,7 @@ export default function Header({ darkHeader = false }) {
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://dribbble.com/unifiedinfotech"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                      <a href={SOCIAL_LINKS.dribbble} target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
                           <path
                             fill="#444444"

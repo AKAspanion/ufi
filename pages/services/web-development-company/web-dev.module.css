@@ -73,7 +73,9 @@
   opacity: 0;
   transition-delay: 0.2s;
   transform: translate3d(0, 25%, 0);
-  transition: transform 1.5s ease, opacity 1.5s ease;
+  transition:
+    transform 1.5s ease,
+    opacity 1.5s ease;
 }
 
 .web__excellence__right {
@@ -380,7 +382,9 @@
 .web__timeline__item__right {
   opacity: 0;
   transition-delay: 0.2s;
-  transition: transform 1.5s ease, opacity 1.5s ease;
+  transition:
+    transform 1.5s ease,
+    opacity 1.5s ease;
 }
 
 .web__timeline__item__left {

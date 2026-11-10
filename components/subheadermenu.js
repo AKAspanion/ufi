@@ -63,7 +63,7 @@ export default function SubHeaderMenu(props) {
                 </div>
               </div>
               <div className={styles.nav__submenu__services__img}>
-                <img alt="gallery" src={'/images/placeholders/uipl-mega-menu-gallery-image.svg'} />
+                <img alt="gallery" src={'/images/placeholders/mega-menu-gallery-image.svg'} />
                 <div
                   className={cs(styles.nav__submenu__services_container_name, 'text-center mt-4')}>
                   <span className="pe-2">Our UX gallery</span>

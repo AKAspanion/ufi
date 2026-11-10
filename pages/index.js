@@ -14,10 +14,11 @@ import { Carousel } from 'react-responsive-carousel';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { coreItems, expertise, portfolio, process, processNav, stats } from '../assets/data';
+import { coreItems, expertise, portfolio, processNav, processSteps, stats } from '../assets/data';
 import Button from '../components/button';
 import Layout from '../components/layout';
 import Project from '../components/project';
+import { COMPANY_NAME } from '../config/site';
 import styles from './index.module.css';
 
 const arrowStyles = {
@@ -68,11 +69,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.stats}>
-        {stats.map((detail, index) => (
-          <StatCard key={index} detail={detail} />
-        ))}
-      </section>
+      {stats.length > 0 && (
+        <section className={styles.stats}>
+          {stats.map((detail, index) => (
+            <StatCard key={index} detail={detail} />
+          ))}
+        </section>
+      )}
       <section className={styles.standout}>
         <div className={styles.standout__left}>
           <h2 className={styles.standout__title}>How we stand out - We are Proactive Experts</h2>
@@ -81,10 +84,10 @@ export default function Home() {
             software solutions, that fuel innovation &amp; deliver digital success!
           </p>
           <p className={styles.standout__desc}>
-            At Unified we believe that every project is an important milestone in our journey. So we
-            position ourselves as a boutique digital agency, custom tailoring impactful digital
-            solutions with industry best practices across the board, for Fortune 500s, SMEs, and
-            Start-up’s around the globe.
+            At {COMPANY_NAME} we believe that every project is an important milestone in our
+            journey. So we position ourselves as a boutique digital agency, custom tailoring
+            impactful digital solutions with industry best practices across the board, for Fortune
+            500s, SMEs, and Start-up’s around the globe.
           </p>
           <Button borderedReverse>Request Consultation</Button>
         </div>
@@ -205,7 +208,7 @@ export default function Home() {
               showIndicators={isMedium}
               selectedItem={selectedNav}
               axis={!isMedium ? 'vertical' : undefined}>
-              {process.map(({ id, title, img, desc }) => (
+              {processSteps.map(({ id, title, img, desc }) => (
                 <div key={id}>
                   <section className={cs(styles.standout, styles.standout__carousel)}>
                     <div className={cs(styles.standout__right, styles.carousel__right)}>

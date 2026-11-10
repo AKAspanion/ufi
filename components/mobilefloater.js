@@ -1,5 +1,6 @@
 import cs from 'classnames';
 
+import { CONTACT_URL } from '../config/site';
 import styles from './mobilefloater.module.css';
 
 export default function MobileFloater() {
@@ -7,9 +8,7 @@ export default function MobileFloater() {
     <div className={cs(styles.mobile__float__sec)}>
       <div className={cs('container')}>
         <div className={cs(['row', 'align-items-center'])}>
-          <a
-            href="https://www.unifiedinfotech.net/portfolio/"
-            className={cs(['col-6', styles.stiky__border])}>
+          <a href="/portfolio" className={cs(['col-6', styles.stiky__border])}>
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14">
               <g fill="none" fillRule="nonzero" stroke="#FFF" transform="translate(-1)">
                 <rect width="15" height="13" x="4.5" y=".5" rx="2"></rect>
@@ -18,7 +17,7 @@ export default function MobileFloater() {
             </svg>
             <h3>Case Studies</h3>
           </a>
-          <a href="https://www.unifiedinfotech.net/about/contact/" className={cs('col-6')}>
+          <a href={CONTACT_URL} className={cs('col-6')}>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">
               <g fill="none" fillRule="nonzero" stroke="#FFF">
                 <rect width="15" height="13" x=".5" y=".5" rx="2"></rect>

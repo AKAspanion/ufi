@@ -12,6 +12,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { gallery, praiseListStartup, services } from '../../assets/data';
 import Button from '../../components/button';
 import Layout from '../../components/layout';
+import { COMPANY_NAME } from '../../config/site';
 import startupStyles from '../services/startup-consulting/startup-consulting.module.css';
 import styles from './services.module.css';
 
@@ -48,7 +49,7 @@ export default function Services() {
       <section ref={ref} className={styles.banner}>
         <h1>OUR SERVICES</h1>
         <p>
-          Startup or a Fortune 500 company, Unified Infotech will act as your consultant and
+          Startup or a Fortune 500 company, {COMPANY_NAME} will act as your consultant and
           development partners to transform your idea into success. Take advantage of our
           full-service capabilities.
         </p>
